@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 50px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding: 8px 30px 5px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .refer {
+            background: #000;
+            color: #fff;
+            padding: 2px 8px 0 8px;
+            border-radius: 30px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding: 3px 10px 0 10px;
+            font-size: 24px;
+        }
+
+        .sample {
+            border-radius: 5px;
+        }
+
+        .sample h3 {
+            background: #f2f2f2;
+            font-size: 16px;
+            padding: 20px 20px 20px 20px;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #e6e6e6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 5px 5px 5px 5px !important;
+        }
+        table {
+            width: 50%;
+            height: 200px;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        tr, td {
+            border: 1px solid #444444;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../assets/css/prism.css">
+
+</head>
+
+<body>
+
+    <h1>식별자란?</h1>
+    <p>
+        식별자는 자바스크립트에서 이름을 붙일 때 사용하는 단어입니다. 식별자는 코드의 일부이지만 문자열은 데이터이기 때문에, 식별자와 문자열은 다릅니다. JavaScript에서 식별자를 문자열로 변환하는
+        방법은 없지만, 어떤 경우 문자열을 분석해 식별자로 사용할 수 있습니다. 식별자를 만들 때는 다음 규칙을 반드시 지켜야 합니다.<br>
+
+    </p>
+    <h2>식별자 규칙</h2>
+    <p>
+        1. 키워드를 사용하면 안된다.<br>
+        <div id="sample1" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+var function = 100; (X)
+var f = 100;       (O)
+}</code></pre>
+            </div>
+        </div>
+        <br>
+        2. 숫자로 시작하면 안된다.
+        <div id="sample1" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+var 3name = Kim;    (X)
+var name3 = Kim;    (O)
+}</code></pre>
+            </div>
+        </div>
+        <br>
+        3. 특수 문자는 _와 $만 허용 된다.<br>
+        <div id="sample1" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+//BAD
+var name? = Kim;
+var name~ = Kim;
+//GOOD
+var name_ = Kim;
+var $name = Kim;
+}</code></pre>
+            </div>
+        </div> <br>
+        4. 공백 문자를 포함할 수 없다.<br>
+        <div id="sample1" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+var id card = Kim;  (X)
+var idCard = Kim;   (O)
+}</code></pre>
+            </div>
+        </div>
+    </p>
+    <h2>식별자 관례</h2>
+    <p>
+        식별자 규칙만 만족하면 모든 단어를 식별자로 사용할 수 있다. 즉, 한글이나 한자, 일본어 같은 언어 모두 사용 가능하다. 하지만 알파벳을 사용하는 것이 관례이다.<br>
+        또한 식별자는 x,y 처럼 의미 없는 단어보다 result, input 등과 같은 의미 있는 단어를 사용하는 것이 좋다.<br>
+        이외에도 몇 가지 관례가 있다.<br><br>
+        <h4>1. 생성자 함수의 이름은 항상 대문자로 시작한다.</h4>
+        <h4>2. 변수와 인스턴스, 함수, 메소드의 이름은 항상 소문자로 시작한다.</h4>
+        <h4>3. 여러 단어로 이루어진 식별자는 각 단어의 첫 글자를 대문자로 한다.</h4>
+        <div id="sample1" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+is ture         --> isTrue
+will return      --> willReturn
+new array       --> newArray
+}</code></pre>
+            </div>
+        </div>
+    </p>
+    <h2>키워드란?</h2>
+    <p>
+        자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 말합니다. 다음 표는 자바 스크립트의 키워드입니다. 현재 모든 브라우저에서 다음과 같은 28가지의 키워드를 지원합니다.<br>
+        <table>
+            <tr>
+                <td>break</td>
+                <td>else</td>
+                <td>instanceof</td>
+                <td>true</td>
+                <td>case</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>new</td>
+                <td>try</td>
+                <td>catch</td>
+                <td>finally</td>
+                <td>new</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <td>typeof</td>
+                <td>continue</td>
+                <td>for</td>
+                <td>return</td>
+                <td>var</td>
+                <td>default</td>
+            </tr>
+            <tr>
+                <td>function</td>
+                <td>switch</td>
+                <td>void</td>
+                <td>delete</td>
+                <td>if</td>
+                <td>this</td>
+            </tr>
+            <tr>
+                <td>while</td>
+                <td>do</td>
+                <td>in</td>
+                <td>throw</td>
+                <td>with</td>
+                <td></td>
+            </tr>
+        </table>
+    </p>
+    <script src="../assets/js/prism.js"></script>
+
+</body>
+
+</html>
