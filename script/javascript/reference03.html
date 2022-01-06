@@ -138,11 +138,10 @@
         <br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var s = "javascript";
+                <pre class="line-numbers"><code class="language-js">var s = "javascript";
 var num = "100";
 var tag = "&lt;h1&gt;String&lt;/h1&gt;";
-}</code></pre>
+</code></pre>
             </div>
         </div>
     </p>
@@ -160,10 +159,9 @@ var tag = "&lt;h1&gt;String&lt;/h1&gt;";
         <br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var s = 100;
+                <pre class="line-numbers"><code class="language-js">var s = 100;
 var t = Number("500");
-}</code></pre>
+</code></pre>
             </div>
         </div>
     </p>
@@ -181,11 +179,10 @@ var t = Number("500");
         <br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var s = true;
+                <pre class="line-numbers"><code class="language-js">var s = true;
 var t = 10&gt;=100;         //false
 var k = Boolean("hello");   //true
-}</code></pre>
+</code></pre>
             </div>
         </div>
 
@@ -194,17 +191,15 @@ var k = Boolean("hello");   //true
         반환합니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var m = Boolean(0);
+                <pre class="line-numbers"><code class="language-js">var m = Boolean(0);
 var k = Boolean("홍길동");
-}</code></pre>
+</code></pre>
             </div>
         </div>
         다음은 논리형 값, 비교 연산자, Boolean 메서드를 사용해 변수에 논리형 데이터를 저장한 후 문서에 출력하는 예제와 결과 화면입니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-06: &lt;script&gt;
+                <pre class="line-numbers"><code class="language-js">06: &lt;script&gt;
 07: var a = true;
 08: var b = false;
 09: var c = 10 > 5;
@@ -215,7 +210,7 @@ var k = Boolean("홍길동");
 14: document.write(c, "&lt;br&gt;");
 15: document.write(d, "&lt;br&gt;");
 16: &lt;/script&gt;
-}</code></pre>
+</code></pre>
             </div>
         </div>
 
@@ -227,11 +222,10 @@ var k = Boolean("홍길동");
         값입니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-기본형 : var s;
-var t = hello;
-t = null;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-js">기본형 : var s;
+        var t = hello;
+        t = null;
+</code></pre>
             </div>
         </div>
     </p>
@@ -241,23 +235,21 @@ t = null;
         typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다. 기본형은 다음과 같습니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-기본형 : typeof 변수 또는 데이터;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-js">기본형 : typeof 변수 또는 데이터;
+</code></pre>
             </div>
         </div>
         다음은 typeof를 이용하여 변수에 저장된 자료형을 알아내는 예제입니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-06: &lt;script&gt;<br>
+                <pre class="line-numbers"><code class="language-js">06: &lt;script&gt;<br>
 07: var num = 100;<br>
 08: var str = "자바스크립트";<br>
 09:<br>
 10: document.write(typeof num, "&lt;br&gt;");<br>
 11: document.write(typeof str);<br>
 12: &lt;script&gt;<br><br>
-}</code></pre>
+</code></pre>
             </div>
         </div>
 
@@ -269,46 +261,41 @@ t = null;
         1. 변수명 첫글자로는 $,_(언더바), 영문자만 올 수 있습니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var 1num = 10; (X)
+                <pre class="line-numbers"><code class="language-js">var 1num = 10; (X)
 var $num = 10; (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         2.변수명 첫 글자 다음은 영문자, 숫자, $, _(언더바)만 포함할 수 있습니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var 100num = 10; (X)
+                <pre class="line-numbers"><code class="language-js">var 100num = 10; (X)
 var num100 = 10; (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         3. 변수명으로는 예약어(document, location, window 등)를 사용할 수 없습니다. 예약어란 이미 자바스크립트에서 사용 중인 단어를 말합니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var document = 10; (X)
+                <pre class="line-numbers"><code class="language-js">var document = 10; (X)
 var num = 10; (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         4. 변수명을 지을 때는 되도록 의미를 부여해 작성하는 것이 좋습니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var num = "hello"; (X)
+                <pre class="line-numbers"><code class="language-js">var num = "hello"; (X)
 var num = 10; (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         5. 변수명을 사용할 때는 대,소문자를 구분해야 합니다.<br><br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var num = 10; document.write(Num) (X)
+                <pre class="line-numbers"><code class="language-js">var num = 10; document.write(Num) (X)
 var num = 10; document.write(num) (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
     </p>

@@ -152,43 +152,39 @@
         1. 키워드를 사용하면 안된다.<br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var function = 100; (X)
+                <pre class="line-numbers"><code class="language-js">var function = 100; (X)
 var f = 100;       (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         <br>
         2. 숫자로 시작하면 안된다.
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var 3name = Kim;    (X)
+                <pre class="line-numbers"><code class="language-js">var 3name = Kim;    (X)
 var name3 = Kim;    (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
         <br>
         3. 특수 문자는 _와 $만 허용 된다.<br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-//BAD
+                <pre class="line-numbers"><code class="language-js">//BAD
 var name? = Kim;
 var name~ = Kim;
 //GOOD
 var name_ = Kim;
 var $name = Kim;
-}</code></pre>
+</code></pre>
             </div>
         </div> <br>
         4. 공백 문자를 포함할 수 없다.<br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-var id card = Kim;  (X)
+                <pre class="line-numbers"><code class="language-js">var id card = Kim;  (X)
 var idCard = Kim;   (O)
-}</code></pre>
+</code></pre>
             </div>
         </div>
     </p>
@@ -202,11 +198,10 @@ var idCard = Kim;   (O)
         <h4>3. 여러 단어로 이루어진 식별자는 각 단어의 첫 글자를 대문자로 한다.</h4>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-is ture         --> isTrue
+                <pre class="line-numbers"><code class="language-js">is ture         --> isTrue
 will return      --> willReturn
 new array       --> newArray
-}</code></pre>
+</code></pre>
             </div>
         </div>
     </p>
