@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <link rel="stylesheet" href="assets/js/prism.js">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="javascript01.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li class="active"><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>변수란?</h2>
+            <p>
+                <strong>변수(Variables)</strong>는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는 그릇이라 할 수 있죠. 변수에는 데이터가 오직
+                한개만 저장됩니다. 그러다 보니 새로운데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다. 변수에 저장할 수 있는 데이터의 종류로는 문자형(String),
+                숫자형(Number), 논리형(Boolean)
+                그리고 빈(Null) 데이터가 있습니다.
+            </p>
+
+            <h2>변수 선언 방법</h2>
+            <p>
+                변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며, 영문과 숫자 그리고 일부 특수 문자(_,$)만 포함할 수 있습니다.
+                <div class="code">
+                    <pre><code>var 변수명 = 값;
+let 변수명 = 값;                    
+</pre></code>
+                </div>
+            </p>
+
+            <h2>변수명</h2>
+            <p>
+                자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수 없는 단어들이 있습니다.
+            </p>
+            <div class="line">
+                키워드 : 자바스크립트에서 사용하는 단어<br>
+                식별자 : 사용자가 임의로 사용하는 단어
+            </div>
+
+            <h3>식별자를 만드는 규칙</h3>
+            <ul>
+                <li>사용자가 사용할 수 있는 문자는 : 알파벳(a~z, A~Z), 숫자(0~9), 특수문자(_,$)</li>
+                <li>첫 글자는 숫자를 사용할 수 없습니다.</li>
+                <div class="code">
+                    <pre><code>var 3name = Kim;    (X)
+var name3 = Kim;    (O)
+</code></pre>
+                </div>
+                <li>공백을 사용할 수 없습니다. : 밑줄(_)은 사용 가능하지만, 하이픈(-)은 사용할 수 없습니다.</li>
+                <div class="code">
+                    <pre><code>var i-d card = Kim;   (X)
+var i_dCard = Kim;   (O)
+</code></pre>
+                </div>
+                <li>특수기호를 사용할 수 없습니다. : 달러기로($)는 사용 가능합니다.</li>
+                <div class="code">
+                    <pre><code>var name? = Kim;    (X)
+var $name = Kim;    (O)
+</code></pre>
+                </div>
+                <li>키워드를 사용할 수 없습니다.</li>
+                <div class="code">
+                    <pre><code>var function = 100; (X)
+var f = 100;            (O)
+</code></pre>
+                </div>
+                <br>
+                <strong>키워드란?</strong>자바스크립트가 처음 만들어질 때 정해진 특별한 의미가 있는 단어를 말합니다. 다음 표는 자바 스크립트의 키워드입니다.
+                <table>
+                    <tr>
+                        <td>break</td>
+                        <td>else</td>
+                        <td>instanceof</td>
+                        <td>true</td>
+                        <td>case</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>new</td>
+                        <td>try</td>
+                        <td>catch</td>
+                        <td>finally</td>
+                        <td>new</td>
+                        <td>null</td>
+                    </tr>
+                    <tr>
+                        <td>typeof</td>
+                        <td>continue</td>
+                        <td>for</td>
+                        <td>return</td>
+                        <td>var</td>
+                        <td>default</td>
+                    </tr>
+                    <tr>
+                        <td>function</td>
+                        <td>switch</td>
+                        <td>void</td>
+                        <td>delete</td>
+                        <td>if</td>
+                        <td>this</td>
+                    </tr>
+                    <tr>
+                        <td>while</td>
+                        <td>do</td>
+                        <td>in</td>
+                        <td>throw</td>
+                        <td>with</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </ul>
+
+            <h3>단어를 조합할 때 규칙</h3>
+            <ul>
+                <li>언더스코어 노테이션 : (color_top) : 중간에 '_'를 사용합니다.</li>
+                <li>캐멜 노테이션 : (colorTop) : 두번째 단어의 첫 글자를 대문자로 사용합니다.</li>
+                <li>파스칼 노테이션 : (ColorTop) : 모든 단어의 첫 글자를 대문자로 사용합니다.</li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+</html>
