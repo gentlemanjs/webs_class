@@ -50,6 +50,25 @@ a {
     color: #000;
 }
 
+/* top */
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.top a {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
+
 /* header */
 
 #header {
@@ -103,6 +122,7 @@ a {
     padding: 40px;
 }
 
+/* list */
 .list {
     padding-bottom: 40px;
     border-bottom: 1px dotted #cdcdcd;
@@ -112,6 +132,7 @@ a {
     font-size: 18px;
     line-height: 1.8;
 }
+
 
 @media (max-width: 800px) {
     #main {
@@ -126,6 +147,23 @@ a {
         font-size: 14px;
         line-height: 1.6;
     }
+}
+
+/*note */
+.note {
+    padding: 40px 0;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.note a {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 7px 15px 5px 15px;
+    display: inline-block;
+}
+.note a:hover {
+    text-decoration: underline;
 }
 
 /* script */
@@ -163,5 +201,9 @@ a {
     .script .sample h3 {
         font-size: 14px;
         padding: 10px 15px 8px 15px;
+    }
+
+    .script .sample .code pre {
+        font-size: 14px;
     }
 }
