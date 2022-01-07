@@ -161,6 +161,7 @@ a {
     border-radius: 20px;
     padding: 7px 15px 5px 15px;
     display: inline-block;
+    margin-bottom: 5px;
 }
 .note a:hover {
     text-decoration: underline;
