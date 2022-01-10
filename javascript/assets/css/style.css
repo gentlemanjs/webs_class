@@ -63,7 +63,8 @@ th {
     background-color: #c3eaff;
 }
 
-tr,td {
+tr,
+td {
     border: 1px solid #444444;
     padding: 2px;
     text-align: center;
