@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <link rel="stylesheet" href="assets/js/prism.js">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li class="active"><a href="reference05.html">연산자</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>연산자</h2>
+            <p>연산의 방식을 결정하는 기호를 '연산자'라고 부르고 연산되는 대상을 '피연산자'라고 합니다. 우리에게 가장 익숙한 +, -, *, / 이 가장 대표적인 예라고 볼 수 있습니다.
+            </p>
+
+            <h3>산술연산자</h2>
+                <p>기본적인 산술 연산자는 덧셈(+), 뺄셈 (-), 곱셈 (*), 나눗셈 (/)이 있습니다. 이밖에도 나머지(%), 거듭제곱(**) 연산 정도가 있는데, 일반적인 산술연산자는 피연산자
+                    2개 사이에서 이항 연산자로도 활용되고, 특별히 ++(증가), --(감소) 연산자는 피연산자 앞이나 뒤에 붙으면서 단항 연산자로도 활용됩니다.
+                </p>
+                <table>
+                    <tr>
+                        <th>종류</th>
+                        <th>기본형</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>A+B</td>
+                        <td>더하기</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>A-B</td>
+                        <td>빼기</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>A*B</td>
+                        <td>곱하기</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>A/B</td>
+                        <td>나누기</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>A%B</td>
+                        <td>나머지</td>
+                    </tr>
+                </table>
+                다음 예제를 통해 더하기, 빼기, 곱하기, 나누기, 나머지 연산자를 어떻게 사용하는지 확인해 보세요.
+                <div class="code">
+                    <pre><code>06:  &lt;script&gt;
+07:     var num1 = 15;
+08:     var num2 = 2;
+09:     var result;
+10:     result = num1 + num2;
+11:     document.write(result, "&lt;br&gt;"); // 17
+12:     result = num1 - num2;
+13:     document.write(result, "&lt;br&gt;"); // 13
+14:     result = num * num2;
+15:     document.write(result, "&lt;br&gt;"); // 30
+16:     result = num / num2;
+17:     document.write(result, "&lt;br&gt;"); // 7.5
+18:     result = num % num2;
+19:     document.write(result, "&lt;br&gt;"); // 1
+20: &lt;/script&gt;
+</pre></code>
+                </div>
+
+                <h3>문자 결합 연산자</h3>
+                <p>
+                    일반적으로 문자열 연산자는 두 개의 문자열 값을 피연산자 받고(이항 연산자) 두 문자열이 합쳐진 새로운 문자열을 반환합니다. 두 문자열 값을 연결한다고 해서 연결 연산자라고도
+                    부릅니다. 추가적으로 문자열 값이 할당된 변수를 이용하면 복합 할당 연산자 +=로도 문자열을 연결할 수 있습니다.
+                </p>
+                <div class="code">
+                    <pre><code>06:  &lt;script&gt;
+07:     var t1 = "학교종이";
+08:     var t2 = "땡땡땡";
+09:     var t3 = 8282;
+10:     var t4 = "어서 모이자";
+11:     var result;
+12:
+13:     result = t1 + t2 + t3 + t4;
+14:     document.write(result); // "학교종이 땡땡땡 8282 어서 모이자"
+15:     document.write(t1 += "땡땡땡"); // "학교종이 땡땡땡"
+15: &lt;/script&gt;
+</pre></code>
+                </div>
+                <h3>대입 연산자</h3>
+                <p>
+                    대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. 복합 대입 연산자(+=, -=, *=, /=, %=)는 산술 연산자와 대입 연산자가 복합적으로 적용된 것을
+                    말합니다. 다음은 대입 연산자의 종류입니다.
+                </p>
+                <table>
+                    <tr>
+                        <th>종류</th>
+                        <th>풀이</th>
+                    </tr>
+                    <tr>
+                        <td>A = B</td>
+                        <td>A = B</td>
+                    </tr>
+                    <tr>
+                        <td>A += B</td>
+                        <td>A = A + B</td>
+                    </tr>
+                    <tr>
+                        <td>A *= B</td>
+                        <td>A = A*B</td>
+                    </tr>
+                    <tr>
+                        <td>A /= B</td>
+                        <td>A = A/B</td>
+                    </tr>
+                    <tr>
+                        <td>A %= B</td>
+                        <td>A = A%B</td>
+                    </tr>
+                </table>
+                다음 예제를 보며 대입 연산자에 대해 알아보겠습니다.
+                <div class="code">
+                    <pre><code>06:  &lt;script&gt;
+07:     var num1 = 10;
+08:     var num2 = 3;
+09:     
+10:     num1 += num2;     //num1 = num1(10) + num2(3);
+11:     document.write(num1, "&lt;br&gt;");   // 13
+12:     
+13:     num1 -= num2;     //num1 = num1(13) + num2(3);
+13:     document.write(num1, "&lt;br&gt;");   // 10
+14:     
+15:     num *= num2;     //num1 = num1(10) + num2(3);
+16:     document.write(num1, "&lt;br&gt;");   // 30
+17:     
+19:     num %= num2;     //num1 = num1(30) + num2(3);
+20:     document.write(num1, "&lt;br&gt;");   // 0
+21: &lt;/script&gt;
+</pre></code>
+                </div>
+                <h3>증감 연산자</h3>
+                <p>
+                    증감 연산자에는 숫져항 데이터를 1씩 증가시키는 증가 연산자(++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다. 증감 연산자는 앞에서 배운 연산자와는 달리 피연산자가
+                    한 개만 필요한 단항 연산자입니다. 증감 연산자는 변수의 어느 위치에 오는가에 따라 결괏값이 달라집니다.
+                </p>
+                <div class="code">
+                    <pre><code>기본형 : 1. 변수의 값을 1만큼 감소시킵니다.
+            변수--; 또는 --변수;
+
+            2. 변수의 값을 1만큼 증가시킵니다.
+            변수++; 또는 ++변수;
+</pre></code>
+                </div>
+                <br>
+                다음은 증감 연산자를 사용해 변수에 저장된 숫자를 증가하거나 감소하여 문서에 출력하는 예제입니다.
+                <div class="code">
+                    <pre><code>06:  &lt;script&gt;
+07:     var num1 = 10;
+08:     var num2 = 20;
+09:     var result;
+10:     
+11:     num1--;     // 9
+12:     document.write(num1, "&lt;br&gt;");   
+13:     
+14:     num1++;     // 10
+15:     document.write(num1, "&lt;br&gt;");   
+16:     
+17:     result = num2++;        // result:20, num2:21
+18:     document.write(result, "&lt;br&gt;");  
+19:     
+20:     result = ++num2;        // result:22, num2:22
+21:     document.write(num1, "&lt;br&gt;");   // 0
+22: &lt;/script&gt;
+</pre></code>
+                </div>
+
+                <h3>비교 연산자</h3>
+                <p>
+                    두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다. 연산된 결괏값은 true(참)또는 false(거짓)로 논리형 데이터를 반환합니다. 다음은 비교 연산자의 종류입니다.
+                </p>
+                <table>
+                    <tr>
+                        <th>종류</th>
+                        <th>설명</th>
+                        <th>비고</th>
+                    </tr>
+                    <tr>
+                        <td>A > B</td>
+                        <td>A가 B보다 크다.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A < B</td>
+                        <td>A가 B보다 작다.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A >= B</td>
+                        <td>A가 B보다 크거나 같다.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A <= B</td>
+                        <td>A가 B보다 작거나 같다.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A == B</td>
+                        <td>A와 B는 같다..</td>
+                        <td>숫자를 비교할 경우 자료형(type)은 숫자형이든 문자형이든 상관하지 않고 표기된 숫자만 일치하면 true를 반환합니다. 가령, 숫자형 10과 문자형 "10"은 같은 것으로 인식되어 true를 반환합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>A != B</td>
+                        <td>A와 B는 다르다.</td>
+                        <td></td>
+                    </tr>
+
+                </table>
+                <h3>논리 연산자</h3>
+        </div>
+    </main>
+
+</body>
+
+</html>

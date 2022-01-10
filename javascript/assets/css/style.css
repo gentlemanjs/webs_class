@@ -53,15 +53,22 @@ a {
 table {
     width: 50%;
     height: 200px;
-    margin-top: 20px;
+    margin: 20px 0;
     border: 1px solid #444444;
     border-collapse: collapse;
 }
-tr, td {
+
+th {
+    border: 1px solid #444444;
+    background-color: #c3eaff;
+}
+
+tr,td {
     border: 1px solid #444444;
     padding: 2px;
     text-align: center;
 }
+
 /* top */
 .top {
     position: fixed;
@@ -154,7 +161,7 @@ tr, td {
     .list {
         padding-bottom: 20px;
     }
-    
+
     .list ul li {
         font-size: 14px;
         line-height: 1.6;
@@ -244,11 +251,13 @@ tr, td {
     font-weight: 500;
     margin: 40px 0 5px;
 }
+
 .doc h3 {
     font-weight: 500;
     margin: 20px 0 5px;
     text-decoration: underline;
 }
+
 .doc li {
     list-style: disc;
     margin-left: 20px;
@@ -263,15 +272,48 @@ tr, td {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
 }
+
 .doc .code {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
     background: #f4f8fa;
 }
+
 .doc strong {
     background: #c3eaff;
     font-weight: normal;
     border-radius: 20px;
     padding: 2px 15px 0px 15px;
     display: inline-block;
+}
+
+/* result */
+.result h4 {
+    background: #F2F2F2;
+    padding: 10px 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+}
+
+.result div {
+    background: #272822;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    line-height: 1.;
+}
+
+@media (max-width: 800px) {
+    .result h4 {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .result div {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
