@@ -347,7 +347,7 @@ td {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    border: 8px solid tomato;
+    border: 8px solid  #0243F1;
     box-sizing: border-box;
     border-radius: 20px;
     position: relative;
@@ -357,7 +357,7 @@ td {
     content: '';
     width: 100%;
     height: calc(100vh - 16px);
-    border: 8px solid pink;
+    border: 8px solid #50B5F9;
     box-sizing: border-box;
     position: absolute;
     left: 0; top: 0;
@@ -367,7 +367,7 @@ td {
 
 .javascript h1{
     font-size: 8vw;
-    color: tomato;
+    color:  #0243F1;
 }
 
 .javascript .menu {
@@ -379,8 +379,8 @@ td {
 }
 
 .javascript .menu li a {
-    border: 1px dashed tomato;
-    color: tomato;
+    border: 1px dashed  #0243F1;
+    color:  #0243F1;
     border-radius: 50px;
     padding: 10px 30px;
     display: inline-block;
@@ -388,7 +388,7 @@ td {
 }
 
 .javascript .menu li a:hover {
-    background: tomato;
+    background:  #0243F1;
     color: white;
 }
 
