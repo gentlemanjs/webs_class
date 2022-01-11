@@ -52,6 +52,7 @@ a {
 
 table {
     width: 50%;
+    min-width: 500px;
     height: 200px;
     margin: 20px 0;
     border: 1px solid #444444;
@@ -304,7 +305,7 @@ td {
         padding: 10px 15px;
     }
     .doc .table {
-        overflow-x: scroll;
+        overflow-x: auto;
     }
 }
 
@@ -336,5 +337,64 @@ td {
     .result div {
         font-size: 14px;
         padding: 15px;
+    }
+}
+
+/* javascript */
+.javascript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    border: 8px solid tomato;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: relative;
+}
+
+.javascript::before {
+    content: '';
+    width: 100%;
+    height: calc(100vh - 16px);
+    border: 8px solid pink;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+    border-radius: 13px;
+}
+
+.javascript h1{
+    font-size: 8vw;
+    color: tomato;
+}
+
+.javascript .menu {
+    text-align: center;
+}
+
+.javascript .menu li {
+    display: inline;
+}
+
+.javascript .menu li a {
+    border: 1px dashed tomato;
+    color: tomato;
+    border-radius: 50px;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.javascript .menu li a:hover {
+    background: tomato;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .javascript h1 {
+        font-size: 55px;
+        padding: 10px 0;
     }
 }
