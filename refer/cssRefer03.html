@@ -15,7 +15,42 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        .box {
+            background-color: #f5f5f5;
+            border: 3px solid #00db72;
+            padding: 10px;
+            margin: 1em 0;
+        }
+
+        .wrapper {
+            font-size: 1em;
+        }
+
+        .px {
+            width: 200px;
+        }
+
+        .vw {
+            width: 10vw;
+        }
+
+        .em {
+            width: 10em;
+        }
+
+        .link {
+            text-decoration: none;
+            background-color: #00db72;
+            color: #fff;
+            padding: 5px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,12 +76,117 @@
 
         <div class="refer">
             <div class="doc">
-                <h3>CSS 단위</h3>
-                <p>..........</p>
-            </div>
+                <h3>절대길이 단위</h3>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>단위</th>
+                            <th>이름</th>
+                            <th>다음과 동일함</th>
+                        </tr>
+                        <tr>
+                            <td>cm</td>
+                            <td>센티미터</td>
+                            <td>1cm = 96px/2.54</td>
+                        </tr>
+                        <tr>
+                            <td>mm</td>
+                            <td>밀리미터</td>
+                            <td>1mm = 1/10th of 1cm</td>
+                        </tr>
+                        <tr>
+                            <td>Q</td>
+                            <td>4분의 1 밀리미터</td>
+                            <td>1Q = 1/40th of 1cm</td>
+                        </tr>
+                        <tr>
+                            <td>in</td>
+                            <td>인치</td>
+                            <td>1in = 2.54cm = 96px</td>
+                        </tr>
+                        <tr>
+                            <td>pc</td>
+                            <td>Picas</td>
+                            <td>1pc = 1/16th of 1in</td>
+                        </tr>
+                        <tr>
+                            <td>pt</td>
+                            <td>포인트</td>
+                            <td>1pt = 1/72th of 1in</td>
+                        </tr>
+                        <tr>
+                            <td>px</td>
+                            <td>픽셀</td>
+                            <td>1px = 1/96th of 1in</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>이러한 값의 대부분은 화면 출력이 아닌 인쇄에 사용될 때 더 유용합니다. 일반적으로 화면에 사용하는 값은 px입니다.
+                </p>
 
-        </div>
-        <!-- //refer -->
+                <h3>상대 길이 단위</h3>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>단위</th>
+                            <th>관련 사항</th>
+                        </tr>
+                        <tr>
+                            <td>em</td>
+                            <td>요소의 글꼴 크기</td>
+                        </tr>
+                        <tr>
+                            <td>ex</td>
+                            <td>요소 글꼴의 x-heigth</td>
+                        </tr>
+                        <tr>
+                            <td>ch</td>
+                            <td>요소 글꼴의 glyph"0"의 사전 길이(너비)</td>
+                        </tr>
+                        <tr>
+                            <td>rem</td>
+                            <td>루트 요소의 글꼴 크기</td>
+                        </tr>
+                        <tr>
+                            <td>lh</td>
+                            <td>요소의 라인 높이</td>
+                        </tr>
+                        <tr>
+                            <td>vw</td>
+                            <td>viewport너비의 1%</td>
+                        </tr>
+                        <tr>
+                            <td>vh</td>
+                            <td>viewport 높이의 1&</td>
+                        </tr>
+                        <tr>
+                            <td>vmin</td>
+                            <td>viewport의 작은 치수의 1%</td>
+                        </tr>
+                        <tr>
+                            <td>vmax</td>
+                            <td>viewport의 큰 치수의 1%</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>상대 길이 단위는 다른 요소(상위 요소의 글꼴 크기 또는 viewport크기)와 관련이 있습니다. 상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여
+                    조정되도록 신중하게 계획할 수 있습니다.</p>
+
+                <h3>* 예제</h3>
+                <div class="wrapper">
+                    <div class="box px">I am 200px wide</div>
+                    <div class="box vw">I am 10vw wide</div>
+                    <div class="box em">I am 10em wide</div>
+                </div>
+                <ul>
+                    <li>첫 번째 박사에는 <strong>width 픽셀단위</strong>로 설정되어 있습니다. 절대 단위로서 이 너비는 다른 사항에 관계없이 동일하게 유지됩니다.</li>
+                    <li>두 번째 박스의 너비는 <strong>vw(viewport)단위</strong>로 설정되어 있습니다. 이 값은 브라우저 창의 너비를 변경하면 박스의 크기가 변경됩니다.</li>
+                    <li>세 번째 박스는 <strong>em단위</strong>를 사용합니다. 글꼴 크기에 상대적 입니다.</li>
+                </ul>
+                <br>
+                <div><a class="link" href="https://mdn.github.io/css-examples/learn/values-units/length.html">코드보기</a></div>
+            </div>
+            <!-- //refer -->
     </main>
 
     <!-- script -->
