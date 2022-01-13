@@ -26,6 +26,7 @@
                 <li><a href="reference04.html">for문</a></li>
                 <li><a href="reference05.html">연산자</a></li>
                 <li class="active"><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
             </ul>
         </nav>
     </header>
@@ -73,7 +74,7 @@ if(num&lt;500){         // true를 반환합니다.
                 입력되었을 때 반환되는 결과입니다.<br>
                 다음 값이 조건식에 입력되면 false를 반환하지만 그 밖의 값은 true로 인식합니다.</p>
             <div class="line">0, null, ""(빈문자), undefined</div>
-            <h3>else문</h3>
+            <h3 class=mt50>else문</h3>
             <p>else문은 조건식을 만족할(true)경우와 만족하지 않을(false)경우에 따라 실행되는 코드가 달라집니다. 즉, 두 가지 결과가 나올 수 있습니다.<br>
                 다음은 조건식의 만족 여부에 따라 실행되는 코드가 달라지는 else문의 기본형 입니다.</p>
             <div class="code">
@@ -96,7 +97,7 @@ if(num&lt;500){         // true를 반환합니다.
 13:         }         
 14:     &lt;/script&gt;</code></pre>
             </div>
-            <h3>else if문</h3>
+            <h3 class=mt50>else if문</h3>
             <p>else if문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어 져 있습니다.<br><br>
                 다음은 else if문의 기본형입니다. 가장 위에 있는 조건식1부터 5까지 차례로 조건 검사를 하면서 만족(true)하는 값이 나오면 그에 해당하는 코드를 실행하고 조건문을 종료합니다.
                 조건식 중 만족(true)하는 값이 하난도 없으면 else문의 중괄호{}에 있는 코드를 실행합니다.</p>
@@ -118,17 +119,52 @@ if(num&lt;500){         // true를 반환합니다.
             다음은 질의응답 창을 이용하여 "현재는 몇 월입니까?"를 묻고, else if 문을 사용해 현재 월에 해당하는 계절과 관련된 문구가 출력되도록 작성한 예제입니다.
             <div class="code">
                 <pre><code>06:    &lt;script&gt;
-07:         var num = prompt("당신이 좋아하는 숫자는?", "0");
+07:         var mon = prompt("현재는 몇 월입니까?", "0");
 08:
-09:         if(num % 2 == 0) {      // 짝수일 경우에 실행
-10:             document.write("당신이 좋아하는 숫자는 짝수입니다.");
-11:         } else {                      // 홀수일 경우에 실행
-12:             document.write("당신이 좋아하는 숫자는 홀수입니다.");    
-13:         }         
-14:     &lt;/script&gt;</code></pre>
+09:         if(mon &gt;= 9 && mon &lt;= 11){             // 9 ~ 11
+10:             document.write("독서의 계절 가을이네요!!");
+11:         } else if(mon &gt;= 6 && mon &lt;= 8){      // 6 ~ 8
+12:             document.write("여행가기 좋은 여름이네요!!");
+13:         } else if(mon &gt;= 3 && mon &lt;= 5){      // 3 ~ 5
+14:             document.write("햇살 가득한 봄이네요!!");
+15:         } else {                                           // 나머지 입력
+16:             document.write("스키의 계절 겨울이네요!!");
+17:         }
+18:     &lt;/script&gt;</code></pre>
             </div>
-            <h3>중첩 if문</h3>
-
+            <h3 class=mt50>중첩 if문</h3>
+            <p>조건문 안에 조건문이 있으면 중첩 if문이라고 합니다. 중첩 if문의 기본형은 다음과 같습니다.</p>
+            <div class="code">
+                <pre><code>if(조건식1) {
+    if(조건식2){
+        자바스크립트 코드;
+    }
+}</code></pre>
+            </div>
+            중첩 if 문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다. 만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에
+            있는 코드만 실행하고 종료됩니다.<br><br>
+            다음은 중첩 if문을 사용해 아이디와 비밀번호가 일치했을 때 환영 문구가 출력되도록 작성한 예제입니다. 비밀번호가 일치하지 않을 경우에는 브라우저가 새로고침이 되도록 했습니다.
+            <div class="code">
+                <pre><code>06:    &lt;script&gt;
+07:         var id = "easy1004";        // 아이디
+07:         var pw = "112233";          // 비밀번호
+07:         
+07:         var user_id = prompt("아이디는?", "");      // 아이디 입력
+07:         var user_pw = prompt("비밀번호는?, "");     // 비밀번호 입력
+08:
+09:         if(id == user_id) {
+10:             if(pw == user_pw) {
+11:                 document.write(user_id+"님 반갑습니다!");
+12:             } else {
+13:                 alert("비밀번호가 일치하지 않습니다.");
+14:                 location.reload();
+15:             }
+16:         } else {
+16:             alert("아이디가 일치하지 않습니다.");
+16:             location.reload();
+17:         }
+18:     &lt;/script&gt;</code></pre>
+            </div>
         </div>
     </main>
 

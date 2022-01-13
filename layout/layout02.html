@@ -5,55 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout01</title>
-
+    <title>Layout02</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-
         }
 
         body {
-            background-color: #FFF3E0;
+            background-color: #F1F8E9;
         }
 
         #container {
             width: 1200px;
-            height: 1080px;
             margin: 0 auto;
         }
 
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #FFE0B2;
+            background-color: #CEE5CB;
         }
 
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #FFCC80;
-        }
-
-        #aside {
-            width: 400px;
-            height: 780px;
-            background-color: #FFB74D;
-            float: left;
+            background-color: #AFD5AB;
         }
 
         #contents {
-            width: 800px;
+            width: 1200px;
+        }
+
+        #contents .left {
+            width: 300px;
             height: 780px;
-            background-color: #FFA726;
+            background-color: #91C58A;
             float: left;
         }
+
+        #contents .center {
+            width: 600px;
+            height: 780px;
+            background-color: #7BB973;
+            float: left;
+        }
+
+        #contents .right {
+            width: 300px;
+            height: 780px;
+            background-color: #67AD5B;
+            float: left;
+        }
+
 
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #FF9800;
+            background-color: #5D9E51;
             clear: both;
         }
     </style>
@@ -63,8 +72,11 @@
     <div id="container">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="contents"></div>
+        <div id="contents">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
         <div id="footer"></div>
     </div>
 </body>
