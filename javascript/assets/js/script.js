@@ -20,6 +20,6 @@ for (let i = 1; i <= 15; i++) {
 document.querySelectorAll(".result h4").forEach(function(el){
     //console.log(el)
     el.addEventListener("click", function(){
-        alert("클릭");
+        // alert("클릭");
     })
 });
