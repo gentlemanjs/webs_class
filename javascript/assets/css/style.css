@@ -86,9 +86,30 @@ td {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 10000;
 }
 
 .top a {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
+
+/* back */
+.back {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10000;
+}
+
+.back a {
     color: #fff;
     width: 60px;
     height: 60px;
@@ -123,6 +144,16 @@ td {
     padding: 12px 30px 10px 30px;
     display: inline-block;
     margin-bottom: 10px;
+}
+
+#header nav ul:nth-child(2) li a {
+    font-size: 14px;
+    padding: 8px 20px 6px 20px;
+}
+
+#header nav ul:nth-child(3) li a {
+    font-size: 14px;
+    padding: 8px 20px 6px 20px;
 }
 
 #header nav ul li.active a {

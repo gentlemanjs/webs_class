@@ -14,8 +14,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="../javascript/assets/css/prism2.css">
 
+    <!-- script -->
+    <script src="../javascript/assets/js/prism2.js"></script>
 </head>
 
 <body>
@@ -35,6 +37,7 @@
                 <li><a href="cssRefer02.html">Block/Inline</a></li>
                 <li><a href="cssRefer03.html">CSS 단위</a></li>
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
             </ul>
         </div>
         <!-- //menu -->
@@ -42,7 +45,8 @@
         <div class="refer">
             <div class="doc">
                 <h3>CSS란?</h3>
-                <p><strong>Cascading Style Sheets</strong>는 documents가 사용자에게 어떻게 보여질까를 기술하는 언어이다. HTML이 정보를 표현한다면 CSS는 HTML문서를 시작적으로 이쁘게 꾸며주는 역할을 합니다.</p>
+                <p><strong>Cascading Style Sheets</strong>는 documents가 사용자에게 어떻게 보여질까를 기술하는 언어이다. HTML이 정보를 표현한다면 CSS는
+                    HTML문서를 시작적으로 이쁘게 꾸며주는 역할을 합니다.</p>
 
                 <h3>CSS 주석 표시</h3>
                 <p>CSS에서 주석을 표시할 때 다음과 같이 사용합니다.</p>
@@ -52,7 +56,8 @@
 
                 <h3>CSS 선언 방법</h3>
                 <h4>내부 스타일</h4>
-                <p>HTML 파일 안에 &lt;style&gt; 태그로 스타일을 작성하는 방식입니다. 이 방식은 번들링 하지 않는 프로젝트에서는 대부분 HTML, CSS, JS 파일을 나누어 관리하는 것이 일반적 이므로 번들링하지 않는다면 자주 사용되지 않는 방식입니다.</p>
+                <p>HTML 파일 안에 &lt;style&gt; 태그로 스타일을 작성하는 방식입니다. 이 방식은 번들링 하지 않는 프로젝트에서는 대부분 HTML, CSS, JS 파일을 나누어 관리하는
+                    것이 일반적 이므로 번들링하지 않는다면 자주 사용되지 않는 방식입니다.</p>
                 <div class="code">
                     <pre><code>&lt;style&gt;
     div {
@@ -69,7 +74,8 @@
                 </div>
 
                 <h4>인라인 스타일</h4>
-                <p>요소의 style 속성에 직접 스타일을 작성하는 방식입니다. 우선순위상 우선하기 때문에 공통기능에 대해서 따로 파일로 관리하는 경우 변경이 불가능하기 때문에 유지보수에 어려움이 있는 방식입니다. 그렇기 때문에 권장하지 않는 방식입니다.</p>
+                <p>요소의 style 속성에 직접 스타일을 작성하는 방식입니다. 우선순위상 우선하기 때문에 공통기능에 대해서 따로 파일로 관리하는 경우 변경이 불가능하기 때문에 유지보수에 어려움이 있는
+                    방식입니다. 그렇기 때문에 권장하지 않는 방식입니다.</p>
                 <div class="code">
                     <pre><code>&lt;div style="color:red; margin:20px;"&gt;
 ....

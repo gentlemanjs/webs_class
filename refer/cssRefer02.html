@@ -14,8 +14,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="../javascript/assets/css/prism2.css">
 
+    <!-- script -->
+    <script src="../javascript/assets/js/prism2.js"></script>
 </head>
 
 <body>
@@ -35,6 +37,7 @@
                 <li class="active"><a href="cssRefer02.html">Block/Inline</a></li>
                 <li><a href="cssRefer03.html">CSS 단위</a></li>
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
             </ul>
         </div>
         <!-- //menu -->
@@ -71,10 +74,12 @@
                     <a href="#" style="background-color: #00db72; text-decoration: none; color: #000;">&lt;a&gt;</a>
                 </div>
                 <h3>Inline과 Block의 합성 속성</h3>
-                <p><strong>inline-block</strong>이라는 속성은, 인라인과 같이 한 줄에 표현하면서도 margin,width,height 속성을 정의하면 표현해 줍니다. 이 속성은 작성자의 CSS를 통해 inline-block임을 선언해 주어야만 합니다.</p>
+                <p><strong>inline-block</strong>이라는 속성은, 인라인과 같이 한 줄에 표현하면서도 margin,width,height 속성을 정의하면 표현해 줍니다. 이 속성은
+                    작성자의 CSS를 통해 inline-block임을 선언해 주어야만 합니다.</p>
                 <h3>태그 표시기 주의할 점</h3>
                 <p>Block은 Inline을 포괄하는 더 큰 개념입니다. 따라서 HTML을 마크업 할 때는 Inline속성의 태그 안에 Block 속성 태그를 넣으면 문법 오류가 됩니다.</p>
-                <div class="code"><pre><code>BAD
+                <div class="code">
+                    <pre><code>BAD
 &lt;span&gt;&lt;p&gt;문장입니다.&lt;/p&gt;&lt;/span&gt;
 
 GOOD

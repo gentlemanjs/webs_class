@@ -54,6 +54,7 @@ body {
     top: 0;
     width: 100%;
     background-color: #F5F5F5;
+    z-index: 10000;
 }
 
 #header h1 {

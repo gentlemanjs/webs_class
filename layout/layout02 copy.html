@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout02</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #F1F8E9;
+    }
+
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #CEE5CB;
+    }
+
+    #nav {
+        width: 1200px;
+        height: 100px;
+        background-color: #AFD5AB;
+    }
+
+    #main {
+        width: 1200px;
+        display: flex;
+    }
+
+    #main .section-left {
+        width: 300px;
+        height: 780px;
+        background-color: #91C58A;
+    }
+
+    #main .section-center {
+        width: 600px;
+        height: 780px;
+        background-color: #7BB973;
+    }
+
+    #main .section-right {
+        width: 300px;
+        height: 780px;
+        background-color: #67AD5B;
+    }
+
+    #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #5D9E51;
+    }
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+           <section class="section-left"></section>
+           <section class="section-center"></section>
+           <section class="section-right"></section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
