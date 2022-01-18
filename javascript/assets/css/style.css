@@ -81,6 +81,12 @@ td {
     text-align: center;
 }
 
+img {
+    width: 100%;
+    vertical-align: top;
+    /* 이미지 여백 방지 */
+}
+
 /* top */
 .top {
     position: fixed;
@@ -259,6 +265,59 @@ td {
     font-weight: 500;
 }
 
+.script .sample .view {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2%;
+    border: 1px solid #E6E6E6
+}
+
+.script .sample .view > div {
+    width: 16%;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+}
+
+.script .sample .view > div.selected {
+    border: 4px solid red;
+    background-color: red;
+    border-radius: 1.3em;
+}
+
+.script .sample .view > div.blue {
+    border: 4px solid blue;
+    background-color: blue;
+    border-radius: 1.3em;
+}
+
+.script .sample .view > div.selected img {
+    opacity: 0.3;
+}
+
+.script .sample .view > div img {
+    border-radius: 1em;
+}
+
+.script .sample .btn {
+    border: 1px solid #E6E6E6;
+    border-top: 0;
+    padding: 2%;
+}
+
+.script .sample .btn a {
+    border: 1px solid #333;
+    border-radius: 2rem;
+    padding: 0.8em 1.8em;
+    display: inline-block;
+    margin: 0.3em;
+}
+
+.script .sample .btn a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 .script .sample .code pre {
     margin: 0 !important;
     border-radius: 0 0 5px 5px;
@@ -276,6 +335,11 @@ td {
     .script .sample h3 {
         font-size: 14px;
         padding: 10px 15px 8px 15px;
+    }
+
+    .script .sample .view > div {
+        width: 48%;
+        margin: 1%;
     }
 
     .script .sample .code pre {
@@ -361,7 +425,7 @@ td {
     font-size: 16px;
 }
 
-.result > div {
+.result>div {
     background: #272822;
     padding: 20px;
     color: #fff;
@@ -369,6 +433,16 @@ td {
     font-size: 16px;
     line-height: 1.4;
     display: none;
+}
+
+.result>display{
+    background: #272822;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    line-height: 1.4;
+    /* display: none; */
 }
 
 @media (max-width: 800px) {
@@ -449,11 +523,13 @@ td {
     width: 100%;
     margin: 100px auto;
 }
+
 .test h2 {
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.6;
 }
+
 .test h3 {
     font-size: 1.6rem;
     margin-bottom: 0.5em;
@@ -461,10 +537,12 @@ td {
     line-height: 1.6;
     margin-top: 3em;
 }
+
 .test p {
     font-size: 1.2rem;
     line-height: 1.8;
 }
+
 .test .code {
     margin-top: 1em;
 }
