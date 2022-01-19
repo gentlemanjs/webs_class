@@ -421,10 +421,13 @@ img {
     padding: 10px 20px;
     font-weight: normal;
     margin-top: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
 }
-
+.result.display h4 {
+    border-radius: 5px 5px 0 0;
+}
 .result>div {
     background: #272822;
     padding: 20px;
@@ -435,13 +438,8 @@ img {
     display: none;
 }
 
-.result .display{
-    background: #272822;
-    padding: 20px;
-    color: #fff;
+.result.display > div{
     border-radius: 0 0 5px 5px;
-    font-size: 16px;
-    line-height: 1.4;
     display: block;
 }
 

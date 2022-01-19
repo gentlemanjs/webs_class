@@ -2,6 +2,6 @@
 
 document.querySelectorAll(".result").forEach(function(el){
     addEventListener("click", function(){
-        el.children[1].classList.toggle("display");
+        el.classList.toggle("display");
     });
 })
