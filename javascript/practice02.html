@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice01-1</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
+
+    <!-- script -->
+    <script src="assets/js/prism2.js"></script>
+</head>
+
+<body>
+
+    <div class="back"><a href="practice.html">Back</a></div>
+    <main id="main">
+        <div class="test">
+            <h2>1. 구구단 출력하기</h2>
+
+            <!-- 01 -->
+            <h3>1.1 for문을 이용해서 1단부터 9단까지 출력하시오!</h3>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    for (let i = 2; i<=9; i++){
+        document.write("&lt;br&gt;")
+        
+        for (let j = 1; j<=9; j++){
+            let sum = i * j;
+            document.write(i + " X " + j + " = " + sum, "&lt;br&gt;")
+        }
+    }
+}</code></pre>
+            </div>
+            <div class="result result01">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //01 -->
+
+            <!-- 02 -->
+            <h3>1.2 while문을 이용해서 1단부터 9단까지 출력하시오!</h3>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    let i = 2
+    while(i <= 9){
+        document.write("&lt;br&gt;")
+
+        let j = 1
+        while(j <= 9){
+            let sum = i * j;
+            document.write(i + " X " + j + " = " + sum, "&lt;br&gt;")
+            j++ 
+        };
+        i++
+    }
+}</code></pre>
+            </div>
+            <div class="result result02">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //02 -->
+
+            <!-- 03 -->
+            <h3>3. 사용자가 원하는 단을 받아 출력하시오!</h3>
+            <p>조건 : 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="pBtn btn03">클릭</a></p>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+
+}</code></pre>
+            </div>
+            <div class="result result03">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //03 -->
+
+    </main>
+
+    <script>
+        // {
+
+        // // for문을 이용해서 구구단 출력
+        {
+            for (let i = 2; i <= 9; i++) {
+                document.write("<br>")
+
+                for (let j = 1; j <= 9; j++) {
+                    let sum = i * j;
+                    document.querySelector(".result01 > div").innerHTML += i + " X " + j + " = " + sum + "<br>"
+                }
+            }
+        }
+
+        // // while문을 이용해서 구구단 출력
+        {
+            let i = 2
+            while (i <= 9) {
+                document.write("<br>")
+                let j = 1
+                while (j <= 9) {
+                    let sum = i * j;
+                    document.querySelector(".result02 > div").innerHTML += i + " X " + j + " = " + sum + "<br>"
+                    j++
+                };
+                i++
+            }
+        }
+
+
+        // 3. 사용자가 원하는 단을 받아 출력하시오!
+        {
+            let num, result;
+
+            //버튼을 클릭하면 경고창을 띄워주세요!
+
+            document.querySelector(".btn03").addEventListener("click", () => {
+                num = prompt("출력할 구구단 숫자를 입력해 주세요!!", "2")
+                // console.log(num);
+
+                for (let i = 1; i <= 9; i++) {
+                    result = num + " X " + i + " = " + (num * i) + "<br>";
+                    console.log(result);
+                    document.querySelector(".result03 > div").innerHTML += result;
+                }
+            });
+
+        }
+    </script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

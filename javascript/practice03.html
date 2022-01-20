@@ -18,7 +18,7 @@
         }
 
         table td {
-            border: 1px solid #222 !important;
+            border: 1px solid #fff !important;
             font-size: 16px !important;
             padding: 15px !important;
             font-family: 'NexonLv1Gothic' !important;
@@ -28,7 +28,7 @@
 
 <body>
 
-    <div class="back"><a href="practice01.html">Back</a></div>
+    <div class="back"><a href="practice.html">Back</a></div>
     <main id="main">
         <div class="test">
             <h2>1. 테이블 출력하기</h2>
@@ -52,7 +52,10 @@
         document.write(table);
 }</code></pre>
             </div>
-            <div class="result01"></div>
+            <div class="result result01">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
             <!-- //01 -->
 
             <!-- 02 -->
@@ -77,8 +80,11 @@
     document.write(table);
 }</code></pre>
             </div>
-            <div class="result02"></div>
-            <!-- //01 -->
+            <div class="result result02">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //02 -->
         </div>
         <!-- 
         <table border="1">
@@ -137,7 +143,7 @@
             }
             table += "</table>";
 
-            document.querySelector(".result01").innerHTML = table
+            document.querySelector(".result01 > div").innerHTML = table
         }
 
         // 02
@@ -155,9 +161,11 @@
             }
             table += "</table>"
 
-            document.querySelector(".result02").innerHTML = table;
+            document.querySelector(".result02 > div").innerHTML = table;
         }
     </script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
