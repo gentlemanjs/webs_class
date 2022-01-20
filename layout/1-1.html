@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout04</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FFFFFF;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: #FFE0B2;
+        }
+        #nav {
+            height: 100px;
+            background-color: #FFCC80;
+        }
+        #contents {
+            height: 780px;
+            display: flex;
+        }
+        #contents .aside {
+            width: 400px;
+            height: 780px;
+            background-color: #FFB74D;
+        }
+        #contents .article {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #contents .article .article1 {
+            width: 800px;
+            height: 390px;
+            background-color: #FFA726;
+        }
+        #contents .article .article2 {
+            width: 800px;
+            height: 390px;
+            background-color: #E79621;
+        }
+        #footer {
+            height: 100px;
+            background-color: #FF9800;
+        }
+
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <aside class="aside"></aside>
+            <article class="article">
+                <div class="article1"></div>
+                <div class="article2"></div>
+            </article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+  
+</body>
+</html>
