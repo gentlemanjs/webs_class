@@ -10,15 +10,28 @@
 
 <body>
     <script>
-         let num = 0;
+        const obj = {
+        a: 100,
+        b: [200, 300],
+        c: {
+            x: 400,
+            y: 500
+        },
+        d: "javascript",
+        e: function () {
+            document.write("javascript가 실행 되었습니다.");
+        },
+        f: function () {
+            document.write(obj.d + "가 실행 되었습니다.");
+        },
 
-while (num < 10) {
-    document.write(num);
-    if (num == 5) {
-        continue;
+        g: function () {
+            document.write(this.d + "가 실행 되었습니다.");
+        }
     }
-    num++;
-}
+
+
+    obj.g();
     </script>
 </body>
 
