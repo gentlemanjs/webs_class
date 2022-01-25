@@ -421,7 +421,7 @@
 
         function hearts() {
             $.each($(".hearts"), function () {
-                var heartcount = ($(this).width() / 50) * 3;
+                var heartcount = ($(this).width() / 50);
                 for (var i = 0; i <= heartcount; i++) {
                     var size = ($.rnd(60, 120) / 10);
                     $(this).append('<span class="particle" style="top:' + $.rnd(20, 80) + '%; left:' + $.rnd(0,
