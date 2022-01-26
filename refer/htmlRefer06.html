@@ -15,6 +15,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
+    <style>
+        .test {
+            width: 50%;
+            height: 100px;
+            border: 1px solid #bcbcbc;
+            background-image: url( "assets/image/duck1.png" );
+            }
+    </style>
 
 </head>
 
@@ -50,7 +58,7 @@
                         <li>이미지 스프라이트 : background와 ir 효과를 통해서 이미지를 표현</li>
                     </ul>
                 </p>
-                <h3>img 태그</h3>
+                <h3>img 태그를 통해</h3>
                 <p>img는 HTML 문서에 이미지를 삽입하는 태그입니다.</p>
                 <p>주요 속성은 src, alt, width, height, loading입니다.</p>
                 <ul>
@@ -89,6 +97,40 @@
                 <img src="assets/image/duck1.png" alt="duck" width="100">
                 <img src="assets/image/duck1.png" alt="duck" height="150">
                 <img src="assets/image/duck1.png" alt="duck" width="100" height="200">
+                <h3>CSS 속성을 통해</h3>
+                <p>background-image는 이미지를 배경으로 사용하게 하는 속성입니다.</p>
+                <p>다음은 기본 문법과 예제입니다.</p>
+                <ul>
+                    <li>none : 이미지를 배경으로 사용하지 않습니다.</li>
+                    <li>url : 이미지의 URL을 입력합니다.</li>
+                    <li>initial : 기본값으로 설정합니다.</li>
+                    <li>inherit : 부모 요소의 속성값을 상속받습니다.</li>
+                </ul>
+                <p>왼쪽 위에서 시작하여 가로 방향과 세로 방향으로 해당 요소를 다 채울 때까지 반복되어 나옵니다. 반복 여부는 background-repeat 속성으로 정합니다.</p>
+                <h4>예제</h4>
+                <div class="code">
+                    <pre><code>&lt;!doctype html&gt;
+    &lt;html lang="ko"&gt;
+        &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;CSS&lt;/title&gt;
+        &lt;style&gt;
+            .test {
+            width: 50%;
+            height: 100px;
+            border: 1px solid #bcbcbc;
+            background-image: url( "assets/image/duck1.png" );
+            }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div class="a"&gt;
+        &lt;/div&gt;
+        &lt;/body&gt;
+&lt;/html&gt;play-state&gt;</code></pre>
+                </div>
+                <div class="test"></div>
+
             </div>
         </div>
         <!-- //refer -->
