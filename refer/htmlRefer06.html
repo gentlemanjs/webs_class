@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/Html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/Html.png">
+    <link rel="icon" href="../assets/face/Html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>김정식</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML <em>이미지 표현 방법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="htmlRefer03.html">시멘틱 태그</a></li>
+                <li><a href="htmlRefer04.html">SEO</a></li>
+                <li><a href="htmlRefer05.html">그리드 시스템</a></li>
+                <li class="active"><a href="htmlRefer06.html">이미지 표현 방법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <p>웹에서 이미지를 표현하는 방법은 3가지로 나눌 수 있습니다.
+                    <ul>
+                        <li>HTML 태그를 통해서 : img 태그 (의미가 있는 이미지)</li>
+                        <li>CSS 속성을 통해 : background 속성 (의미가 없는 이미지)</li>
+                        <li>이미지 스프라이트 : background와 ir 효과를 통해서 이미지를 표현</li>
+                    </ul>
+                </p>
+                <h3>img 태그</h3>
+                <p>img는 HTML 문서에 이미지를 삽입하는 태그입니다.</p>
+                <p>주요 속성은 src, alt, width, height, loading입니다.</p>
+                <ul>
+                    <li>src</li>
+                    <li>alt</li>
+                    <li>width</li>
+                    <li>height</li>
+                    <li>loading</li>
+                </ul>
+                <h4>예제</h4>
+                <ul>
+                    <li>width, height 속성을 정하지 않으면 이미지 원본 크기 그대로 나옵니다.</li>
+                    <li>만약 지정한 경로에 이미지가 없다면 alt 속성에 있는 값이 출력됩니다.</li>
+                    <li>width 속성으로 가로 크기만 정하면 세로 크기는 원본의 가로 세로 비율에 맞게 정해집니다.</li>
+                    <li>height 속성으로 세로 크기만 정하면 가로 크기는 원본의 가로 세로 비율에 맞게 정해집니다.</li>
+                    <li>가로 크기와 세로 크기를 동시에 정하면 원본의 가로 세로 비율과 상관없이 설정한 크기로 나옵니다</li>
+                </ul>
+                <div class="code">
+                    <pre><code>&lt;!doctype html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src="" alt="duck"&gt;
+        &lt;img src="assets/image/duck1.png" alt="duck"&gt;
+        &lt;img src="assets/image/duck1.png" alt="duck" width="100"&gt;
+        &lt;img src="assets/image/duck1.png" alt="duck" height="150"&gt;
+        &lt;img src="assets/image/duck1.png" alt="duck" width="100" height="200"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <img src="" alt="duck">
+                <img src="assets/image/duck1.png" alt="duck">
+                <img src="assets/image/duck1.png" alt="duck" width="100">
+                <img src="assets/image/duck1.png" alt="duck" height="150">
+                <img src="assets/image/duck1.png" alt="duck" width="100" height="200">
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
