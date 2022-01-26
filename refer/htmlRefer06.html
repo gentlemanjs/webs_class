@@ -20,8 +20,40 @@
             width: 50%;
             height: 100px;
             border: 1px solid #bcbcbc;
-            background-image: url( "assets/image/duck1.png" );
-            }
+            background-image: url("assets/image/duck1.png");
+        }
+
+        .up,
+        .down,
+        .right,
+        .left {
+            display: inline-block;
+            background: url("assets/image/sprite.png") no-repeat;
+        }
+
+        .up {
+            width: 59px;
+            height: 62px;
+            background-position: 0 0;
+        }
+
+        .down {
+            width: 56px;
+            height: 62px;
+            background-position: -60px 0;
+        }
+
+        .right {
+            width: 62px;
+            height: 60px;
+            background-position: -117px 0;
+        }
+
+        .left {
+            width: 62px;
+            height: 60px;
+            background-position: -178px 0;
+        }
     </style>
 
 </head>
@@ -130,7 +162,53 @@
 &lt;/html&gt;play-state&gt;</code></pre>
                 </div>
                 <div class="test"></div>
-
+                <h3>CSS 이미지 스프라이트(Image Sprite)</h3>
+                <p>웹 페이지의 첫 로딩 속도를 줄여주는 여러 방법 중 하나로 서버로의 요청 횟수를 최소화 해줘서 모바일환경과 같이 한정된 자원을 사용하는 플랫폼의 최적화 요소 중에서도 실제 적용하기에
+                    아주 손쉬운 방법입니다.</p>
+                <br>
+                <p>원리는 아이콘이나 버튼과 같은 반복되서 표시되지 않는 그림들을 하나의 그림으로 합쳐놓고 CSS의 background-position속성을 이용해 특정 부분만 노출되도록 하는
+                    것입니다.</p>
+                <h4>원본 이미지</h4>
+                <img src="assets/image/sprite.png" alt="sprite">
+                <div class="code">
+                    <pre><code>&lt;style&gt;
+    .test {
+        width: 50%;
+        height: 100px;
+        border: 1px solid #bcbcbc;
+        background-image: url("assets/image/duck1.png");
+    }
+    .up, .down, .right, .left {
+        display: inline-block;
+        background: url("assets/image/sprite.png") no-repeat;
+    }
+    .up {
+        width: 59px;
+        height: 62px;
+        background-position: 0 0;
+    }
+    .down {
+        width: 56px;
+        height: 62px;
+        background-position: -60px 0;
+    }
+    .right {
+        width: 62px;
+        height: 60px;
+        background-position: -117px 0;
+    }
+    .left {
+        width: 62px;
+        height: 60px;
+        background-position: -178px 0;
+    }
+&lt;/style&gt;</code></pre>
+                </div>
+                <h4>이미지 스프라이트를 이용한 아이콘</h4>
+                <div class="up"></div>
+                <div class="down"></div>
+                <div class="right"></div>
+                <div class="left"></div>
             </div>
         </div>
         <!-- //refer -->
