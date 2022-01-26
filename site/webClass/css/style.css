@@ -226,6 +226,7 @@
     height: 530px;
     margin-right: 20px;
     background-image: url(../img/test@1x.jpg);
+    background-size: 100%;
 }
 .itType01 .img2 {
     float: left;
