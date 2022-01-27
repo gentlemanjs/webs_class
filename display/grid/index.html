@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>display : flex</title>
+    <title>display : grid</title>
     <style>
         /* reset */
         @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
@@ -346,29 +346,35 @@
             font-family: var(--font-score);
         }
 
-        .flexBox {
+        .gridBox {
             counter-reset: items;
             text-align: center;
             min-height: 400px;
             padding: 5px;
         }
-        .itemBox {
+        .columns {
             background: var(--bg-main);
             box-sizing: border-box;
             border: 4px solid var(--brown);
             box-shadow: 0 2px 0 rgba(0,90,250,0.05);
-            height: 100px;
-            width: 100px;
+            min-height: 100px;
+            min-width: 100px;
             margin: 10px;
+            padding: 10px;
             border-radius: 5px;
-            line-height: 90px;
             font-family: var(--font-bbtree);
             font-size: 2rem;
-            color: var(--brown)
+            color: var(--brown);
+            text-align: left;
         }
-        .itemBox::before {
+        .columns::before {
             counter-increment: items;
             content: counter(items);
+        }
+        .columns.active {
+            background: #61bcf4;
+            border-color: #1685ca;
+            color: #1685ca;
         }
 
 
@@ -459,10 +465,10 @@
                 border-width: 2px;
                 border-radius: 5px;
             }
-            .flexBox {
+            .gridBox {
                 min-height: 200px;
             }
-            .itemBox {
+            .columns {
                 border-width: 2px;
                 width: 40px;
                 height: 40px;
@@ -866,8 +872,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2>display:flex</h2>
-                            <h1><em>디스플레이</em> <strong>플렉스</strong></h1>
+                            <h2>display:grid</h2>
+                            <h1><em>디스플레이</em> <strong>그리드</strong></h1>
                             <p>사이트의 레이아웃은 어떻게 작업할까요?</p>
                         </div>
                     </div>
@@ -884,15 +890,12 @@
                     <div class="sample__title">
                         <h3>학습 주제</h3>
                         <p>
-                            Flexbox는 모던 웹을 위하여 제안된 기존 레이아웃보다 더 세련된 방식의 니즈를 부합하기 위한 CSS3의 새로운 레이아웃 방식입니다.
+                            CSS 그리드 레이아웃은 페이지를 여러 주요 영역으로 나누거나, 크기와 위치 및 문서 계층 구조의 관점에서
+                            HTML 기본 요소로 작성된 요소간의 관계를 정의하는데 아주 탁월한 속성입니다.
                         </p>
                     </div>
                     <div class="sample__table mt30">
-                        <p>
-                            flexbox에서 사용하는 속성은 부모요소와 자식요소를 나누어집니다. 전체적인 정렬이나 흐름에 관한 속성은 flex container에서 정의하고 자식 요소의 크기나 순서와 관련된 속성은 flex item에서 정의합니다. 이를 분리해서 적용하는 것이 flex-box에서 가장 중요합니다.<br>
-                            - flex container 속성 : flex-direction, flex-wrap, justify-content, align-items, align-content<br>
-                            - flex item 속성 : flex, flex-grow, flex-shrink, flex-basis, order
-                        </p>
+
                         <table>
                             <caption>그리드의 속성과 설명을 나타내는 표입니다.</caption>
                             <colgroup>
@@ -907,73 +910,78 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>align-content</td>
-                                    <td>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid</td>
+                                    <td>grid</td>
                                 </tr>
                                 <tr>
-                                    <td>align-items</td>
-                                    <td>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</td>
+                                    <td>grid-area</td>
+                                    <td>grid-area</td>
                                 </tr>
                                 <tr>
-                                    <td>align-self</td>
-                                    <td>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</td>
+                                    <td>grid-auto-columns</td>
+                                    <td>grid-auto-columns</td>
                                 </tr>
                                 <tr>
-                                    <td>flex</td>
-                                    <td>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</td>
+                                    <td>grid-auto-flow</td>
+                                    <td>grid-auto-flow</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-basis</td>
-                                    <td>flex-basis 속성은 요소의 기본 단위를 정의합니다.</td>
+                                    <td>grid-auto-rows</td>
+                                    <td>grid-auto-rows</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-direction</td>
-                                    <td>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</td>
+                                    <td>grid-column</td>
+                                    <td>grid-column 속성은 컬럼 속성을 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-flow</td>
-                                    <td>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</td>
+                                    <td>grid-column-end</td>
+                                    <td>grid-column-end 속성은 컬럼의 끝나는 위치를 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-grow</td>
-                                    <td>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</td>
+                                    <td>grid-column-gap</td>
+                                    <td>grid-column-gap 속성은 컬럼의 간격 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-shrink</td>
-                                    <td>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</td>
+                                    <td>grid-column-start</td>
+                                    <td>grid-column-start 속성은 컬럼의 시작 위치를 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>flex-wrap</td>
-                                    <td>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</td>
+                                    <td>grid-gap</td>
+                                    <td>grid-gap</td>
                                 </tr>
                                 <tr>
-                                    <td>justify-content</td>
-                                    <td>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-row</td>
+                                    <td>grid-row</td>
                                 </tr>
                                 <tr>
-                                    <td>justify-items</td>
-                                    <td>justify-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-row-gap</td>
+                                    <td>grid-row-gap</td>
                                 </tr>
                                 <tr>
-                                    <td>justify-self</td>
-                                    <td>justify-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-row-start</td>
+                                    <td>grid-row-start</td>
                                 </tr>
                                 <tr>
-                                    <td>place-content</td>
-                                    <td>place-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-row-end</td>
+                                    <td>grid-row-end</td>
                                 </tr>
                                 <tr>
-                                    <td>place-items</td>
-                                    <td>place-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-template</td>
+                                    <td>grid-template 속성은 컬럼의 속성을 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>place-self</td>
-                                    <td>place-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                    <td>grid-template-areas</td>
+                                    <td>grid-template-areas 속성은 가로 컬럼의 영역을 설정합니다.</td>
                                 </tr>
                                 <tr>
-                                    <td>order</a></td>
-                                    <td>order 속성은 flex 콘텐츠의 순서를 정의합니다.</td>
+                                    <td>grid-template-columns</td>
+                                    <td>grid-template-columns 속성은 가로 컬럼의 정렬 상태를 설정합니다.</td>
                                 </tr>
+                                <tr>
+                                    <td>grid-template-rows</td>
+                                    <td>grid-template-rows 속성은 세로 컬럼의 정렬 상태를 설정합니다</td>
+                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -986,14 +994,9 @@
 
 
         <style>
-            .flex1 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items : center;
-            }
-            .item1 {
-                height: auto;
+            .grid1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
             }
         </style>
 
@@ -1007,71 +1010,76 @@
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>align-items</h2>
-                        <p>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</p>
+                        <h2>grid-template-columns</h2>
+                        <p>grid-template-columns 속성은 가로 컬럼의 정렬 상태를 설정합니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex1">
-                            <div class="itemBox item1"></div>
-                            <div class="itemBox item1"></div>
-                            <div class="itemBox item1"></div>
-                            <div class="itemBox item1"></div>
-                            <div class="itemBox item1"></div>
+                        <div class="gridBox grid1">
+                            <div class="columns columns1"></div>
+                            <div class="columns columns1"></div>
+                            <div class="columns columns1"></div>
+                            <div class="columns columns1"></div>
+                            <div class="columns columns1"></div>
+                            <div class="columns columns1"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn1">
-                        <a href="#">align-items : stretch</a>
-                        <a href="#" class="active">align-items : center</a>
-                        <a href="#">align-items : flex-start</a>
-                        <a href="#">align-items : flex-end</a>
-                        <a href="#">align-items : baseline</a>
+                    <div class="sample__btn gridBtn1">
+                        <a href="#">grid-template-columns: 1fr 1fr 1fr 1fr;</a>
+                        <a href="#">grid-template-columns: 1fr 1fr 1fr 1fr 1fr;</a>
+                        <a href="#">grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;</a>
+                        <a href="#">grid-template-columns: 200px 300px 1fr 1fr 1fr;</a>
+                        <a href="#">grid-template-columns: repeat(6, 1fr)</a>
+                        <a href="#">grid-template-columns: repeat(auto-fill, 150px)</a>
+                        <a href="#">grid-template-columns: 200px repeat(auto-fill, 110px)</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- //sample1 -->
 
-        <hr>
-        
 
         <style>
-            .flex2 {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
+            .grid2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
             }
         </style>
         <section id="sample2">
             <div class="container">
                 <div class="sample">
-                    <div class="deco">
+                    <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>justify-content</h2>
-                        <p>jusify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</p>
+                        <h2>grid-template-rows</h2>
+                        <p>grid-template-rows 속성은 세로 컬럼의 정렬 상태를 설정합니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex2">
-                            <div class="itemBox item2"></div>
-                            <div class="itemBox item2"></div>
-                            <div class="itemBox item2"></div>
-                            <div class="itemBox item2"></div>
-                            <div class="itemBox item2"></div>
+                        <div class="gridBox grid2">
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
+                            <div class="columns columns2"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn2">
-                        <a href="#" class="active">justify-content: normal</a>
-                        <a href="#">justify-content: flex-start</a>
-                        <a href="#">justify-content: flex-end</a>
-                        <a href="#">justify-content: space-between</a>
-                        <a href="#">justify-content: space-around</a>
-                        <a href="#">justify-content: space-evenly</a>
-                        <a href="#">justify-content: center</a>
-                        <a href="#">justify-content: stretch</a>
+                    <div class="sample__btn gridBtn2">
+                        <a href="#">grid-template-rows: auto;</a>
+                        <a href="#">grid-template-rows: 1fr 1fr</a>
+                        <a href="#">grid-template-rows: 1fr 2fr</a>
+                        <a href="#">grid-template-rows: 1fr 2fr 3fr</a>
+                        <a href="#">grid-template-rows: repeat(3, 1fr)</a>
+                        <a href="#">grid-template-rows: repeat(3, 150px)</a>
+                        <a href="#">grid-template-rows: repeat(auto-fill, 140px)</a>
+                        <a href="#">grid-template-rows: 400px repeat(auto-fill, 120px)</a>
+                        <a href="#">grid-template-rows: 150px auto minmax(100px, 160px)</a>
                     </div>
                 </div>
             </div>
@@ -1082,84 +1090,94 @@
 
 
         <style>
-            .flex3 {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
+            .grid3 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
             }
         </style>
         <section id="sample3">
             <div class="container">
                 <div class="sample">
-                    <div class="deco">
+                    <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>flex-direction</h2>
-                        <p>flex-direction 속성은 콘텐츠의 정렬 방향을 정의합니다.</p>
+                        <h2>grid-column-start</h2>
+                        <p>grid-column-start 속성은 컬럼의 시작 위치를 설정합니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex3">
-                            <div class="itemBox item3"></div>
-                            <div class="itemBox item3"></div>
-                            <div class="itemBox item3"></div>
-                            <div class="itemBox item3"></div>
-                            <div class="itemBox item3"></div>
+                        <div class="gridBox grid3">
+                            <div class="columns columns3 active"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn3">
-                        <a href="#" class="active">flex-direction : row</a>
-                        <a href="#">flex-direction : row-reverse</a>
-                        <a href="#">flex-direction : column;</a>
-                        <a href="#">flex-direction : column-reverse</a>
+                    <div class="sample__btn gridBtn3">
+                        <a href="#">grid-column-start : auto</a>
+                        <a href="#">grid-column-start : 1</a>
+                        <a href="#">grid-column-start : 2</a>
+                        <a href="#">grid-column-start : 3</a>
+                        <a href="#">grid-column-start : -1</a>
+                        <a href="#">grid-column-start : span 2</a>
+                        <a href="#">grid-column-start : span 3</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- //sample3 -->
 
-        <hr>
 
         <style>
-            .flex4 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                flex-basis : 100px;
-                align-content: center;
+            .grid4 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
             }
         </style>
         <section id="sample4">
             <div class="container">
                 <div class="sample">
-                    <div class="deco">
+                    <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>flex-basis</h2>
-                        <p>flex-basis 속성은 요소의 기본 크기를 정의합니다.</p>
+                        <h2>grid-column-end</h2>
+                        <p>grid-column-end 속성은 컬럼의 마지막 위치를 설정합니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex4">
-                            <div class="itemBox item4"></div>
-                            <div class="itemBox item4"></div>
-                            <div class="itemBox item4"></div>
-                            <div class="itemBox item4"></div>
-                            <div class="itemBox item4"></div>
+                        <div class="gridBox grid4">
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4 active"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn4">
-                        <a href="#" class="active">flex-basis : 100px</a>
-                        <a href="#">flex-basis : 200px</a>
-                        <a href="#">flex-basis : 300px</a>
-                        <a href="#">flex-basis : 10%</a>
-                        <a href="#">flex-basis : 20%</a>
+                    <div class="sample__btn gridBtn4">
+                        <a href="#">grid-column-end : auto</a>
+                        <a href="#">grid-column-end : 1</a>
+                        <a href="#">grid-column-end : 2</a>
+                        <a href="#">grid-column-end : 3</a>
+                        <a href="#">grid-column-end : -1</a>
+                        <a href="#">grid-column-end : span 2</a>
+                        <a href="#">grid-column-end : span 3</a>
                     </div>
                 </div>
             </div>
@@ -1167,377 +1185,150 @@
         <!-- //sample4 -->
 
 
-        <hr>
-
 
         <style>
-            .flex5 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                flex-basis : 100px;
-                align-content: center;
-            }
-            .item5 {
-                flex-grow: 1;
+            .grid5 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
             }
         </style>
         <section id="sample5">
             <div class="container">
                 <div class="sample">
-                    <div class="deco">
+                    <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>flex-grow</h2>
-                        <p>flex-grow 속성은 요소의 크기를 숫자를 통해 확대합니다.</p>
+                        <h2>grid-column</h2>
+                        <p>grid-column 속성은 컬럼의 위치를 설정합니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex5">
-                            <div class="itemBox item5"></div>
-                            <div class="itemBox item5"></div>
-                            <div class="itemBox item5"></div>
-                            <div class="itemBox item5"></div>
-                            <div class="itemBox item5"></div>
+                        <div class="gridBox grid5">
+                            <div class="columns columns5 active"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn5">
-                        <a href="#">flex-grow : 0</a>
-                        <a href="#" class="active">flex-grow : 1</a>
-                        <a href="#">flex-grow : 2</a>
-                        <a href="#">flex-grow : 3</a>
-                        <a href="#">flex-grow : 4</a>
-                        <a href="#">flex-grow : 5</a>
-                        <a href="#">flex-grow : 0.5</a>
+                    <div class="sample__btn gridBtn5">
+                        <a href="#">grid-column : 1</a>
+                        <a href="#">grid-column : 1 / 3</a>
+                        <a href="#">grid-column : 1 / 4</a>
+                        <a href="#">grid-column : 1 / 5</a>
+                        <a href="#">grid-column : 2 / 4</a>
+                        <a href="#">grid-column : 2 / 5</a>
+                        <a href="#">grid-column : 3 / 5</a>
+                        <a href="#">grid-column : 4 / 5</a>
+                        <a href="#">grid-column : 2 / -1</a>
+                        <a href="#">grid-column : 2 / -2</a>
+                        <a href="#">grid-column : 2 / -3</a>
+                        <a href="#">grid-column : 1 / span 2</a>
+                        <a href="#">grid-column : 1 / span 3</a>
+                        <a href="#">grid-column : 1 / span 4</a>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- //sample5 -->
 
-        <hr>
 
         <style>
-            .flex6 {
-                display: flex;
-                align-items: center;
-            }
-            .item6 {
-                flex: 1 1 25%;
+            .grid5 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
             }
         </style>
-        <section id="sample6">
+        <section id="sample5">
             <div class="container">
                 <div class="sample">
-                    <div class="deco">
+                    <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                         <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
-                        <h2>flex-shrink</h2>
-                        <p>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</p>
+                        <h2>레이아웃1</h2>
+                        <p>grid를 이용한 레이아웃 설정입니다.</p>
                     </div>
                     <div class="sample__box">
-                        <div class="flexBox flex6">
-                            <div class="itemBox item6"></div>
-                            <div class="itemBox item6"></div>
-                            <div class="itemBox item6"></div>
-                            <div class="itemBox item6"></div>
-                            <div class="itemBox item6"></div>
+                        <div class="gridBox grid6">
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
                         </div>
                     </div>
-                    <div class="sample__btn flexBtn6">
-                        <a href="#">flex-shrink : 0</a>
-                        <a href="#" class="active">flex-shrink : 1</a>
-                        <a href="#">flex-shrink : 2</a>
-                        <a href="#">flex-shrink : 3</a>
-                        <a href="#">flex-shrink : 4</a>
-                        <a href="#">flex-shrink : 5</a>
-                        <a href="#">flex-shrink : 0.5</a>
-                    </div>
+                    
                 </div>
             </div>
         </section>
         <!-- //sample6 -->
+        
 
-
-
-        <hr>
-
-        <style>
-            .flex7 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-content: center;
-            }
-            
-        </style>
-        <section id="sample7">
-            <div class="container">
-                <div class="sample">
-                    <div class="deco">
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                    </div>
-                    <div class="sample__sub_title">
-                        <h2>flex-wrap</h2>
-                        <p>flex-wrap 속성은 요소의 줄 속성을 정의합니다.</p>
-                    </div>
-                    <div class="sample__plus">
-                        <span class="plus plus7">+</span>
-                        <span class="minus minus7">-</span>
-                    </div>
-                    <div class="sample__box">
-                        <div class="flexBox flex7">
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                            <div class="itemBox item7"></div>
-                        </div>
-                    </div>
-                    <div class="sample__btn flexBtn7">
-                        <a href="#">flex-wrap : nowrap</a>
-                        <a href="#" class="active">flex-wrap : wrap</a>
-                        <a href="#">flex-wrap : wrap-reverse</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //sample7 -->
-
-
-        <hr>
-
-        <style>
-            .flex8 {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-content: center;
-            }
-            .item8 {
-                flex: 1 1 10%;
-            }
-        </style>
-        <section id="sample8">
-            <div class="container">
-                <div class="sample">
-                    <div class="deco">
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                    </div>
-                    <div class="sample__sub_title">
-                        <h2>flex</h2>
-                        <p>flex 속성은 flex-grow, flex-shrink, flex-basis 속성을 정의합니다.</p>
-                    </div>
-                    <div class="sample__plus">
-                        <span class="plus plus8">+</span>
-                        <span class="minus minus8">-</span>
-                    </div>
-                    <div class="sample__box">
-                        <div class="flexBox flex8">
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                            <div class="itemBox item8"></div>
-                        </div>
-                    </div>
-                    <div class="sample__btn flexBtn8">
-                        <a href="#" class="active">flex : 1 1 10%;</a>
-                        <a href="#">flex : 1 1 20%;</a>
-                        <a href="#">flex : 1 1 30%;</a>
-                        <a href="#">flex : 1 1 40%;</a>
-                        <a href="#">flex : 1 1 100%;</a>
-                        <a href="#">flex : 0 0 10%;</a>
-                        <a href="#">flex : 0 0 20%;</a>
-                        <a href="#">flex : 0 0 30%;</a>
-                        <a href="#">flex : 0 0 40%;</a>
-                        <a href="#">flex : 0 0 100%;</a>
-                    </div>
-                    <div class="sample__point">
-                        /* flex-grow : 단위가 없이 속성 한개만 사용한 경우 */<br>
-                        flex: 1<br>
-                        /* flex-basis : 단위가 있고 속성을 한개만 사용한 경우 */<br>
-                        flex: 100px<br>
-                        /* flex-grow | flex-shrink : 단위가 없고 속성 두개 사용한 경우 */<br>
-                        flex: 1 1;<br>
-                        /* flex-grow | flex-basis */<br>
-                        flex: 1 200px;<br>
-                        /* flex-grow | flex-shrink | flex-basis */<br>
-                        flex: 1 1 100px;<br>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //sample8 -->
-
-
-        <style>
-            .flex9 {
-                display: flex;
-    
-                justify-content: center;
-
-            }
-            .item9:last-child {
-                align-self:stretch;
-            }
-        </style>
-        <section id="sample9">
-            <div class="container">
-                <div class="sample">
-                    <div class="deco">
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                        <span></span><span></span><span></span><span></span><span></span><span></span> 
-                    </div>
-                    <div class="sample__sub_title">
-                        <h2>align-self</h2>
-                        <p>align-self</p>
-                    </div>
-                    <div class="sample__plus">
-                        <span class="plus plus9">+</span>
-                        <span class="minus minus9">-</span>
-                    </div>
-                    <div class="sample__box">
-                        <div class="flexBox flex9">
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                        </div>
-                    </div>
-                    <div class="sample__btn flexBtn9">
-                        <a href="#" class="active">align-self: flex-start;</a>
-                        <a href="#">align-self:stretch;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //sample9 -->
     </div>
     <!-- //content -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $("a").on("click", function(e){
-            e.preventDefault();
-        });
 
-        $(".flexBtn1").on("click","a", function(e){
+        $(".gridBtn1").on("click","a", function(e){
             e.preventDefault();
             var attrText = $(this).text();
-            $(".flex1").attr("style",attrText);
+            $(".grid1").attr("style",attrText);
 
-            $(".flexBtn1 a").removeClass();
+            $(".gridBtn1 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn2").on("click","a", function(e){
+        $(".gridBtn2").on("click","a", function(e){
             e.preventDefault();
             var attrText = $(this).text();
-            $(".flex2").attr("style",attrText);
+            $(".grid2").attr("style",attrText);
 
-            $(".flexBtn2 a").removeClass();
+            $(".gridBtn2 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn3").on("click","a", function(e){
+        $(".gridBtn3").on("click","a", function(e){
             e.preventDefault();
             var attrText = $(this).text();
-            $(".flex3").attr("style",attrText);
+            $(".grid3 > div").eq(0).attr("style",attrText);
 
-            $(".flexBtn3 a").removeClass();
+            $(".gridBtn3 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn4").on("click","a", function(e){
+        $(".gridBtn4").on("click","a", function(e){
             e.preventDefault();
             var attrText = $(this).text();
-            $(".flex4 > div").attr("style",attrText);
+            $(".grid4 > div").last().attr("style", attrText);
 
-            $(".flexBtn4 a").removeClass();
+            $(".gridBtn4 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn5").on("click","a", function(e){
+        $(".gridBtn5").on("click","a", function(e){
             e.preventDefault();
             var attrText = $(this).text();
-            $(".flex5 > div").eq(3).attr("style",attrText);
+            $(".grid5 > div").first().attr("style", attrText);
 
-            $(".flexBtn5 a").removeClass();
+            $(".gridBtn5 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn6").on("click","a", function(e){
-            e.preventDefault();
-            var attrText = $(this).text();
-            $(".flex6 > div").eq(3).attr("style",attrText);
-
-            $(".flexBtn6 a").removeClass();
-            $(this).addClass("active");
-        });
-
-        $(".flexBtn7").on("click","a", function(e){
-            e.preventDefault();
-            var attrText = $(this).text();
-            $(".flex7").attr("style",attrText);
-
-            $(".flexBtn7 a").removeClass();
-            $(this).addClass("active");
-        });
-
-        $(".plus7").click(function(e){
-            e.preventDefault();
-            $(".flex7").append("<div class='itemBox item7'></div>");
-        });
-        $(".minus7").click(function(){
-            $(".flex7 > div:last-child").remove();
-        });
-
-        $(".flexBtn8").on("click","a", function(e){
-            e.preventDefault();
-            var attrText = $(this).text();
-            $(".flex8 > div").attr("style",attrText);
-
-            $(".flexBtn8 a").removeClass();
-            $(this).addClass("active");
-        });
-
-        $(".plus8").click(function(e){
-            e.preventDefault();
-            $(".flex8").append("<div class='itemBox item8'></div>");
-        });
-        $(".minus8").click(function(e){
-            e.preventDefault();
-            $(".flex8 > div:last-child").remove();
-        });
+        
     </script>
 </body>
 </html>
