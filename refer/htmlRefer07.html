@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/Html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/Html.png">
+    <link rel="icon" href="../assets/face/Html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <style>
+        .test {
+            width: 50%;
+            height: 100px;
+            border: 1px solid #bcbcbc;
+            background-image: url("assets/image/duck1.png");
+        }
+
+        .up,
+        .down,
+        .right,
+        .left {
+            display: inline-block;
+            background: url("assets/image/sprite.png") no-repeat;
+        }
+
+        .up {
+            width: 59px;
+            height: 62px;
+            background-position: 0 0;
+        }
+
+        .down {
+            width: 56px;
+            height: 62px;
+            background-position: -60px 0;
+        }
+
+        .right {
+            width: 62px;
+            height: 60px;
+            background-position: -117px 0;
+        }
+
+        .left {
+            width: 62px;
+            height: 60px;
+            background-position: -178px 0;
+        }
+        hr {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>김정식</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML <em>IR효과</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="htmlRefer03.html">시멘틱 태그</a></li>
+                <li><a href="htmlRefer04.html">SEO</a></li>
+                <li><a href="htmlRefer05.html">그리드 시스템</a></li>
+                <li><a href="htmlRefer06.html">이미지 표현 방법</a></li>
+                <li class="active"><a href="htmlRefer07.html">IR효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>IR효과</h3>
+                <p>IR (Image Replacement) 기법은 이미지를 볼 수 없는 사용자에게 적절한 대체 텍스트를 제공하는 것을 말합니다. 웹 접근성 준수를 위해 이미지 사용 시 대체 텍스트를 제공해야 합니다. 단순히 스크린 리더 사용자뿐 아니라 검색 엔진의 효과적인 내용 수집을 위해서도 필수적입니다.</p>
+                <h4>pm(Phark Method)</h4>
+                <p>의미있는 이미지의 대체 텍스트를 제공하는 경우 사용합니다.</p>
+                <div class="code">
+                    <pre><code>.ir_pm {
+    display: block; 
+    overflow: hidden; 
+    font-size: 0; 
+    line-height: 0; 
+    text-indent: -9999px;
+}</code></pre>
+                </div>
+                <h4>wa</h4>
+                <p>의미있는 이미지의 대체 텍스트로 이미지가 없어도 텍스트를 보여주고자 할 때 사용합니다.</p>
+                <div class="code">
+                    <pre><code>.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}</code></pre>
+                </div>
+                <h4>so(Screen Out)</h4>
+                <p>대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 사용합니다.</p>
+                <div class="code">
+                    <pre><code>.ir_so {
+    /* ir_screen out 약자로 임의 사용 */
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}</code></pre>
+                </div>
+
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
