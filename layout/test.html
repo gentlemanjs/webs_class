@@ -13,6 +13,32 @@
             line-height: 1.53;
         }
 
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            z-index: -1;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: relative;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
         /* 여백 초기화 */
         body,
         div,
@@ -176,29 +202,69 @@
             height: 399px;
             background: #666;
         }
+
+        /* 스킵 메뉴 */
+        #skip {
+            position: relative;
+            z-index: 10000;
+        }
+
+        #skip a {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: -400px;
+            top: 0;
+            padding: 20px 30px;
+            display: inline-block;
+            transition: left 0.3s ease-in;
+        }
+
+        #skip a:active,
+        #skip a:focus {
+            left: 5px;
+        }
     </style>
 </head>
 
 <body>
+    <noscript>"페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다."</noscript>
+    <div id="skip">
+        <a href="#menu">메뉴 바로가기</a>
+        <a href="#cont1">컨텐츠 바로가기1</a>
+        <a href="#cont2">컨텐츠 바로가기2</a>
+        <a href="#cont3">컨텐츠 바로가기3</a>
+    </div>
+    <!-- //skip -->
+
     <div id="wrap">
         <header id="header">
-            <div class="inform">inform</div>
-            <div class="menu">menu</div>
-            <div class="tap">tap</div>
+            <div class="inform">
+                <h1 class="ir_so">TEST SITE</h1>
+            </div>
+            <div class="menu">
+                <h2 class="ir_so">메뉴 영역</h2>
+            </div>
+            <div class="tap"></div>
         </header>
         <nav id="banner">
-            <div class="desc">desc</div>
+            <h2 class="ir_so">배너 영역</h2>
+            <div class="desc"></div>
         </nav>
         <section id=cont1>
+            <h2 class="ir_so">컨텐츠 영역1</h2>
             <div class="desc">desc</div>
         </section>
         <section id=cont2>
-            <div class="desc">desc</div>
+            <h2 class="ir_so">컨텐츠 영역2</h2>
+            <div class="desc"></div>
         </section>
         <section id=cont3>
+            <h2 class="ir_so">컨텐츠 영역3</h2>
             <div class="desc">
-                <h1 class="title">FIND Opportunities</h1>
-                <article class="article">
+                <h3 class="title">FIND Opportunities</h3>
+                <div class="article">
+
                     <div class="box1">
                         <div class="img1"></div>
                         <div class="text1">
@@ -207,14 +273,15 @@
                         </div>
 
                     </div>
+
                     <div class="box2">
                         <div class="img2"></div>
                         <div class="text2">
                             <p class="info1">Digital Marketing</p>
                             <p class="info2">IMS</p>
                         </div>
-
                     </div>
+
                     <div class="box3">
                         <div class="img3"></div>
                         <div class="text3">
@@ -224,7 +291,7 @@
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
         </section>
