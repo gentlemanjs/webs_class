@@ -1,15 +1,147 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         font-size: 10px;
+         font-family: "Do Hyeon", sans-serif;
+      }
+
+      .main_box {}
+
+      .header {
+         display: flex;
+         justify-content: space-around;
+      }
+
+
+      .kt_img {
+         width: 80px;
+         height: 80px;
+         background: url(../kt.png) no-repeat;
+         background-size: contain;
+
+      }
+
+      .T1_img {
+         width: 80px;
+         height: 80px;
+         background: url(../t1.png) no-repeat;
+         background-size: contain;
+      }
+
+      .dwg_img {
+         width: 80px;
+         height: 80px;
+         background: url(../kia.png) no-repeat;
+         background-size: contain;
+      }
+
+      .gen_img {
+         width: 80px;
+         height: 80px;
+         background: url(../geng.svg) no-repeat;
+         background-size: contain;
+      }
+
+      .drx_img {
+         width: 80px;
+         height: 80px;
+         background: url(../drx.png) no-repeat;
+         background-size: contain;
+      }
+
+
+      .lck_img {
+         width: 200px;
+         height: 200px;
+         background: url(../lck.svg) no-repeat;
+         background-size: contain;
+         margin-top: 30px;
+      }
+
+      .snadbox_img {
+         width: 80px;
+         height: 80px;
+         background: url(../sandbox.png) no-repeat;
+         background-size: contain;
+      }
+
+      .hwa_img {
+         width: 80px;
+         height: 80px;
+         background: url(../hanwha.png) no-repeat;
+         background-size: contain;
+      }
+
+      .pradit_img {
+         width: 80px;
+         height: 80px;
+         background: url(../fredit.png) no-repeat;
+         background-size: contain;
+      }
+
+      .freecs_img {
+         width: 80px;
+         height: 80px;
+         background: url(../freecs.png) no-repeat;
+         background-size: contain;
+      }
+
+      .redfoce_img {
+         width: 80px;
+         height: 80px;
+         background: url(../redfoce.png) no-repeat;
+         background-size: contain;
+      }
+   </style>
 </head>
 
 <body>
-    
+   <div class="main_box">
+      <div class="header">
+         <div class="kt_img"></div>
+         <div class="T1_img"></div>
+         <div class="dwg_img"></div>
+         <div class="gen_img"></div>
+         <div class="drx_img"></div>
+         <div class="lck_img"></div>
+         <div class="snadbox_img"></div>
+         <div class="hwa_img"></div>
+         <div class="pradit_img"></div>
+         <div class="freecs_img"></div>
+         <div class="redfoce_img"></div>
+      </div>
+
+      <div class="nav">
+         <div class="notice_area">공지사항</div>
+         <div class="platy_schedul">경기일정</div>
+         <div class="team_rank">팀별순위</div>
+         <div class="team_player">팀별선수</div>
+         <div class="highlight_video ">하이라이트 영상</div>
+         <div class="stadium_location">경기장 위치</div>
+         <div class="ticket_pre_buy">티켓예매</div>
+         <div class="login_area">로그인</div>
+         <div class="join_member">회원가입</div>
+      </div>
+      <div class="contents"></div>
+      <div class="footer"></div>
+   </div>
+   <script>
+
+document.querySelectorAll(".header > div").forEach(function(el){
+    el.addEventListener("click", function(){
+        alert("dd");
+    });
+})
+   </script>
 </body>
 
 </html>
