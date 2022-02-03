@@ -95,6 +95,23 @@
             </div>
             <!-- //03 -->
 
+            <!-- 04 -->
+            <h3>1.4 for문을 이용해서 1부터 100까지 합을 출력하세요</h3>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    let sum = 0;
+
+    for (let i = 1; i <= 100; i++) {
+        sum += i;
+    }
+}</code></pre>
+            </div>
+            <div class="result result04">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //04 -->
+
     </main>
 
 
@@ -103,7 +120,7 @@
         {
             let num = 1;
 
-            while (num <= 100){
+            while (num <= 100) {
                 document.querySelector(".result01 > div").innerHTML += num + "<br>"
                 num++;
             };
@@ -111,12 +128,23 @@
 
         //02
         {
-            for(let i=1; i<=100; i++){
+            for (let i = 1; i <= 100; i++) {
                 document.querySelector(".result02 > div").innerHTML += i + "<br>"
             }
         }
+
+        //04 
+        {
+            let sum = 0;
+            for (let i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            
+            document.querySelector(".result04 > div").innerHTML = sum
+            
+        }
     </script>
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
