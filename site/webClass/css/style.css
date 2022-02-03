@@ -345,6 +345,7 @@
     padding: 150px 0;
     height: 500px;
     margin-bottom: 500px;
+    font-family: 'GmarketSans';
 }
 
 .img_type01 h3 {
@@ -360,16 +361,67 @@
     vertical-align: -4px;
 }
 .img_type01 .img-wrap {
+    display: flex;
+    justify-content: space-between;
 }
 .img_type01 .img-wrap .left {
     width: 590px;
     height: 360px;
-    float: left;
+    background: url(../img/border1.jpg);
+    position: relative;
 }
 .img_type01 .img-wrap .right {
     width: 590px;
     height: 360px;
-    float: left;
+    background: url(../img/border2.jpg);
+    position: relative;
+}
+
+.img_type01 .img-wrap .left-cont {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.img_type01 .img-wrap h4 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.img_type01 .img-wrap .left p {
+    font-size: 14px;
+    color: #fff;
+    padding-right: 200px;
+    margin-bottom: 15px;
+}
+
+.img_type01 .img-wrap .left a {
+    background: #9a481d;
+    padding: 10px 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.img_type01 .img-wrap .right-cont {
+    background: #9A481D;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    width: 430px;
+    opacity: 0.8;
+}
+.img_type01 .img-wrap .right p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.img_type01 .img-wrap .right a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 /* 이미지 유형01(img_type02) */
