@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dt,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        select,
+        button,
+        figure,
+        article,
+        aside,
+        details,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        figcaption {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 시멘틱 태그 초기화 */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        /* 폰트 초기화 */
+        body,
+        button,
+        input,
+        select,
+        table,
+        textarea {
+            color: #222;
+            font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+            font-style: 16px;
+            line-height: 1.53;
+        }
+
+        /* 링크 초기화 */
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* 목록 초기화 */
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        /* 스타일 초기화 */
+        em {
+            font-style: normal;
+        }
+
+
+        /* CSS */
+        #wrap {
+            width: 1920px;
+            height: 3000px;
+        }
+
+        .container {
+            width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* header */
+        #header {
+            height: 100px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #header .logo {
+            margin: 5px 0 0 60px;
+        }
+
+        #header .logo a {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        #header .menu ul li {
+            display: inline;
+            margin: 0 20px 0 0;
+        }
+
+        #header .menu ul li a {
+            margin-top: 30px;
+            padding: 10px 10px;
+            display: inline-block;
+        }
+
+        /* main */
+        #main {
+            height: 2500px;
+            margin-top: 250px;
+        }
+
+        #main .container .contents {
+            display: flex;
+            justify-content: space-between
+        }
+
+        #main h2 {
+            font-size: 48px;
+            margin-bottom: 100px;
+
+        }
+
+        #main .contL .cont1 {
+            width: 550px;
+            height: 550px;
+            background: url(img/test1.JPG) no-repeat;
+            background-size: cover;
+            margin: -20px 0 150px 0;
+        }
+
+        #main .contL .cont1_text {
+            font-size: 28px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        #main .contL .cont2 {
+            width: 550px;
+            height: 550px;
+            background: url(img/test3.JPG) no-repeat;
+            background-size: cover;
+            margin: -20px 0 150px 0;
+        }
+
+        #main .contL .cont2_text {
+            font-size: 28px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        #main .contR {
+            margin-top: 50px;
+        }
+        #main .contR .cont1 {
+            width: 550px;
+            height: 550px;
+            background: url(img/test2.JPG) no-repeat;
+            background-size: cover;
+            margin: -20px 0 150px 0;
+        }
+
+        #main .contR .cont1_text {
+            font-size: 28px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        #main .contR .cont2 {
+            width: 550px;
+            height: 550px;
+            background: url(img/test4.JPG) no-repeat;
+            background-size: cover;
+            margin: -20px 0 150px 0;
+        }
+
+        #main .contR .cont2_text {
+            font-size: 28px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+
+
+        /* footer */
+        #footer {
+            height: 400px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="#">IMFORM</a></h1>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </header>
+        <main id="main">
+            <article class="container">
+                <h2>We research new opportunities<br>that inspire success.</h2>
+                <div class="contents">
+                    <section class="contL">
+                        <div class="cont1_text">스마트한 카라이프<br>한국타이어</div>
+                        <div class="cont1"></div>
+                        <div class="cont2_text">나는 대만족 입니다<br>대만관광청 홈페이지 리뉴얼</h3>
+                        <div class="cont2"></div>
+
+                    </section>
+                    <section class="contR">
+                        <div class="cont1_text">한섬 프리미엄 스타일<br>모바일 룩북</div>
+                        <div class="cont1"></div>
+                        <div class="cont2_text">세련된 감각의 까사미아<br>라이프스타일 매거진</div>
+                        <div class="cont2"></div>
+                    </section>
+                </div>
+            </article>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
