@@ -71,7 +71,17 @@
             <p>조건 : 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="pBtn btn03">클릭</a></p>
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">{
+    let num, result;
 
+    //버튼을 클릭하면 경고창을 띄워주세요!
+
+    document.querySelector(".btn03").addEventListener("click", () => {
+        num = prompt("출력할 구구단 숫자를 입력해 주세요!!", "2")
+
+        for (let i = 1; i <= 9; i++) {
+            result = num + " X " + i + " = " + (num * i) + "<br>";
+        }
+    });
 }</code></pre>
             </div>
             <div class="result result03">
