@@ -294,6 +294,7 @@
     padding: 150px 0;
     min-width: 1200px;
 }
+
 .imgText_type02 .left {
     float: left;
     width: 48.5%;
@@ -302,6 +303,7 @@
     background-size: cover;
     margin-right: 1.5%;
 }
+
 .imgText_type02 .right {
     font-family: 'GmarketSans';
     float: left;
@@ -309,6 +311,7 @@
     height: 535px;
     margin-left: 1.5%;
 }
+
 .imgText_type02_right .sub {
     font-size: 16px;
     color: #7C7C7C;
@@ -319,18 +322,21 @@
     text-underline-position: under; */
     border-bottom: 1px solid #7C7C7C;
 }
+
 .imgText_type02 .right .title {
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 38px;
     white-space: nowrap;
 }
+
 .imgText_type02 .right .desc {
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 38px;
     white-space: nowrap;
 }
+
 .imgText_type02 .right .view {
     font-size: 24px;
     font-weight: 300;
@@ -358,10 +364,12 @@
     color: #777;
     vertical-align: -4px;
 }
+
 .img_type01 .img-wrap {
     display: flex;
     justify-content: space-between;
 }
+
 .img_type01 .img-wrap .left {
     width: 590px;
     height: 360px;
@@ -369,6 +377,7 @@
     position: relative;
     overflow: hidden;
 }
+
 .img_type01 .img-wrap .right {
     width: 590px;
     height: 360px;
@@ -409,19 +418,37 @@
     display: inline-block;
     font-size: 14px;
 }
-.img_type01 .img-wrap .right-cont{
+
+.img_type01 .img-wrap .right:hover .right-cont {
+    opacity: 1;
+    transition: all 0.5s;
+}
+.img_type01 .img-wrap .right:hover span {
+    opacity: 0;
+}
+.img_type01 .img-wrap .right span {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 500;
+    left: 33px; top: 191px;
+    color: #fff;
+}
+.img_type01 .img-wrap .right-cont {
     background-color: rgba(159, 146, 139, 0.8);
     position: absolute;
     left: 20px;
     bottom: 20px;
     padding: 10px 15px;
     width: 430px;
+    opacity: 0;
 }
+
 .img_type01 .img-wrap .right p {
     font-size: 14px;
     color: #fff;
     margin-bottom: 15px;
 }
+
 .img_type01 .img-wrap .right a {
     font-size: 14px;
     color: #fff;
@@ -435,6 +462,7 @@
     padding: 150px 0;
     font-family: 'GmarketSans';
 }
+
 .img_type02 h3 {
     font-size: 50px;
     line-height: 1;
@@ -452,6 +480,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .img_type02 .img-wrap ul li {
     width: 387px;
     height: 387px;
@@ -466,29 +495,36 @@
     display: block;
     background: #fff;
     position: absolute;
-    left: 30px; right: 30px;
-    top: 30px; bottom: 30px;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
     opacity: 0;
     transition: all 0.4s ease-in-out;
     transform: rotateX(-90deg);
 }
+
 .img_type02 .img-wrap ul li:hover::after {
     opacity: 0.8;
     transform: rotateX(0deg);
 }
+
 .img_type02 .img-wrap ul li span {
     position: absolute;
-    left: 50%; top: calc(50% + 36px);
+    left: 50%;
+    top: calc(50% + 36px);
     color: #000;
     transform: translate(-50%, -50%);
     z-index: 100;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
+
 .img_type02 .img-wrap ul li:hover span {
     top: 50%;
 
 }
+
 .img_type02 .img-wrap ul li span em {
     display: block;
     font-size: 30px;
@@ -496,6 +532,7 @@
     color: #fff;
     transition: all 0.3s;
 }
+
 .img_type02 .img-wrap ul li span a {
     display: block;
     background: #000;
@@ -508,25 +545,24 @@
     transition: all 0.4s ease-in-out;
     transform: rotateX(-90deg);
 }
+
 .img_type02 .img-wrap ul li:hover span em {
     color: #000;
 }
+
 .img_type02 .img-wrap ul li:hover span a {
     opacity: 1;
     transform: rotateX(0deg);
 }
 
-.img_type02 .img-wrap ul li:nth-child(1){
+.img_type02 .img-wrap ul li:nth-child(1) {
     background-image: url(../img/cookie.jpg);
 }
-.img_type02 .img-wrap ul li:nth-child(2){
+
+.img_type02 .img-wrap ul li:nth-child(2) {
     background-image: url(../img/cake.jpg);
 }
-.img_type02 .img-wrap ul li:nth-child(3){
+
+.img_type02 .img-wrap ul li:nth-child(3) {
     background-image: url(../img/chocolate.jpg);
 }
-
-
-
-
-
