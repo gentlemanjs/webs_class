@@ -409,8 +409,7 @@
     display: inline-block;
     font-size: 14px;
 }
-
-.img_type01 .img-wrap .right-cont {
+.img_type01 .img-wrap .right-cont{
     background-color: rgba(159, 146, 139, 0.8);
     position: absolute;
     left: 20px;
