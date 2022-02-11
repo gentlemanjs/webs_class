@@ -168,32 +168,37 @@
         }
 
         /* option */
-        .board .desc {
-            background: #a5c3d5;
-            font-size: 18px;
-            margin: 5px 0;
-            border-radius: 4px;
-            padding: 15px 10px;
-        }
-
-        .board .list {
-            background: #a5c3d5;
-            padding: 15px 10px;
-            border-radius: 4px;
-        }
-        .board .list span {
+        .board .search span {
             border: 1px solid #223547;
-            border-radius: 20px;
-            padding: 5px 20px;
-            margin: 3px;
+            border-radius: 30px;
+            padding: 5px 30px;
             display: inline-block;
-            transition: all 0.3s;
+            margin: 3px;
+            transition: all 0.2s;
         }
 
-        .board .list span:hover {
+        .board .search span:hover {
             background: #223547;
             color: #fff;
+            cursor: pointer;
         }
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+        .board .list li span {
+            position: absolute;
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+
+        .board .list li span::before {
+            content: 'veiw : ';
+            text-transform: uppercase;
+        }
+
+
     </style>
 </head>
 
@@ -212,42 +217,135 @@
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample11">find( )</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
+            <span class="sub"><a href="../javascript06.html#sample05">sort( ), reverse ( )</a>를 이용하여 정렬하기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
             <!-- 검색 영역 -->
             <div class="search">
-                <label for="search-box">검색하기</label>
-                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!">
+                <span class="btn1">반대로</span>
+                <span class="btn2">오름차순</span>
+                <span class="btn3">내림차순</span>
+                <span class="btn4">알파벳순(a~z)</span>
+                <span class="btn5">알파벳순(z~a)</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
-            <div class="count">전체 목록 갯수 : 0 개</div>
+            <div class="count"></div>
 
-            <!-- CSS 설명 영역 -->
-            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
 
             <!-- CSS 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul></ul>
+            </div>
         </div>
     </div>
 
     <!-- script -->
     <script>
        const cssProperty = [
-           {name: "all", desc: "all 속성은 CSS 속성을 재설정하는 데 사용할 수 있는 약식 속성입니다."},
-           {name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
-           {name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-           {name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-           {name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
-           {name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-           {name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터 효과를 설정합니다."},
-           {name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부를 설정합니다."},
-           {name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
-           {name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
-           {name: "display", desc: "display는 요소를 어떻게 보여줄지 결정합니다"},
-           {name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."}
-       ]
+           {num: 5, name: "all", desc: "all 속성은 CSS 속성을 재설정하는 데 사용할 수 있는 약식 속성입니다."},
+           {num: 2, name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+           {num: 3, name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+           {num: 9, name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+           {num: 1, name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+           {num: 6, name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+           {num: 7, name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터 효과를 설정합니다."},
+           {num: 8, name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부를 설정합니다."},
+           {num: 4, name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+           {num: 10, name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
+           {num: 11, name: "display", desc: "display는 요소를 어떻게 보여줄지 결정합니다"},
+           {num: 12, name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."}
+       ];
+
+        const searchBtn = document.querySelectorAll(".search span");    // 버튼
+        const cssList = document.querySelector(".list ul");             // 속성 리스트
+        const cssCount = document.querySelector(".count");              // CSS 갯수
+
+
+        // 데이터 출력
+        const updateList = function (){
+            let listHTML = '';
+
+            cssProperty.forEach((el, index) => {
+                listHTML += `<li>${el.num}. ${el.name} : ${el.desc}</li>`
+                cssCount.innerText = `전체 목록 갯수 : ${index+1}개`
+            })
+            cssList.innerHTML = listHTML;
+        }
+        updateList();
+
+        // 반대정렬
+        function reverse(){
+            cssProperty.reverse()
+            updateList();
+        }
+
+        // 오름차순 정렬
+        function sortAscending(){
+            cssProperty.sort((a,b) => {
+                return a.num - b.num
+            })
+            updateList();
+        }
+        
+        // 내림차순 정렬
+        function sortDescending(){
+            cssProperty.sort((a,b) => {
+                return b.num - a.num
+            })
+            updateList();
+        }
+        
+        // 알파벳 정렬(a~z)
+        function sortAlphabet(){
+            cssProperty.sort((a,b) => {
+                let x = a.name;
+                let y = b.name;
+                return x.localeCompare(y)
+            })
+            updateList();
+        }
+        // 알파벳 정렬(z~a)
+        function sortAlphabetZ(){
+            cssProperty.sort((a,b) => {
+                let x = a.name;
+                let y = b.name;
+                return y.localeCompare(x)
+            })
+            updateList();
+        }
+
+        // forEach문
+        // cssProperty.forEach(el => {
+        //    listHTML += `<li>${el.name}</li>`
+        // })
+
+        // for of 문
+        // for(let data of cssProperty){
+        //    listHTML += `<li>${data.name}</li>`
+        // }
+        
+        // 반대로 버튼 클릭시
+        document.querySelector(".btn1").addEventListener("click", () => {
+            reverse();
+        })
+        // 내림차순 버튼 클릭시
+        document.querySelector(".btn3").addEventListener("click", () => {
+            sortDescending();
+        })
+        // 오름차순 버튼 클릭시
+        document.querySelector(".btn2").addEventListener("click", () => {
+            sortAscending();
+        })
+        // 알파벳 정렬(a~z) 버튼 클릭시
+        document.querySelector(".btn4").addEventListener("click", () => {
+            sortAlphabet();
+        })
+        // 알파벳 정렬(z~a) 버튼 클릭시
+        document.querySelector(".btn5").addEventListener("click", () => {
+            sortAlphabetZ();
+        })
+
 
     </script>
 
