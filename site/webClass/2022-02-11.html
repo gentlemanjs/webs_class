@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-02-11</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 폰트 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+    </style>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            width: 1249px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        #wrap {
+            width: 100%;
+            height: 4734px;
+        }
+        #header {
+            height: 100px;
+        }
+        #header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 10px;
+        }
+        #header .logo {
+            width: 35px;
+            height: 35px;
+            background: url(../webClass/img/bg-svg.svg);
+            background-position: -200px 0;
+        }
+        #header .logo a {
+            margin-left: 45px;
+            font-size: 30px;
+            margin-top: -5px;
+            display: inline-block;
+        }
+        #header .menu {
+        }
+        #header .menu ul {
+        }
+        #header .menu ul li {
+            display: inline-block;
+            margin-right: 60px;
+            font-family: 'Geomanist';
+        }
+        #header .menu ul li a {
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+        #header .sidemenu {}
+        #header .sidemenu a {
+            width: 24px;
+            height: 24px;
+            background: url(../webClass/img/bg-svg.svg);
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #header .sidemenu .search {
+            background-position: -250px 0;
+        }
+        #header .sidemenu .basket {
+            background-position: -250px -26px;
+        }
+        #header .sidemenu .mypage {
+            background-position: -300px 0;
+        }
+        #banner {
+            height: 1085px;
+            background: #e9e9e9;
+        }
+        #banner .bg {
+            width: 1022px;
+            height: 853px;
+            background: url(../webClass/img/Image.jpg) no-repeat;
+            background-size: cover;
+            float:right;
+            margin-top: 110px;
+        }
+        #banner .bg .desc {
+            margin-left: -560px;
+        }
+        #banner .bg h1 {
+            font-size: 80px;
+            font-weight: 500;
+            line-height: 1;
+            color: #292019;
+            margin-bottom: 55px;
+            margin-left: -5px;
+        }
+        #banner .bg p {
+            width: 432px;
+            height: 232px;
+            font-size: 18px;
+            line-height: 1.56;
+            color: #72696a;
+            margin-bottom: 200px;
+        }
+        #banner .bg a {
+            font-size: 16px;
+            display: inline-block;
+        }
+        #banner .bg a.request {
+            padding: 21px 35px 21px 35px;
+            color: #fff;
+            background-color: #c4a586
+        }
+        #banner .bg a.video {
+            padding: 21px 50px 21px 50px;
+            color: #c4a586;
+            background-color: #fff;
+            border: 1px solid #c4a586;
+        }
+        #banner .bg .text {
+            font-size: 16px;
+            margin-top: 130px;
+            color: #292019;
+            font-weight: 700;
+        }
+        #content01 {
+            height: 388px;
+            background: #555;
+        }
+        #content02 {
+            height: 1500px;
+            background: #666;
+        }
+        #content03 {
+            height: 900px;
+            background: #777;
+        }
+        #content04 {
+            height: 527px;
+            background: #888;
+        }
+        
+        #footer {
+            height: 236px;
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="logo"><a href="#">MISTRIUM</a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">faqs</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="sidemenu">
+                    <a href="#" class="search"><span class="ir_pm">search</span></a>
+                    <a href="#" class="basket"><span class="ir_pm">basket</span></a>
+                    <a href="#" class="mypage"><span class="ir_pm">mypage</span></a>
+                </div>
+            </div>
+        </header>
+        <nav id="banner">
+            <div class="bg">
+                <div class="desc">
+                <h1>Modern Furniture For<br>
+                    Modern Living Style</h1>
+                    <p> In unfeeling existence objection immediate repulsive on he in. Imprudence comparison uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as on raillery.<br><br>
+
+                        September few dependent extremity own continued and ten prevailed attending. Early to weeks we could. Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet.
+                    </p>
+                    <a href="#" class="request">Request a Quote</a>
+                    <a href="#" class="video">Watch Video</a>
+                </div>
+                <div class="text">SOME OF OUR TRUSTED CLIENTS</div>
+                
+            </div>
+        </nav>
+        <section id="content01"></section>
+        <section id="content02"></section>
+        <section id="content03"></section>
+        <section id="content04"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
