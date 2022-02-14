@@ -23,14 +23,15 @@
             width: 100%;
             height: 4734px;
         }
+
+        /* 헤더 */
         #header {
             height: 100px;
         }
         #header .container {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            padding-bottom: 10px;
+            align-items: flex-end
         }
         #header .logo {
             width: 35px;
@@ -45,15 +46,13 @@
             display: inline-block;
         }
         #header .menu {
+            width: 40%;
         }
         #header .menu ul {
+            display: flex;
+            justify-content: space-between
         }
-        #header .menu ul li {
-            display: inline-block;
-            margin-right: 60px;
-            font-family: 'Geomanist';
-        }
-        #header .menu ul li a {
+        #header .menu a:hover {
             border-bottom: 2px solid #000;
             padding-bottom: 8px;
         }
@@ -61,8 +60,8 @@
             width: 24px;
             height: 24px;
             background: url(../webClass/img/bg-svg.svg);
-            display: inline-block;
             margin-left: 15px;
+            display: inline-block;
         }
         #header .sidemenu .search {
             background-position: -250px 0;
@@ -73,21 +72,18 @@
         #header .sidemenu .mypage {
             background-position: -300px 0;
         }
+
+        /* 배너 */
         #banner {
-            height: 1085px;
+            height: 985px;
+            background: url(../webClass/img/Image.jpg) right no-repeat;
+            margin-top: 126px;
         }
         #banner .container {
-            width: 1022px;
-            height: 853px;
-            background: url(../webClass/img/Image.jpg) no-repeat;
-            background-size: cover;
-            float:right;
-            margin-top: 110px;
+            width: 1249px;
+            margin: 0 auto;
         }
-        #banner .container .desc {
-            margin-left: -560px;
-        }
-        #banner .container h1 {
+        #banner .container .desc h1 {
             font-size: 80px;
             font-weight: 500;
             line-height: 1;
@@ -95,7 +91,7 @@
             margin-bottom: 55px;
             margin-left: -5px;
         }
-        #banner .container p {
+        #banner .container .desc p {
             width: 480px;
             height: 232px;
             font-size: 18px;
@@ -103,7 +99,7 @@
             color: #72696a;
             margin-bottom: 100px;
         }
-        #banner .container a {
+        #banner .container .desc a {
             font-size: 16px;
             display: inline-block;
             margin-right: 25px;
@@ -121,30 +117,287 @@
         }
         #banner .container .text {
             font-size: 16px;
-            margin-top: 100px;
+            margin-top: 200px;
             color: #292019;
             font-weight: 700;
+            text-align: center;
         }
-        #content01 {
+        #banner .container .logo {
+            height: 50px;
+            display: flex;
+            justify-content: space-around;        
+            margin-top: 100px;
+        }
+        #banner .container .logo .stripe {
+            width: 120px;
+            background: url(img/stripe.jpg) no-repeat;
+            background-size: contain;
+        }
+        #banner .container .logo .google {
+            width: 120px;
+            background: url(img/Google.png) no-repeat;
+            background-size: contain;
+        }
+        #banner .container .logo .deloitte {
+            width: 120px;
+            background: url(img/deloitte.png) no-repeat;
+            background-size: contain;
+        }
+        #banner .container .logo .accenture {
+            width: 120px;
+            background: url(img/accenture.png) no-repeat;
+            background-size: contain;
+        }
+        #banner .container .logo .ibm {
+            width: 120px;
+            background: url(img/ibm.png) no-repeat;
+        }
+        #banner .container .logo .samsung {
+            width: 120px;
+            background: url(img/samsung.png) no-repeat;
+            background-size: contain;
+        }
+        /* 이미지 텍스트01 */
+        .img_text01 {
+            display: flex;
+            margin-top: 198px;
+        }
+        .img_text01 .cont1 {
+            display: flex;
+            justify-content: end;
+            width: 50%;
             height: 388px;
-            background: #555;
+            background-color: #FCEFE9;
         }
-        #content02 {
-            height: 1500px;
-            background: #666;
+        .img_text01 .cont1 .img {
+            width: 409px;
+            height: 351px;
+            background: url(img/furniture.jpg) no-repeat;
+            margin: 19px 44px 0 0;
         }
-        #content03 {
-            height: 900px;
-            background: #777;
+        .img_text01 .cont2 {
+            display: flex;
+            justify-content: start;
+            width: 50%;
+            height: 388px;
+            background-color: #fae2c8;
         }
-        #content04 {
-            height: 527px;
-            background: #888;
+        .img_text01 .cont2 .desc {
+            margin-left: 67px;
         }
-        
-        #footer {
-            height: 236px;
-            background: #999;
+        .img_text01 .cont2 .img {
+            width: 351px;
+            height: 216px;
+            background: url(img/furniture2.jpg) no-repeat;
+            margin-top: 106px;
+            margin-left: 59px;
+        }
+        .img_text01 h3 {
+            font-size: 34px;
+            font-weight: bold;
+            color: #3d3d3f;
+            margin-top: 110px;
+            line-height: 1.29;
+        }
+        .img_text01 p {
+            font-size: 20px;
+            letter-spacing: 0.6px;
+            margin-top: 91px;
+        }
+
+        /* 이미지 텍스트02 */
+        .img_text02 {
+            margin-top: 173px;
+        }
+        .img_text02 .header {
+            width: 1041px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .img_text02 .header .logo {
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 0.5;
+            color: #3d3d3f;
+        }
+        .img_text02 .header .tab {
+            margin-top: 30px;
+        }
+        .img_text02 .header .tab ul {
+            display: flex;
+        }
+        .img_text02 .header .tab li {
+            margin: 0 100px 0 10px;
+        }
+        .img_text02 .header .tab li a {
+            font-size: 23px;
+            color: #b9b7b6;
+        }
+        .img_text02 .header .tab li a:hover {
+            color: #3d3d3f;
+        }
+        .img_text02 .header .btn {
+            display: flex;
+            margin-top: 35px;
+            position: relative;
+        }
+        .img_text02 .header .btn .btn_txt {
+            font-size: 17px;
+            color: #3d3d3f;
+            margin-right: 28px;
+        }
+        .img_text02 .header .btn .btn_box {
+            width: 34px;
+            height: 19px;
+            background-color: #e9e9e9;
+            margin-top: 4px;
+        }
+        .img_text02 .header .btn .btn_arrow {
+            width: 25px;
+            height: 17px;
+            background: url(img/bg-svg.svg) -200px -50px no-repeat;
+            position: absolute;
+            top: 6px; right: 17px;
+        }
+        .img_text02 .nav {
+            width: 421px;
+            height: 18px;
+            margin: 0 auto;
+            margin-top: 111px;
+        }
+        .img_text02 .nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        .img_text02 .nav li {
+            margin: 0 30px;
+        }
+        .img_text02 .nav li a {
+            font-size: 18px;
+            color: #b9b7b6;
+        }
+        .img_text02 .nav li a:hover {
+            color: #3d3d3f;
+        }
+        .img_text02 .iT {
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+        }
+        .img_text02 .atc {
+            width: 137px;
+            height: 40px;
+            background-color: #d9ab82;
+            border-radius: 40px;
+            position: absolute;
+            left: 28%; top: -7%;
+            display: flex;
+        }
+        .img_text02 .atc_txt {
+            font-size: 14px;
+            color: #fff;
+            padding: 10px 0 0 14px;
+        }
+        .img_text02 .atc_bk {
+            margin: 7px 0 0 5px;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.250);
+            border-radius: 20px;
+        }
+        .img_text02 .atc_bk .bk_img {
+            width: 20px;
+            height: 20px;
+            background: url(img/bg-svg.svg) -150px -50px no-repeat;
+            margin: 5px 0 0 5px;
+        }
+        .img_text02 .name {
+            font-size: 26px;
+            font-weight: bold;
+            color: #3d3d3f;
+            margin: 35px 0 20px 51px;
+        }
+        .img_text02 .price {
+            display: flex;
+            margin-left: 51px;
+        }
+        .img_text02 .r_price {
+            margin-right: 38px;
+            font-size: 19px;
+            font-weight: 500;
+        }
+        .img_text02 .o_price {
+            font-size: 15px;
+            font-weight: 500;
+            color: #a9a7a6;
+            margin-top: 5px;
+            text-decoration: line-through;
+        }
+        .img_text02 .img_container01 {
+            display: flex;
+            justify-content: space-between;
+            width: 1056px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        .img_text02 .img_container01 .img_txt01 {
+            position: relative;
+        }
+        .img_text02 .img_container01 .img_txt01 .img {
+            width: 250px;
+            height: 280px; 
+            background: url(img/Product01.jpg) -98px -44px no-repeat;
+            margin-left: 40px;
+        }
+
+        .img_text02 .img_container01 .img_txt02 {
+            position: relative;
+        }
+        .img_text02 .img_container01 .img_txt02 .img {
+            width: 280px;
+            height: 255px;
+            background: url(img/Product02.jpg) -30px -25px no-repeat;
+        }
+        .img_text02 .img_container01 .img_txt03 {
+            position: relative;
+        }
+        .img_text02 .img_container01 .img_txt03 .img {
+            width: 290px;
+            height: 255px;
+            background: url(img/Product03.jpg) -50px -35px no-repeat;
+        }
+        .img_text02 .img_container02 {
+            display: flex;
+            justify-content: space-between;
+            width: 1056px;
+            margin: 0 auto;
+            margin-top: 191px;
+        }
+        .img_text02 .img_container02 .img_txt01 {
+            position: relative;
+        }
+        .img_text02 .img_container02 .img_txt01 .img {
+            width: 250px;
+            height: 270px;
+            background: url(img/Product04.jpg) 0 -10px no-repeat;
+        }
+        .img_text02 .img_container02 .img_txt02 {
+            position: relative;
+        }
+        .img_text02 .img_container02 .img_txt02 .img {
+            width: 270px;
+            height: 280px;
+            background: url(img/Product05.jpg) -60px -30px no-repeat;
+        }
+        .img_text02 .img_container02 .img_txt03 {
+            position: relative;
+        }
+        .img_text02 .img_container02 .img_txt03 .img {
+            width: 265px;
+            height: 270px;
+            background: url(img/Product06.jpg) 35px 0px no-repeat;
         }
     </style>
 </head>
@@ -172,8 +425,8 @@
         <nav id="banner">
             <div class="container">
                 <div class="desc">
-                <h1>Modern Furniture For<br>
-                    Modern Living Style</h1>
+                    <h1>Modern Furniture For<br>
+                        Modern Living Style</h1>
                     <p> In unfeeling existence objection immediate repulsive on he in. Imprudence comparison uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as on raillery.<br><br>
 
                         September few dependent extremity own continued and ten prevailed attending. Early to weeks we could. Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet.
@@ -182,10 +435,150 @@
                     <a href="#" class="video">Watch Video</a>
                 </div>
                 <div class="text">SOME OF OUR TRUSTED CLIENTS</div>
-                
+                <div class="logo">
+                    <div class="stripe"></div>
+                    <div class="google"></div>
+                    <div class="deloitte"></div>
+                    <div class="accenture"></div>
+                    <div class="ibm"></div>
+                    <div class="samsung"></div>
+                </div>
             </div>
         </nav>
-        <section id="content01"></section>
+        <section id="content01">
+            <div class="img_text01">
+                <div class="cont1">
+                    <div class="desc">
+                        <h3>Residential<br>Furniture</h3>
+                        <p>Browse Collection</p>
+                    </div>
+                    <div class="img"></div>
+                </div>
+                <div class="cont2">
+                    <div class="desc">
+                        <h3>Hospitality<br>Furniture</h3>
+                        <p>Browse Collection</p>
+                    </div>
+                    <div class="img"></div>
+                </div>
+            </div>
+            <!-- //img_text01 -->
+
+            <div class="img_text02">
+                <div class="header">
+                    <h3 class="logo">PRODUCTS</h3>
+                    <div class="tab">
+                        <ul>
+                            <li><a href="#">Best Selling</a></li>
+                            <li><a href="#">Most Popular</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <div class="btn_txt">See All</div>
+                        <div class="btn_arrow"></div>
+                        <div class="btn_box"></div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Sofa</a></li>
+                        <li><a href="#">Chair</a></li>
+                        <li><a href="#">Light</a></li>
+                    </ul>
+                </div>
+                <div class="img_container01">
+                    <div class="img_txt01 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Ramen Stool</div>
+                        <div class="price">
+                            <div class="r_price">$65.00</div>
+                            <div class="o_price">$95.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                    <div class="img_txt02 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Flexform</div>
+                        <div class="price">
+                            <div class="r_price">$35.00</div>
+                            <div class="o_price">$55.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                    <div class="img_txt03 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Porada</div>
+                        <div class="price">
+                            <div class="r_price">$87.00</div>
+                            <div class="o_price">$97.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                </div>
+                <div class="img_container02">
+                    <div class="img_txt01 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Taknion</div>
+                        <div class="price">
+                            <div class="r_price">$45.00</div>
+                            <div class="o_price">$55.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                    <div class="img_txt02 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Amora</div>
+                        <div class="price">
+                            <div class="r_price">$65.00</div>
+                            <div class="o_price">$95.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                    <div class="img_txt03 iT">
+                        <div class="atc">
+                            <div class="atc_txt">Add To Cart</div>
+                            <div class="atc_bk">
+                                <div class="bk_img"></div>
+                            </div>
+                        </div>
+                        <div class="name">Liquid Contract</div>
+                        <div class="price">
+                            <div class="r_price">$35.00</div>
+                            <div class="o_price">$45.00</div>
+                        </div>
+                        <div class="img"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //img_text02 -->
+        </section>
         <section id="content02"></section>
         <section id="content03"></section>
         <section id="content04"></section>
