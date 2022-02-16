@@ -207,33 +207,31 @@
                                 </div>
                                 <div>
 <pre><code class="language-javascript">    const sliderWrap = document.querySelector(".slider__wrap");
-    const sliderImg = document.querySelector(".slider__img");       // 이미지 보이는 영역
-    const sliderInner = document.querySelector(".slider__inner");   // 이미지 움직이는 구간
-    const slider = document.querySelectorAll(".slider");                 // 5개의 이미지
+    const sliderImg = document.querySelector(".slider__img");      
+    const sliderInner = document.querySelector(".slider__inner");   
+    const slider = document.querySelectorAll(".slider");                
 
     let currentIndex = 0;
-    let sliderCount = slider.length;                  // 이미지 갯수
-    let sliderWidth = sliderImg.offsetWidth     // sliderImg의 width 값 가져오기
-    let sliderClone = sliderInner.firstElementChild.cloneNode(true);        // 첫 번째 이미지 복사
-    sliderInner.appendChild(sliderClone);       // 첫 번째 이미지를 마지막에 넣어줌
+    let sliderCount = slider.length;                 
+    let sliderWidth = sliderImg.offsetWidth     
+    let sliderClone = sliderInner.firstElementChild.cloneNode(true);      
+    sliderInner.appendChild(sliderClone);      
 
-    function sliderEffect(){                               // sliderEffect 함수를 만든다.
-        currentIndex++;                                     // currentIndex를 1씩 증가시킴
-        sliderInner.style.transition = "all 0.3s"       // sliderInner에 transition 효과
-        sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)" // sliderInner에 transform 효과
+    function sliderEffect(){                              
+        currentIndex++;                                    
+        sliderInner.style.transition = "all 0.3s"       
+        sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)" 
 
-        // 마지막 사진에 갔을 때
-        if(currentIndex==sliderCount){      // currentIndex값이 sliderCount 가 되면
-            setTimeout(()=>{                      // 일정 시간이 지난 후에 함수 실행
+        if(currentIndex==sliderCount){      
+            setTimeout(()=>{                      
 
-            // 초기화 시켜주기 위한 효과들
             sliderInner.style.transition = "0s"     
             sliderInner.style.transform = "translateX(0)"
             }, 300)
             currentIndex=0;
         }
     }
-    setInterval(sliderEffect, 2000);        // 2초마다 sliderEffect함수 실행
+    setInterval(sliderEffect, 2000);        
 </code></pre>
 
                                 </div>
