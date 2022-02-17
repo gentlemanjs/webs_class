@@ -35,6 +35,9 @@ body.img04 {
 body.img05 {
     background-image: url(../img/img05.jpg);
 }
+body.img06 {
+    background-image: url(../img/img06.jpg);
+}
 img {
     width: 100%;
     vertical-align: top; /* 이미지 여백 제거 */
