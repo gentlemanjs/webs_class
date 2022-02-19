@@ -769,9 +769,15 @@
 
         quizConfirm.addEventListener("click", ()=>{
             if (quizAnswer.value === answerResult) {
+                quizDog.classList.remove("dislike")
                 quizDog.classList.add("like")
+                document.querySelector(".false").style.opacity = "0"
+                document.querySelector(".true").style.opacity = "1"
             } else {
+                quizDog.classList.remove("like")
                 quizDog.classList.add("dislike")
+                document.querySelector(".false").style.opacity = "1"
+                document.querySelector(".true").style.opacity = "0"
             }
         });
         
