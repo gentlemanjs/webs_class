@@ -158,7 +158,6 @@
 
 .content-container>.content {
     display: flex;
-    height: 260px;
 }
 
 .content-container>.content>.main,
