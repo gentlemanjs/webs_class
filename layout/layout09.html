@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #e8f5e9;
+        }
+        .container {
+            width: 90%;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.1);
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background: #bee9c2;
+        }
+        #nav {
+            width: 100%;
+            height: 300px;
+            background: #a8e6ae;
+        }
+        #main {
+            width: 100%;
+            height: 600px;
+            background: #8ce495;
+        }
+        #main .container {
+            display: flex;
+        }
+        #main .left {
+            width: 50%;
+            background: #679c6d;
+        }
+        #main .right {
+            width: 50%;
+            background: #30a73c;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background: #70e07b;
+        }
+
+        @media (max-width: 1220px){
+        }
+        @media (max-width: 768px){
+            .container {
+                width: 100%;
+            }
+            #wrap {
+                width: 100%;
+            }
+            #main .container {
+                flex-direction: column;
+            }
+            #main .left {
+                width: 100%;
+                height: 300px;
+            }
+            #main .right {
+                width: 100%;
+                height: 300px;
+            }
+
+            #main {
+                height: 600px;
+            }
+        }
+        @media (max-width: 600px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
