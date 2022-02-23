@@ -12,29 +12,73 @@
 
     <style>
         body::before {
-            background: rgba(5,36,70,0.8);
+            background: rgba(25,44,58,0.8);
+        }
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            /* cursor: none; */
+        }
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
+        }
+        .mouse__wrap p span {
+            border-bottom: 0.15vw dashed goldenrod;
+            color: goldenrod;
+        }
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 200px;
+            height: 200px;
+            z-index: 9999;
+            border-radius: 50%;
+            background-image: url(img/img03.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid #fff;
         }
     </style>
 </head>
-<body class="img01">
+<body class="img03">
 
     <!-- main -->
     <main>
+        <section id="mouseType03">
+            <div class="cursor"></div>
 
+            <div class="mouse__wrap">
+                <p>Better a <span>diamond</span> with a flaw than a <span>pebble</span> without.</p>
+                <p>흠집 없는 <span>조약돌</span>보다는 흠집 있는 <span>다이아몬드</span>가 낫다.</p>
+            </div>
+        </section>
     </main>
     <!-- //main -->
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect01</a></h1>
-            <p>마우스 이펙트 - 따라다니기</p>
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect03</a></h1>
+            <p>마우스 이펙트 - 조명 효과</p>
         </div>
 
         <div class="number">
             <ul>
-                <li class="active"><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect01.html">1</a></li>
                 <li><a href="mouseEffect02.html">2</a></li>
-                <li><a href="mouseEffect03.html">3</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
                 <li><a href="mouseEffect04.html">4</a></li>
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
@@ -59,18 +103,25 @@
                                     <li class="active"><a href="#">HTML</a></li>
                                     <li><a href="#">CSS</a></li>
                                     <li><a href="#">JavaScript</a></li>
-                                    <li><a href="#">jQuery</a></li>
                                 </ul>
                             </div>
                             <div class="view-cont">
                                 <div>
-<pre><code class="language-html">
+<pre><code class="language-html">    &lt;main&gt;
+    &lt;section id="mouseType01"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
 
-</code></pre>
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;The power to turn a &lt;span class="style1"&gt;negative me&lt;/span&gt; into a &lt;span class="style2"&gt;positive me&lt;/span&gt;, 
+            Emotions are &lt;span class="style3"&gt;habits&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span class="style4"&gt;부정의 나&lt;/span&gt;를 &lt;span class="style5"&gt;긍정의 나&lt;/span&gt;로 바꾸는 힘, 
+            감정은 &lt;span class="style6"&gt;습관&lt;/span&gt;이다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main></code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-css">
-    
+<pre><code class="language-css"> 
 </code></pre>
 
                                 </div>
@@ -88,16 +139,39 @@
                 </div>
             </div>
         </div>
+
+        <div class="attr">
+            <ul>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+            </ul>
+        </div>
     </div>
     <!-- // info -->
-    
+
     <!-- script -->
     <script src="js/highlight.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/gsap.min.js"></script>
     <script>
         highlight();
         modal();
         tabMenu();
+
+        const circle3 = document.querySelector(".cursor").getBoundingClientRect(); // 모든 위치정보값
+        
+        console.log(circle3.width/2)
+
+        function follow(e){
+
+            gsap.to(".cursor", {duration: 0.3, left: e.pageX - (circle3.width / 2), top: e.pageY - (circle3.height / 2)});
+
+            //출력용
+            document.querySelector(".pageX").innerText = e.pageX;
+            document.querySelector(".pageY").innerText = e.pageY;
+        }
+
+        window.addEventListener("mousemove", follow);
     </script>
 </body>
 </html>
