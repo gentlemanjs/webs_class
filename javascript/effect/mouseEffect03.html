@@ -23,7 +23,7 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            /* cursor: none; */
+            cursor: none;
         }
         .mouse__wrap p {
             font-size: 2.5vw;
@@ -43,7 +43,7 @@
             left: 0; top: 0;
             width: 200px;
             height: 200px;
-            z-index: 9999;
+            z-index: -1;
             border-radius: 50%;
             background-image: url(img/img03.jpg);
             background-size: cover;
@@ -107,28 +107,70 @@
                             </div>
                             <div class="view-cont">
                                 <div>
-<pre><code class="language-html">    &lt;main&gt;
-    &lt;section id="mouseType01"&gt;
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="mouseType03"&gt;
         &lt;div class="cursor"&gt;&lt;/div&gt;
 
         &lt;div class="mouse__wrap"&gt;
-            &lt;p&gt;The power to turn a &lt;span class="style1"&gt;negative me&lt;/span&gt; into a &lt;span class="style2"&gt;positive me&lt;/span&gt;, 
-            Emotions are &lt;span class="style3"&gt;habits&lt;/span&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;span class="style4"&gt;부정의 나&lt;/span&gt;를 &lt;span class="style5"&gt;긍정의 나&lt;/span&gt;로 바꾸는 힘, 
-            감정은 &lt;span class="style6"&gt;습관&lt;/span&gt;이다.&lt;/p&gt;
+            &lt;p&gt;Better a &lt;span&gt;diamond&lt;/span&gt; with a flaw than a &lt;span&gt;pebble&lt;/span&gt; without.&lt;/p&gt;
+            &lt;p&gt;흠집 없는 &lt;span&gt;조약돌&lt;/span&gt;보다는 흠집 있는 &lt;span&gt;다이아몬드&lt;/span&gt;가 낫다.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/section&gt;
-&lt;/main></code></pre>
+&lt;/main&gt;
+</code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-css"> 
+<pre><code class="language-css">.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed goldenrod;
+    color: goldenrod;
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url(img/img03.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border: 5px solid #fff;
+} 
 </code></pre>
 
                                 </div>
                                 <div>
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const circle3 = document.querySelector(".cursor").getBoundingClientRect();    
+function follow(e){
 
-</code></pre>
+    gsap.to(".cursor", {duration: 0.3, left: e.pageX - (circle3.width / 2), top: e.pageY - (circle3.height / 2)});
+
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+}
+
+window.addEventListener("mousemove", follow);</code></pre>
 
                                 </div>
                                 
@@ -160,8 +202,6 @@
 
         const circle3 = document.querySelector(".cursor").getBoundingClientRect(); // 모든 위치정보값
         
-        console.log(circle3.width/2)
-
         function follow(e){
 
             gsap.to(".cursor", {duration: 0.3, left: e.pageX - (circle3.width / 2), top: e.pageY - (circle3.height / 2)});
