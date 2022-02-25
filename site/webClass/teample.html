@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조별과제</title>
+    
+    <style>
+        @font-face {
+            font-family: 'BMJua';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/BMJua/BMJua.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/BMJua/BMJua.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/BMJua/BMJua.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/BMJua/BMJua.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/BMJua/BMJua.ttf') format("truetype");
+            font-display: swap;
+        } 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'BMJua';
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            width: 1240px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 80px;
+        }
+        /* 간격 셋팅 */
+        .mt0 {margin-top: 0 !important;}
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt100 {margin-top: 100px !important;}
+        .mt200 {margin-top: 200px !important;}
+        .mb0 {margin-bottom: 0 !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb100 {margin-bottom: 100px !important;}
+        .mb200 {margin-bottom: 200px !important;}
+
+        /* banner */
+        #banner {
+            height: 900px;
+            background: #284ABE;
+        }
+        #banner .container{
+            height: 900px;
+            background-image: url(../../bannerImg.jpg);
+        }
+        #banner .desc {
+            padding-top: 100px;
+            color: #fff;
+        }
+        #banner h2 {
+            font-size: 130px;
+            letter-spacing: 8px;
+        }
+        #banner h3 {
+            font-size: 48px;
+            margin-top: 50px;
+            font-weight: 300;
+        }
+        #banner p {
+            font-size: 18px;
+            margin-top: 50px;
+            line-height: 1.6;
+        }
+        #banner .view {
+            width: 180px;
+            box-shadow: 0 4px 0 0 #202020;
+            border: solid 1px #1c1c1d;
+            background-color: #ffc636;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+        #banner .view a {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        #contents {
+        }
+        /* section1 */
+        #section1 {
+            height: 2000px;
+        }
+        #section1 img {
+            width: 650px;
+            height: 500px;
+            margin-top: 150px;
+            margin-right: 50px;
+        }
+        #section1 .section1-cont1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        #section1 .img1-desc {
+            width: 540px;
+            margin-top: 100px;
+        }
+        #section1 .img1-desc h3 {
+            font-size: 48px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        #section1 .img1-desc p {
+            width: 470px;
+            font-size: 24px;
+            line-height: 1.5;
+            color: #1C1C1D;
+        }
+        #section1 .view {
+            width: 180px;
+            box-shadow: 0 4px 0 0 #202020;
+            border: solid 1px #1c1c1d;
+            background-color: #ffc636;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 60px;
+            margin-left: 150px;
+        }
+        #section1 .view a {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+        #section1 .tabmenu {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        #section1 .tabmenu div {
+            text-align: center;
+        }
+        #section1 .tabmenu img {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+        #section1 .tabmenu span {
+            display: block;
+        }
+        .section1-cont2 {
+            text-align: center;
+        }
+        .section1-cont2 h3 {
+            font-size: 54px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .section1-cont2 p {
+            color: #1C1C1D;
+            line-height: 1.4;
+        }
+        .section1-cont2 div {
+            display: inline-block;
+            width: 360px;
+            height: 360px;
+            border-radius: 12.5px;
+            box-shadow: 0 4px 0 0 #202020;
+            border: solid 2.5px #1c1c1d;
+            margin: 200px 20px 0 20px;
+        }
+        .section1-cont2 .icon1 {
+            background-color: #00c6ae;
+        }
+        .section1-cont2 .icon2 {
+            background-color: #4f66af;
+        }
+        .section1-cont2 .icon3 {
+            background-color: #f589b7;
+        }
+        /* section2 */
+        #section2 {
+            height: 1065px;
+            background-color: #FA6648;
+        }
+        #section2 h3 {
+            padding-top: 100px;
+            text-align: center;
+            font-size: 54px;
+        }
+        #section2 .imgBox {
+            margin: 150px 0 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        #section2 .left {
+            position: absolute;
+            left: -150px;
+            width: 65px;
+            height: 68px;
+            background-image: url(../../left.svg);
+        }
+        #section2 .right {
+            position: absolute;
+            right: -150px;
+            width: 65px;
+            height: 68px;
+            background-image: url(../../right.svg);
+        }
+        #section2 .left:hover {
+            background-image: url(../../leftactive.svg);
+        }
+        #section2 .right:hover {
+            background-image: url(../../rightactive.svg);
+        }
+        #section2 h4 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        #section2 p {
+            font-size: 48px;
+            text-align: center;
+        }
+        /* section3 */
+        #section3 {
+            height: 1080px;
+        }
+        #section3 img {
+            display: block;
+            margin: 0 auto;
+        }
+        /* section4 */
+        #section4 {
+            height: 1080px;
+            background-color: #00C6AE;
+        }
+        #section4 div {
+            padding: 40px 0;
+        }
+        #section4 img {
+            height: 1000px;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #000;
+            border-radius: 30px;
+        }
+        #footer {
+            height: 500px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="banner">
+            <div class="container">
+                <div class="desc">
+                    <h2>방역 투게더</h2>
+                    <h3>지치고 힘들 때,<br>우리 함께 이겨내요.</h3>
+                    <p>모두가 힘든 시기에 방투가 함께 하겠습니다.<br>
+                        코로나에 대한 모든 정보를 제공하겠습니다.</p>
+                    <div class="view"><a href="#">자세히 보기</a></div>    
+                </div>
+            </div>
+        </nav>
+        <main id="contents">
+            <section id="section1">
+                <div class="container">
+                    <div class="section1-cont1">
+                        <img src="../../img1.jpg" alt="이미지1">
+                        <div class="img1-desc">
+                            <h3>실시간 확진자를 알려줍니다.</h3>
+                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+        
+                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
+                                
+                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            </p>
+                            <div class="view"><a href="#">자세히 보기</a></div>
+                        </div>
+                        <div class="tabmenu">
+                            <div class="rules">
+                                <img src="../../click.jpg" alt="아이콘">
+                                <span class="mt10">장소별 방역 수칙</span>
+                                <span>Rules</span>
+                            </div>
+                            <div class="realtime">
+                                <img src="../../active.jpg" alt="아이콘">
+                                <span class="mt10">실시간 확진자</span>
+                                <span>Real Time</span>
+                            </div>
+                            <div class="information">
+                                <img src="../../click.jpg" alt="아이콘">
+                                <span class="mt10">지원금 관련 정보</span>
+                                <span>Information</span>
+                            </div>
+                            <div class="community">
+                                <img src="../../click.jpg" alt="아이콘">
+                                <span class="mt10">비대면 커뮤니티</span>
+                                <span>Community</span>
+                            </div>
+
+                            <div class="darkMode">
+                                <img src="../../click.jpg" alt="아이콘">
+                                <span class="mt10">다크 모드</span>
+                                <span>Dark Mode</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section1-cont2 mt200">
+                        <h3>방역투게더는 함께합니다.</h3>
+                        <p>2년간의 거리두기는 새로 사귄 친구라는 말을 어색하게 만들기 충분한 시간이였습니다.
+                            방역 투게더는 여러개의 테마를 가진 방을 만들어
+                            비슷한 사람들끼리 모여 그 동안 못 다한 대화를 나눕니다.<br>
+                            비슷한 사람들끼리 모여 그 동안 못 다한 대화를 나눕니다. 이미지뿐만 아니라 모든 태그는 기본적으로 왼쪽 정렬이 되어있습니다.<br>
+                            가운데 정렬을 하기 위해서는 웹 표준인을 쓰는 것이 일반적이지만 상황에 따라 다르게 표현해야 할 때도 있습니다. 그 방법에 대해 알아보겠습니다.
+                        </p>
+                        <div class="icon1"></div>
+                        <div class="icon2"></div>
+                        <div class="icon3"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="section2">
+                <div class="container">
+                    <h3>Keyword 정리</h3>
+                    <div class="imgBox">
+                        <div class="left"></div>
+                        <img src="../../img03.jpg" alt=""> 
+                        <img src="../../img02.jpg" alt=""> 
+                        <img src="../../img04.jpg" alt="">
+                        <div class="right"></div>
+                    </div>    
+                    <h4>Team Project</h4>
+                    <p>방역 투게더</p> 
+                </div>
+            </section>
+            <section id="section3">
+                <div class="diagram">
+                    <img src="../../diagram.jpg" alt="">
+                </div>
+            </section>
+            <section id="section4">
+                <div class="wireframe">
+                    <img src="../../wireframe.jpg" alt="">
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+
+    <script>
+        document.querySelectorAll(".tabmenu img").forEach((e,i) => {
+            e.addEventListener("click", ()=>{
+                e.src = "../../active.jpg"
+            })
+        })
+    </script>
+</body>
+</html>
