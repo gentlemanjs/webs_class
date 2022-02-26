@@ -113,6 +113,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            display: none;
+        }
+        #section1 .section1-cont1:first-child {
+            display: flex;
         }
         #section1 .img1-desc {
             width: 540px;
@@ -212,6 +216,28 @@
             justify-content: space-between;
             position: relative;
         }
+        #section2 .center {
+            width: 1240px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        #section2 .center .viewBox {
+            width: 1270px;
+            display: flex;
+            align-items: center;
+        }
+        #section2 .center img {
+            width: 350px;
+            height: 350px;
+            margin-right: 40px;
+            transition: all 0.4s;
+        }
+        #section2 .center img.active{
+            width: 450px;
+            height: 450px;
+        }
         #section2 .left {
             position: absolute;
             left: -150px;
@@ -287,7 +313,20 @@
         <main id="contents">
             <section id="section1">
                 <div class="container">
-                    <div class="section1-cont1">
+                    <div class="section1-cont1 rules">
+                        <img src="../../img1.jpg" alt="이미지1">
+                        <div class="img1-desc">
+                            <h3>장소별 방역수칙.</h3>
+                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+        
+                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
+                                
+                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            </p>
+                            <div class="view"><a href="#">자세히 보기</a></div>
+                        </div>
+                    </div>
+                    <div class="section1-cont1 realtime">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
                             <h3>실시간 확진자를 알려줍니다.</h3>
@@ -299,6 +338,46 @@
                             </p>
                             <div class="view"><a href="#">자세히 보기</a></div>
                         </div>
+                    </div>
+                    <div class="section1-cont1 information">
+                        <img src="../../img1.jpg" alt="이미지1">
+                        <div class="img1-desc">
+                            <h3>재난지원금 ㅈㅁ정보.</h3>
+                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+        
+                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
+                                
+                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            </p>
+                            <div class="view"><a href="#">자세히 보기</a></div>
+                        </div>
+                    </div>
+                    <div class="section1-cont1 community">
+                        <img src="../../img1.jpg" alt="이미지1">
+                        <div class="img1-desc">
+                            <h3>커뮤니티</h3>
+                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+        
+                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
+                                
+                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            </p>
+                            <div class="view"><a href="#">자세히 보기</a></div>
+                        </div>
+                    </div>
+                    <div class="section1-cont1 darkMode">
+                        <img src="../../img1.jpg" alt="이미지1">
+                        <div class="img1-desc">
+                            <h3>다크모드.</h3>
+                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+        
+                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
+                                
+                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            </p>
+                            <div class="view"><a href="#">자세히 보기</a></div>
+                        </div>
+                    </div>
                         <div class="tabmenu">
                             <div class="rules">
                                 <img src="../../click.jpg" alt="아이콘">
@@ -327,7 +406,6 @@
                                 <span>Dark Mode</span>
                             </div>
                         </div>
-                    </div>
                     <div class="section1-cont2 mt200">
                         <h3>방역투게더는 함께합니다.</h3>
                         <p>2년간의 거리두기는 새로 사귄 친구라는 말을 어색하게 만들기 충분한 시간이였습니다.
@@ -347,9 +425,16 @@
                     <h3>Keyword 정리</h3>
                     <div class="imgBox">
                         <div class="left"></div>
-                        <img src="../../img03.jpg" alt=""> 
-                        <img src="../../img02.jpg" alt=""> 
-                        <img src="../../img04.jpg" alt="">
+                        <div class="center">
+                            <div class="viewBox">
+                                <img src="../../img03.jpg" alt="">
+                                <img class="active" src="../../img04.jpg" alt="">
+                                <img src="../../img03.jpg" alt="">
+                                <img src="../../img04.jpg" alt="">
+                                <img src="../../img03.jpg" alt="">
+                                <img src="../../img04.jpg" alt="">    
+                            </div>
+                        </div>
                         <div class="right"></div>
                     </div>    
                     <h4>Team Project</h4>
@@ -370,12 +455,73 @@
         <footer id="footer"></footer>
     </div>
 
+
     <script>
-        document.querySelectorAll(".tabmenu img").forEach((e,i) => {
-            e.addEventListener("click", ()=>{
-                e.src = "../../active.jpg"
+        const tabMenu = document.querySelectorAll(".tabmenu img")
+        const contBox = document.querySelectorAll(".section1-cont1")
+        const imgBox = document.querySelector(".center");
+        const viewBox = document.querySelector(".viewBox");
+        const teamImg = document.querySelectorAll(".viewBox img");
+        const nextBtn = document.querySelector(".right");
+        const prevBtn = document.querySelector(".left");
+
+        tabMenu.forEach((el,index) => {
+            el.addEventListener("click", ()=> {
+                tabMenu.forEach(e=>{
+                    e.src = "../../click.jpg"
+                }) 
+                el.src = "../../active.jpg"
+                contBox.forEach((e,i) => {
+                    e.style.display = "none"
+                })
+                contBox[index].style.display = "flex"
             })
         })
+
+        let currentIndex = 0;
+        let sliderCount = teamImg.length;
+        let sliderWidth = 390;
+
+
+        // function gotoSlider(num){
+        //     sliderInner.style.transition = "all 400ms";
+        //     sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)"
+        //     currentIndex = num;
+        // }
+        
+        // sliderBtnPrev.addEventListener("click", () => {
+        //     let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount
+        //     // if(currentIndex==0) prevIndex = sliderCount - 1;
+        //     gotoSlider(prevIndex);
+        // })
+        // sliderBtnNext.addEventListener("click", () => {
+        //     let nextIndex = (currentIndex + 1) % sliderCount
+        //     gotoSlider(nextIndex);
+        // })
+        
+        function Slider(num){
+            viewBox.style.transition = "all 400ms";
+            viewBox.style.transform = "translateX("+ -sliderWidth * num +"px)"
+            currentIndex = num;
+        }
+        nextBtn.addEventListener("click", ()=>{
+            let nextIndex = (currentIndex+1) % sliderCount
+            Slider(nextIndex);
+            teamImg.forEach((e)=>{
+                e.classList.remove("active")
+            })
+            teamImg[nextIndex+1].classList.add("active")
+        })
+        prevBtn.addEventListener("click", () => {
+            let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount
+            // if(currentIndex==0) prevIndex = sliderCount - 1;
+            Slider(prevIndex);
+            teamImg.forEach((e)=>{
+                e.classList.remove("active")
+            })
+            teamImg[prevIndex+1].classList.add("active")
+    })
+
     </script>
 </body>
 </html>
