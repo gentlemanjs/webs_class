@@ -104,7 +104,7 @@
             height: 2000px;
         }
         #section1 img {
-            width: 650px;
+            width: 630px;
             height: 500px;
             margin-top: 150px;
             margin-right: 50px;
@@ -119,7 +119,7 @@
             display: flex;
         }
         #section1 .img1-desc {
-            width: 540px;
+            width: 560px;
             margin-top: 100px;
         }
         #section1 .img1-desc h3 {
@@ -218,29 +218,127 @@
         }
         #section2 .center {
             width: 1240px;
-            display: flex;
             align-items: center;
             justify-content: space-between;
-            overflow: hidden;
+            position: relative;
         }
-        #section2 .center .viewBox {
-            width: 1270px;
-            display: flex;
-            align-items: center;
-        }
-        #section2 .center img {
+        .img00 {
+            margin-top: 60px;
+            background: url(../../img00.jpg) no-repeat 0 0 /contain;
             width: 350px;
             height: 350px;
-            margin-right: 40px;
-            transition: all 0.4s;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 150px;
+            z-index: 1;
         }
-        #section2 .center img.active{
-            width: 450px;
-            height: 450px;
+        .img01 {
+            background-image:url(../../img01.jpg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 500px;
+            height: 500px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 380px;
+            top: 10px;
+            z-index:2;
         }
-        #section2 .left {
+        .img02 {
+            margin-top: 60px;
+            background: url(../../img02.jpg) no-repeat 0 0 /contain;
+            width: 350px;
+            height: 350px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 750px;
+            z-index:1;
+        }
+        .img03 {
+            margin-top: 60px;
+            background: url(../../img03.jpg) no-repeat 0 0 /contain;
+            width: 250px;
+            height: 250px;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 40px;
+            left: 1000px;
+            z-index:0;
+        }
+        .img04 {
+            margin-top: 60px;
+            background: url(../../img04.jpg) no-repeat 0 0 /contain;
+            width: 250px;
+            height: 250px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            z-index:0;
+        
+        }
+        .im00 {
+            margin-top: 60px;
+            background: url(../../img00.jpg) no-repeat 0 0 /contain;
+            width: 350px;
+            height: 350px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 150px;
+            z-index: 1;
+        
+        }
+        .im01 {
+            background-image:url(../../img01.jpg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 500px;
+            height: 500px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 380px;
+            top: 10px;
+            z-index:2;
+        }
+        .im02 {
+            margin-top: 60px;
+            background: url(../../img02.jpg) no-repeat 0 0 /contain;
+            width: 350px;
+            height: 350px;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 750px;
+            z-index:1;
+        
+        }
+        .im03 {
+            margin-top: 60px;
+            background: url(../../img03.jpg) no-repeat 0 0 /contain;
+            width: 250px;
+            height: 250px;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 40px;
+            left: 1000px;
+            z-index:0;
+        }
+        .im04 {
+            margin-top: 60px;
+            background: url(../../img04.jpg) no-repeat 0 0 /contain;
+            width: 250px;
+            height: 250px;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            z-index:0;
+        }       
+         #section2 .left {
             position: absolute;
             left: -150px;
+            top: 200px;
             width: 65px;
             height: 68px;
             background-image: url(../../left.svg);
@@ -248,6 +346,7 @@
         #section2 .right {
             position: absolute;
             right: -150px;
+            top: 200px;
             width: 65px;
             height: 68px;
             background-image: url(../../right.svg);
@@ -261,7 +360,7 @@
         #section2 h4 {
             font-size: 24px;
             text-align: center;
-            margin-bottom: 5px;
+            margin-top: 600px;
         }
         #section2 p {
             font-size: 48px;
@@ -316,12 +415,11 @@
                     <div class="section1-cont1 rules">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
-                            <h3>장소별 방역수칙.</h3>
-                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
+                            <h3>방역수칙을 알려줍니다</h3>
+                            <p>시시때때로 바뀌는 정부지침과 장소별로 다르게 적용되는 방역수칙에 많은 혼란을 겪고 있습니다. <br><br>
         
-                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
-                                
-                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                                이러한 문제점을 해결하기 위해 장소에 따른 거리두기 수칙을 정리하여 알려줍니다.<br><br>
+                                더 나아가, 상황에 따른 격리기준, PCR 검사 기준, 해외입국자 행동수칙 등 다양한 정보를 제공합니다.
                             </p>
                             <div class="view"><a href="#">자세히 보기</a></div>
                         </div>
@@ -329,7 +427,7 @@
                     <div class="section1-cont1 realtime">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
-                            <h3>실시간 확진자를 알려줍니다.</h3>
+                            <h3>실시간 확진자를 알려줍니다</h3>
                             <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
         
                                 계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
@@ -342,12 +440,9 @@
                     <div class="section1-cont1 information">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
-                            <h3>재난지원금 ㅈㅁ정보.</h3>
-                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
-        
-                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
-                                
-                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            <h3>지원금 정보를 알려줍니다</h3>
+                            <p>코로나로 인해 힘들어진 분들이 받을 수 있는 다양한 지원금이 있습니다.<br><br> 하지만 이런 지원금들을 정보의 부재로 놓치고 있는 분들이 꽤 있습니다.<br><br>
+                                지원금의 종류, 지원 기준, 신청 기간 등 다양한 지원금 관련 정보를 제공합니다.
                             </p>
                             <div class="view"><a href="#">자세히 보기</a></div>
                         </div>
@@ -355,12 +450,11 @@
                     <div class="section1-cont1 community">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
-                            <h3>커뮤니티</h3>
-                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
-        
-                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
-                                
-                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            <h3>비대면 커뮤니티를 지원합니다</h3>
+                            <p>2년간의 거리두기는 새로 사귄 친구라는 말을 어색하게 만들기 충분한 시간이였습니다.<br><br>
+                                그래서 준비 했습니다. 방역 투게더는 놀이터, Q&A, 토론이라는 세 가지 테마를 만들어
+                                그 안에서<br>회원들끼리 화상으로 얼굴을 직접 마주하고 대화를 하며 의견을 나눌 수 있는
+                                공간을 만들었습니다.
                             </p>
                             <div class="view"><a href="#">자세히 보기</a></div>
                         </div>
@@ -368,24 +462,23 @@
                     <div class="section1-cont1 darkMode">
                         <img src="../../img1.jpg" alt="이미지1">
                         <div class="img1-desc">
-                            <h3>다크모드.</h3>
-                            <p>실시간으로 늘어나는 국내 코로나 확진자와, 전 세계 확진자 수 그리고 접종 현황까지 한눈에 볼 수 있도록 디자인 했습니다.<br><br>
-        
-                                계속되는 거리두기와 방역패스 시행으로 인해, 장소별, 상황별 정책이 달라 많은 이들이 혼란스러운 상황입니다.<br><br>
-                                
-                                방역 투게더는 이러한 어려움을 해소하기 위해 정확한 정보만을 취합하여 알려줍니다.
+                            <h3>다크모드를 지원합니다</h3>
+                            <p>우리는 요즘 밤낮으로 컴퓨터나 모바일 기기를 사용하고 있고, 우리 눈은 밤 늦게 까지 스크린을 쳐다보는 것이 익숙하지 않습니다.<br><br>
+                                이러한 부담을 덜어 주기 위해 방역투게더는 시대에 맞추어 다크모드를 지원합니다.<br><br>
+                                사용 환경에 맞추어 자유롭게 on/off 할 수 있도록 디자인하였습니다.
+
                             </p>
                             <div class="view"><a href="#">자세히 보기</a></div>
                         </div>
                     </div>
                         <div class="tabmenu">
                             <div class="rules">
-                                <img src="../../click.jpg" alt="아이콘">
+                                <img src="../../active.jpg" alt="아이콘">
                                 <span class="mt10">장소별 방역 수칙</span>
                                 <span>Rules</span>
                             </div>
                             <div class="realtime">
-                                <img src="../../active.jpg" alt="아이콘">
+                                <img src="../../click.jpg" alt="아이콘">
                                 <span class="mt10">실시간 확진자</span>
                                 <span>Real Time</span>
                             </div>
@@ -426,14 +519,11 @@
                     <div class="imgBox">
                         <div class="left"></div>
                         <div class="center">
-                            <div class="viewBox">
-                                <img src="../../img03.jpg" alt="">
-                                <img class="active" src="../../img04.jpg" alt="">
-                                <img src="../../img03.jpg" alt="">
-                                <img src="../../img04.jpg" alt="">
-                                <img src="../../img03.jpg" alt="">
-                                <img src="../../img04.jpg" alt="">    
-                            </div>
+                            <div class="img00"></div>
+                            <div class="img01"></div>
+                            <div class="img02"></div>
+                            <div class="img03"></div>
+                            <div class="img04"></div>
                         </div>
                         <div class="right"></div>
                     </div>    
@@ -477,51 +567,48 @@
                 contBox[index].style.display = "flex"
             })
         })
-
-        let currentIndex = 0;
-        let sliderCount = teamImg.length;
-        let sliderWidth = 390;
-
-
-        // function gotoSlider(num){
-        //     sliderInner.style.transition = "all 400ms";
-        //     sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)"
-        //     currentIndex = num;
-        // }
+        const Img01 = document.querySelector(".img00");
+        const Img02 = document.querySelector(".img01");
+        const Img03 = document.querySelector(".img02");
+        const Img001 = document.querySelectorAll(".center div")
         
-        // sliderBtnPrev.addEventListener("click", () => {
-        //     let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount
-        //     // if(currentIndex==0) prevIndex = sliderCount - 1;
-        //     gotoSlider(prevIndex);
-        // })
-        // sliderBtnNext.addEventListener("click", () => {
-        //     let nextIndex = (currentIndex + 1) % sliderCount
-        //     gotoSlider(nextIndex);
-        // })
-        
-        function Slider(num){
-            viewBox.style.transition = "all 400ms";
-            viewBox.style.transform = "translateX("+ -sliderWidth * num +"px)"
-            currentIndex = num;
-        }
-        nextBtn.addEventListener("click", ()=>{
-            let nextIndex = (currentIndex+1) % sliderCount
-            Slider(nextIndex);
-            teamImg.forEach((e)=>{
-                e.classList.remove("active")
-            })
-            teamImg[nextIndex+1].classList.add("active")
+  
+        nextBtn.addEventListener("click", () => {
+         
+          ImgR();     
         })
         prevBtn.addEventListener("click", () => {
-            let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount
-            // if(currentIndex==0) prevIndex = sliderCount - 1;
-            Slider(prevIndex);
-            teamImg.forEach((e)=>{
-                e.classList.remove("active")
-            })
-            teamImg[prevIndex+1].classList.add("active")
-    })
-
+          ImgL();     
+        })
+  
+        let num = 0;
+        let currentnum = 0;
+       
+       function ImgR(){
+          Img001.forEach((el, i) => {
+             el.classList.remove("im0"+(num)%5)
+             el.classList.remove("img0"+num%5)
+          //el.classList.remove("active0"+num%3)
+             num++;
+             el.classList.add("img0"+num%5)
+             
+             el.style.backgroundImage = `url(../../img0${(i)}.jpg)`
+          })
+          num++;
+        }
+  
+    
+       function ImgL(){
+          Img001.forEach((el, i) => {
+              num = num+5;
+             el.classList.remove("img0"+(num)%5)
+             el.classList.remove("im0"+(num)%5)
+             el.classList.add("im0"+(num-1)%5)
+             num++;
+             el.style.backgroundImage = `url(../../img0${(i)}.jpg)`
+          })
+          num--;
+        }
     </script>
 </body>
 </html>
