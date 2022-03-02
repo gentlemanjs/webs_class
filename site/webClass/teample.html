@@ -34,6 +34,22 @@
         #header {
             width: 100%;
             height: 80px;
+            background: #284ABE;
+        }
+        #header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header ul li {
+            display: inline-block;
+            margin-right: 90px;
+            margin-top: 25px;
+        }
+        #header li a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
         }
         /* 간격 셋팅 */
         .mt0 {margin-top: 0 !important;}
@@ -398,7 +414,23 @@
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
+        <header id="header">
+            <div class="container">
+                <div class="logo"></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#section1">Main</a></li>
+                        <li><a href="#section2">Keyword</a></li>
+                        <li><a href="#section3">Affinity Diagram</a></li>
+                        <li><a href="#section4">Wire Frame</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <div class="mypage"></div>
+                    <div class="join"></div>
+                </div>    
+            </div>
+        </header>
         <nav id="banner">
             <div class="container">
                 <div class="desc">
@@ -610,6 +642,15 @@
           })
           num--;
         }
+
+        document.querySelectorAll("#header li a").forEach(li =>{
+            li.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
     </script>
 </body>
 </html>
