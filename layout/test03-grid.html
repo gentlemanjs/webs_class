@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "left top"
+                "left center"
+                "left bottom"
+                "footer footer";
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 260px 260px 260px 100px;
+
+        }
+        #header {
+            background: #7ED4FA;
+            grid-area: header;
+        }
+        #left {
+            background: #49C4F7;
+            grid-area: left;
+        }
+        #top {
+            background: #1CB7F6;
+            grid-area: top;
+        }
+        #center {
+            background: #00ABF4;
+            grid-area: center;
+        }
+        #bottom {
+            background: #009DE5;
+            grid-area: bottom;
+        }
+        #footer {
+            background: #008AD1;
+            grid-area: footer;
+        }
+
+        @media (max-width: 1300px) {
+            #wrap {
+                grid-template-areas: 
+                    "header header"
+                    "left top"
+                    "left center"
+                    "bottom bottom"
+                    "footer footer";
+                grid-template-columns: 25% 75%;
+                grid-template-rows: 100px 400px 400px 250px 100px;
+            }
+        }
+        @media (max-width: 768px) {
+            #wrap {
+                grid-template-areas: 
+                    "header header"
+                    "left left"
+                    "top center"
+                    "bottom bottom"
+                    "footer footer";
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 150px 150px 400px 250px 100px;
+            }
+        }
+        @media (max-width: 550px) {
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "left"
+                    "top"
+                    "center"
+                    "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 200px 300px 400px 400px 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <section id="left"></section>
+        <section id="top"></section>
+        <section id="center"></section>
+        <section id="bottom"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
