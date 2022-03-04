@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-03-04</title>
+
+    
+    <style>
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+            font-display: swap;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            font-family: 'GmarketSans';
+        }
+        .container {
+            display: flex;
+            padding: 0 20px;
+            justify-content: center;
+        }
+        .desc {
+            padding-top: 160px;
+        }
+        .desc h1 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #777;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .desc h2 {
+            width: 303px;
+            height: 116px;
+            font-size: 50px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.15;
+            letter-spacing: normal;
+            text-align: left;
+            color: #111;
+            margin-bottom: 35px;
+            margin-left: -3px;
+        }
+        .desc p {
+            width: 335px;
+            height: 108px;
+            font-size: 18px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #777;
+            margin-bottom: 30px;
+            margin-right: 61px;
+        }
+        .desc a {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            color: #fff;
+            background: #000;
+            padding: 10px 25px 9px 24px;
+            text-decoration: none;
+        }
+        .img1 {
+            margin-top: 199px;
+            margin-right: 20px;
+            position: relative;
+        }
+        .img1 span {
+            position: absolute;
+            left: 20px; bottom: 27px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            color: #fff;
+            background: #000;
+            padding: 11px 24px 6px 24px;
+            opacity: 0.4;
+            border-radius: 50px;
+        }
+        .img2 {
+            margin-top: 120px;
+            position: relative;
+        }
+        .img2 span {
+            position: absolute;
+            left: 20px; bottom: 106px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            color: #fff;
+            background: #000;
+            padding: 11px 24px 6px 24px;
+            border-radius: 50px;
+        }
+
+        @media (max-width:600px) {
+            #wrap {
+                width: 90%;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .img1 {
+                margin-top: 80px;
+            }
+            .img2 {
+                margin-top: 20px;
+            }
+            .img2 span {
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="desc">
+                <h1>이미지 텍스트 유형01</h1>
+                <h2>웹스토리보이 사이트</h2>
+                <p>웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 강의 사이트입니다. 
+                    <br>Gmarket Sans Light 22px 150% #67778A </p>
+                <a href="#">더 많은 유형 살펴보기</a>
+            </div>
+            <div class="img1">
+                <img src="site01.jpg" alt="레퍼런스 사이트">
+                <span>레퍼런스 사이트</span>
+            </div>
+            <div class="img2">
+                <img src="site02.jpg" alt="튜토리얼 사이트">
+                <span>튜토리얼 사이트</span>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
