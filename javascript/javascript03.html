@@ -443,6 +443,23 @@
             </div>
             <!-- //sample16 -->
 
+            <!-- sample17 -->
+            <div id="sample17" class="sample">
+                <h3>17. 재귀함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+   
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다함수가 실행되었습니다?
+                    </div>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
         </div>
         <!-- //script -->
 
@@ -567,7 +584,7 @@
         // }
 
         // 13. 내부 함수
-        {
+        // {
             // function func(){
             //     function funA(){
             //         document.write("함수가 실행되었습니다.")
@@ -579,10 +596,10 @@
             //     funB();
             // }
             // func();
-        }
+        // }
 
         // 14. 즉시 실행 함수
-        {
+        // {
             // function func(){
             //     document.write("함수가 실행되었습니다.")
             // }
@@ -595,7 +612,7 @@
             // (()=>{
             //     document.write("함수가 실행되었습니다.")
             // })();
-        }
+        // }
 
         // 15. 파라미터 함수
         // {
@@ -613,6 +630,29 @@
         //     }
         //     func("함수가 실행되었습니다", "함수가 실행되었습니다?")
         // }
+
+        // 17. 재귀함수 : 자기 스스로를 호출
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            //     func();
+            // }
+            // func();
+
+            function func(num){
+                if(num <= 1){
+                    document.write("함수가 실행되었습니다.")
+                } else {
+                    document.write("함수가 실행되었습니다.")
+                    func(num-1);
+                }
+            }
+            func(5)
+        }
+
+        // 18. 콜백함수 : 나를 실행시킨 다음 함수를 호출
+
+
     </script>
 
 </body>
