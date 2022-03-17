@@ -283,3 +283,73 @@ input::placeholder {
     text-underline-position: under;
     color: #605BFF;
 }
+
+
+.member-form .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.login-type {
+    padding: 100px 0;
+    font-family: 'BMJua';
+}
+.login-type .member-form h3 {
+    margin-top: 30px;
+}
+.login-box label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.login-box input {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background: #F7F7F8;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.login-submit {
+    font-size: 16px;
+    background: #605BFF;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 10px 0 10px 0;
+}
+.login-submit:hover {
+    transform: scale(1.05);
+}
+.another {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.another img {
+    width: 21px;
+    height: 21px;
+    margin: 0 10px;
+}
+.another img:hover {
+    cursor: pointer;
+}
+.other {
+    text-align: right;
+}
+.other a {
+    color: #605BFF;
+}
+.other a:nth-child(1)::after {
+    content: '';
+    border: 0.5px solid #A3A0F6;
+    width: 1px;
+    height: 10px;
+    margin: 0 0 0 5px;
+}
