@@ -192,7 +192,7 @@
     text-align: center;
     position: relative;
     margin-bottom: 10px;
-}
+} 
 .or::after {
     content: '';
     position: absolute;
