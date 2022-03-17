@@ -192,8 +192,6 @@
     text-align: center;
     position: relative;
     margin-bottom: 10px;
-    color: #030229;
-
 }
 .or::after {
     content: '';
