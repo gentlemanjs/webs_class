@@ -1,11 +1,231 @@
-<script>
-    function func(){
-       let i, j = 0;
-       for(i=0; i<5; i++){
-           j+=i;
-       }
-       document.write(i);
-       document.write(j);
-    }
-    func();
-</script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 10px;
+}
+
+.wang_box1 {
+  width: 70rem;
+  height: 90rem;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.wang_box1 .payment_box {
+  width: 60rem;
+  height: 55rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.wang_box1 .payment_box .card_charge_img {
+  width: 30rem;
+  height: 18rem;
+  margin: 7rem 10rem 3rem 16rem;
+  /* animation: card 1s infinite; */
+  transition: all 1s;
+}
+/* @keyframes card {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+} */
+
+.wang_box1 .payment_box .charge_text {
+  width: 35rem;
+  height: 10rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.wang_box1 .payment_box .charge_text span {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 5rem;
+}
+
+.wang_box1 .payment_box .small_charge_text {
+  width: 20rem;
+  height: 4rem;
+  background-color: aliceblue;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 1.5rem;
+}
+
+.wang_box1 .payment_box .small_charge_text span {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.wang_box1 .payment_box .previous_btn {
+  width: 15rem;
+  height: 5rem;
+  border: 0;
+  outline: 0;
+  font-size: 25px;
+  color: black;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  margin: 1rem 23rem 0 22rem;
+}
+
+.wang_box2 {
+  width: 70rem;
+  height: 90rem;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.wang_box2 .receipt_output_box {
+  width: 60rem;
+  height: 55rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.wang_box2 .receipt_output_box .receipt_img {
+  width: 30rem;
+  height: 30rem;
+  margin: 0 10rem 0rem 16rem;
+}
+
+.wang_box2 .receipt_output_box .receipt_text {
+  width: 35rem;
+  height: 5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 14rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.wang_box2 .receipt_output_box .receipt_text span {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.wang_box2 .receipt_output_box .receipt_input_text {
+  width: 40rem;
+  height: 5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 11rem;
+  margin-bottom: 5rem;
+  display: block;
+}
+
+.wang_box2 .receipt_output_box .receipt_input_text span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #646464;
+}
+
+.wang_box2 .receipt_output_box .select_footer {
+  width: 70%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 10rem;
+}
+
+.wang_box2 .receipt_output_box .select_footer button {
+  width: 15rem;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 2.5rem;
+  color: black;
+  background-color: lightgray;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=1.css.map */
+  </style>
+</head>
+<body>
+  <section class="wang_box1">
+    <div class="payment_box">
+      <img class="card_charge_img" src="img/img01.jpg" alt="카드결제이미지">
+      <div class="charge_text">
+        <span>"결제하실 신용카드를<br>아래의 위치에 넣어주세요."</span>
+      </div>
+      <div class="small_charge_text">
+        <span>신용카드 결제가 완료될 때까지 카드를 빼지마세요.</span>
+      </div>
+      <button class="previous_btn">이전</button>
+    </div>
+  </section>
+  <section class="wang_box2">
+    <div class="receipt_output_box">
+      <img class="receipt_img" src="img/img01.jpg" alt="영수증출력이미지">
+      <div class="receipt_text">
+        <span>결제가 완료되었습니다.</span>
+      </div>
+      <div class="receipt_input_text">
+        <span>영수증을 출력하시겠습니까?</span>
+      </div>
+      <div class="select_footer">
+        <button>아니오</button>
+        <button>예</button>
+      </div>
+    </div>
+  </section>
+  <script src="./1.js"></script>
+  <script>
+      function card(){
+        document.querySelector(".card_charge_img").style = "transform : translateX(-150px)"
+        setInterval(() => {
+            document.querySelector(".card_charge_img").style = "transform : translateX(150px)"
+            setTimeout(() => {
+                document.querySelector(".card_charge_img").style = "transform : translateX(-150px)"
+            }, 1000);
+        }, 2000);
+      }
+      card();
+
+      
+
+  </script>
+</body>
+</html>
