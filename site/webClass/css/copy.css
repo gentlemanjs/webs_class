@@ -259,7 +259,7 @@ input::placeholder {
     cursor: pointer;
     border-radius: 30px;
     margin-top: 50px;
-}
+} 
 
 .join-submit:hover {
     transform: scale(1.05);
