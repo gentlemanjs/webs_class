@@ -487,6 +487,9 @@ mysql> SELECT * FROM myData;
                     <h4 class="pt20">모든 회원의 비밀번호를 '1234'로 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = "1234";</code></pre>
 
+                    <h4 class="pt20">아이디 번호가 3, 비밀번호를 '1234'로 변경</h4>
+<pre class="language-js"><code>UPDATE myMember SET youPass = "1234" WHERE memberID = 3;</code></pre>
+
                     <h4 class="pt20">5~10번 회원까지 비밀번호를 '4321'로 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = "4321" WHERE memberID BETWEEN 5 AND 10;</code></pre>
                     
