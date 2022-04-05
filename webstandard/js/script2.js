@@ -12,10 +12,14 @@
     $(".div > h2").click(function(){
         $(".img__box").addClass("show");
         $(".img__box2").removeClass("show");
+        $(".div > h2").css("color","#000")
+        $(".div > span").css("color","#777")
     })
     $(".div > span").click(function(){
         $(".img__box").removeClass("show")
         $(".img__box2").addClass("show");
+        $(".div > h2").css("color","#777")
+        $(".div > span").css("color","#000")
     })
 
     var currentIndex = 0;
