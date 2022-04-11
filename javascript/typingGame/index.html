@@ -207,10 +207,10 @@
                 }
                 if(typedChar == null){
                     charIndex--;
-                    characters[charIndex].classList.remove("correct", "incorrect");
                     if(characters[charIndex].classList.contains("incorrect")){
                         mistakes--;
                     }
+                    characters[charIndex].classList.remove("correct", "incorrect");
                 } else {
                     if(characters[charIndex].innerText === typedChar){
                         characters[charIndex].classList.add("correct")

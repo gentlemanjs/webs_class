@@ -48,6 +48,30 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+        }
+        .volumeControl {
+            left: 30px; bottom: 15px;
+            position: absolute;
+            width: 150px;
+            height: 15px;
+            opacity: 0;
+            pointer-events: none;
+            background: #e6e6e6f3;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .volumeControl.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .volumeBox {
+            width: 100%;
+            height: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+            border-radius: 10px;
+            border: 2px solid #e6e6e6;
         }
         .music__top i {
             font-size: 30px;
@@ -207,14 +231,19 @@
         .music__list .list > ul > li > div p {
             opacity: 0.8;
         }
-
+        
     </style>
 </head>
 <body>
     <div class="wrap__music">
         <div class="music__inner">
             <div class="music__top">
-                <i class="material-icons">expand_more</i>
+                <div class="volume">
+                    <i class="material-icons">volume_up</i>
+                    <div class="volumeControl">
+                        <div class="volumeBox"></div>
+                    </div>
+                </div>
                 <h3>Now Playing</h3>
                 <i class="material-icons">more_horiz</i>
             </div>
@@ -289,9 +318,14 @@
         const MusicListBtn = musicWrap.querySelector("#control-list");
         const MusicListClose = musicList.querySelector(".close");
         const musicListUl = musicList.querySelector(".list ul");
+        const musicVolume = document.querySelector(".volume");
+        const musicVolumeControl = document.querySelector(".volumeControl");
+        const musicVolumeBox = document.querySelector(".volumeBox");
+        const musicVolumeIcon = document.querySelector(".volume i");
 
         let musicIndex = 1;
-
+        
+        
         // 음악 재생
         function loadMusic(num){
             musicImg.src = `images/${allMusic[num - 1].img}.jpg`;
@@ -308,6 +342,7 @@
             musicPlay.setAttribute("title", "일시정지")
             musicAudio.play();
         }
+        // 볼륨 조절 버튼
 
         // 일시정지 버튼
         function pauseMusic(){
@@ -356,6 +391,53 @@
             if (currentSec < 10) currentSec = `0${currentSec}`;
             musicProgressCurrent.innerText = `${currentMin}:${currentSec}`
         })
+
+        // 볼륨조절 
+
+        document.querySelector(".volume").addEventListener("mouseover", ()=>{
+            musicVolumeControl.classList.add("show")
+        })
+        document.querySelector(".volume").addEventListener("mouseout", ()=>{
+            musicVolumeControl.classList.remove("show")
+        })
+        musicVolumeIcon.addEventListener("click", ()=>{
+            volumeMute();
+            // document.querySelector(".volume i").innerText = "volume_off"
+            // musicVolumeControl.classList.remove("show")
+            // musicAudio.volume = 0;
+            // musicVolumeBox.style.width = 0;
+        })
+        function volumeMute(){
+            let icon = musicVolumeIcon.innerText;
+            let width = musicVolumeControl.clientWidth;
+            let currentVolume = musicVolumeBox.offsetWidth;
+            let setting = Math.floor(( currentVolume / width ) * 100);
+
+            if(icon == "volume_off"){
+                musicVolumeIcon.innerText = "volume_up"
+                musicVolumeBox.style.width = setting + "%";
+                musicAudio.volume = setting / 100
+            } else {
+                musicVolumeIcon.innerText = "volume_off"
+                musicAudio.volume = 0;
+            }
+        }
+        
+        musicVolumeControl.addEventListener("click", e => {
+            let x = e.offsetX;
+            let width = musicVolumeControl.clientWidth
+            let setting = Math.floor(( x / width ) * 100);
+            musicVolumeBox.style.width = setting + "%";
+            musicAudio.volume = setting / 100
+            console.log(setting)
+            if(setting<1){
+                musicVolumeIcon.innerText = "volume_off";
+            } else {
+                musicVolumeIcon.innerText = "volume_up"; 
+            }
+        })
+
+        
 
         // 진행 버튼
         musicProgress.addEventListener("click", e=>{
