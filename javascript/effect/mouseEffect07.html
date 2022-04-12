@@ -23,57 +23,35 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            cursor: none;
-        }
-        .mouse__img {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            width: 50%;
+            /* cursor: none; */
         }
         .mouse__text {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -20%);
-            color: #fff;
-            font-size: 3vw;
-            line-height: 1.5;
-        }
-        .mouse__text .line {
-            width: 100%;
             display: flex;
-        }
-        .mouse__text .line .left {
-            width: 50vw;
-            color: orange;
-            transform: skew(0deg, -15deg);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
             overflow: hidden;
         }
-        .mouse__text .line .left .spanWrap {
-            width: 100vw;
-            text-align: center;
-        } 
-        .mouse__text .line .right {
-            width: 50vw;
-            transform: skew(0deg, 15deg);
-            overflow: hidden;
+        .mouse__text p {
+            font-size: 2vw;
+            margin-bottom: 2vw;
         }
-        .mouse__text .line .right .spanWrap {
-            width: 100vw;
-            text-align: center;
-            transform: translateX(-50vw);
+        .mouse__img {
+            position: relative;
         }
-        .cursor {
+        .mouse__img .img {
             position: absolute;
-            left: 0; top: 0;
-            width: 20px;
-            height: 20px;
-            z-index: 9999;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.8);
-            user-select: none;
-            pointer-events: none;
+            left: 50%; top: 0;
+            transform: translateX(-50%);
+            width: 400px;
+            opacity: 0;
+        }
+        .mouse__img .img img {
+            /* display: none; */
+        }
+        .mouse__img .txt {
+            font-size: 3vw;
         }
     </style>
 </head>
@@ -85,60 +63,46 @@
             <div class="cursor">
             </div>
             <div class="mouse__wrap">
-                <div class="mouse__img">
-                    <figure>
-                        <img src="img/img07.jpg" alt="이미지">
-                    </figure>
-                </div>
                 <div class="mouse__text">
-                    <div class="line">
-                        <div class="left">
-                            <div class="spanWrap">
-                                <div class="spanSlow">No Pain</div>
-                            </div>
+                    <p>Everything comes to him who hustles while he waits.</p>
+                </div>
+                <div>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg01.jpg" alt="">
                         </div>
-                        <div class="right">
-                            <div class="spanWrap">
-                                <div class="spanSlow">No Pain</div>
-                            </div>
+                        <span class="txt">성공은 </span>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg02.jpg" alt="">
                         </div>
-                    </div>
-                    <div class="line">
-                        <div class="left">
-                            <div class="spanWrap">
-                                <div class="spanFast">No Gain</div>
-                            </div>
+                        <span class="txt"> 열심히 </span>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg03.jpg" alt="">
                         </div>
-                        <div class="right">
-                            <div class="spanWrap">
-                                <div class="spanFast">No Gain</div>
-                            </div>
+                        <span class="txt"> 노력하며 </span>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg04.jpg" alt="">
                         </div>
-                    </div>
-                    <div class="line">
-                        <div class="left">
-                            <div class="spanWrap">
-                                <div class="spanSlow">고통 없이는</div>
-                            </div>
+                        <span class="txt"> 기다리는 </span>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg05.jpg" alt="">
                         </div>
-                        <div class="right">
-                            <div class="spanWrap">
-                                <div class="spanSlow">고통 없이는</div>
-                            </div>
+                        <span class="txt"> 사람에게 </span>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimg06.jpg" alt="">
                         </div>
-                    </div>
-                    <div class="line">
-                        <div class="left">
-                            <div class="spanWrap">
-                                <div class="spanFast">얻는 것도 없다.</div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="spanWrap">
-                                <div class="spanFast">얻는 것도 없다.</div>
-                            </div>
-                        </div>
-                    </div>
+                        <span class="txt"> 찾아온다. </span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -147,8 +111,8 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect06</a></h1>
-            <p>마우스 이펙트 - 텍스트 효과</p>
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect07</a></h1>
+            <p>마우스 이펙트 - 이미지 오버 효과</p>
         </div>
 
         <div class="number">
@@ -158,8 +122,8 @@
                 <li><a href="mouseEffect03.html">3</a></li>
                 <li><a href="mouseEffect04.html">4</a></li>
                 <li><a href="mouseEffect05.html">5</a></li>
-                <li class="active"><a href="mouseEffect06.html">6</a></li>
-                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li class="active"><a href="mouseEffect07.html">7</a></li>
                 <li><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
@@ -229,15 +193,37 @@
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
+        const mouseImg = document.querySelectorAll(".mouse__img");
 
-        function mousemove(e){
-            let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1
-            let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
-            gsap.to(".spanSlow",{duration: 0.4, x: positionSlow})
-            gsap.to(".spanFast",{duration: 0.4, x: positionFast})
-            gsap.to(".cursor", {duration: 0.3, left: e.pageX, top: e.pageY});
-        }
-        document.addEventListener("mousemove", mousemove);
+        mouseImg.forEach((item) => {
+            const imageWrap = item.querySelector(".img");
+            const imageWrapBounds = imageWrap.getBoundingClientRect();
+            let itemBounds = item.getBoundingClientRect();
+
+            console.log(imageWrapBounds);
+            // console.log(itemBounds);
+
+            const onMouseEnter = ()=>{
+                gsap.set(imageWrap, {xPercent: -50, yPercent: 50, rotation: -15, scale: 0.3});
+                gsap.to(imageWrap, {xPercent: -50, yPercent: -50, rotation: 0, scale: 1, opacity:1});
+            };
+
+            const onMouseLeave = ()=>{
+                gsap.to(imageWrap, {xPercent: -50, yPercent: -100, rotation: 15, scale:0.3, opacity: 0})
+            }
+
+            const onMouseMove = ({x, y})=>{
+                gsap.to(imageWrap, {
+                    duration: 1.25, 
+                    x: Math.abs(x - itemBounds.left),
+                    y: Math.abs(y - itemBounds.top)
+                })
+            }
+
+            item.addEventListener("mousemove", onMouseMove);
+            item.addEventListener("mouseenter", onMouseEnter);
+            item.addEventListener("mouseleave", onMouseLeave);
+        });
     </script>
 </body>
 </html>
