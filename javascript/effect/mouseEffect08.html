@@ -14,6 +14,12 @@
         body::before {
             background: rgba(25,44,58,0.8);
         }
+        :root {
+            --alpha: 0.8;
+        }
+        ::selection {
+            background-color: rgba(255, 0, 139, 0.8);
+        }
         .mouse__wrap {
             display: flex;
             align-items: center;
@@ -33,28 +39,13 @@
         }
         .typo {
             color: rgba(255, 255, 255, var(--alpha));
-            cursor: default;
             font-family: "Oswald", Helvetica, Arial, sans-serif;
-            font-size: 15vmax;
+            font-size: 10vw;
             font-weight: bold;
             line-height: 1.2;
-            margin: 0;
-            outline: none;
-            padding: 0 10% 1.2% 10%;
             text-align: center;
             text-transform: uppercase;
             transition: color 0.1s linear;
-        }
-        :root {
-            --alpha: 0.8;
-        }
-        ::selection {
-            background-color: rgba(255, 0, 139, 0.8);
-        }
-        body {
-            background-color: #191919;
-            margin: 0;
-            overflow-x: hidden;
         }
     </style>
 </head>
@@ -63,8 +54,6 @@
     <!-- main -->
     <main>
         <section id="mouseType05">
-            <div class="cursor">
-            </div>
             <div class="mouse__wrap">
                 <div class="mouse__text">
                     <h1 class="typo">Music is my life</h1>
@@ -113,33 +102,116 @@
                             </div>
                             <div class="view-cont">
                                 <div>
-<pre><code class="language-html">&lt;main&gt;
-    &lt;section id="mouseType04"&gt;
-        &lt;div class="cursor"&gt;&lt;/div&gt;
-
-        &lt;div class="mouse__wrap"&gt;
-            &lt;div class="mouse__img"&gt;
-                &lt;figure&gt;
-                    &lt;img src="img/img04.jpg" alt="이미지"&gt;
-                &lt;/figure&gt;
-                &lt;figcaption&gt;
-                    &lt;p&gt;The secret of getting ahead is getting started.&lt;/p&gt;
-                    &lt;p&gt;앞서가는 방법의 비밀은 시작하는 것이다.&lt;/p&gt;        
-                &lt;/figcaption&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;
-&lt;/main&gt;</code></pre>
+<pre><code class="language-html">&lt;div class="mouse__wrap"&gt;
+    &lt;div class="mouse__text"&gt;
+        &lt;h1 class="typo"&gt;Music is my life&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-css">
-    
+<pre><code class="language-css">:root {
+    --alpha: 0.8;
+}
+::selection {
+    background-color: rgba(255, 0, 139, 0.8);
+}
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* cursor: none; */
+}
+.mouse__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.typo {
+    color: rgba(255, 255, 255, var(--alpha));
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    font-size: 10vw;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.1s linear;
 }</code></pre>
 
                                 </div>
                                 <div>
-<pre><code class="language-javascript">
-    
+<pre><code class="language-javascript">function getTwoDecimal(num) {
+return parseFloat(num.toFixed(2) + 0.5);
+}
+
+const mouse = {
+decimal(coord) {
+    return getTwoDecimal(coord / 1000);
+},
+x(e) {
+    return Math.abs(e.clientX - window.innerWidth / 2);
+},
+y(e) {
+    return Math.abs(e.clientY - window.innerHeight / 2);
+} };
+
+
+const changeTextAlphaVal = (txt, e) => {
+const root = document.querySelector(":root");
+const cssVar = "--alpha";
+const currentAlpha = getComputedStyle(root).getPropertyValue(cssVar).trim();
+
+const max = parseFloat(currentAlpha);
+const dx = mouse.decimal(mouse.x(e));
+const dy = mouse.decimal(mouse.y(e));
+
+let alphaVal;
+if (dx <= 0) {
+    alphaVal = dy >= max ? dy : getTwoDecimal(max - dy);
+} else {
+    alphaVal = dx >= max ? dx : getTwoDecimal(max - dx);
+}
+
+txt.style.setProperty(cssVar, alphaVal);
+};
+
+function createShadow(e, currTarget) {
+const walk = Math.round(Math.max(window.innerWidth, window.innerHeight) / 6); 
+const coordWalk = (coord, side) =>
+Math.round(coord / side * walk - walk / 2);
+const xWalk = coordWalk(e.clientX, currTarget.offsetWidth);
+const yWalk = coordWalk(e.clientY, currTarget.offsetHeight);
+
+const pink = [20, 40, 90];
+const blue = [40, 180, 120];
+const yellow = [100, 30, 190];
+const typoAlpha = 0.6;
+
+const typo = currTarget.querySelector(".typo");
+changeTextAlphaVal(typo, e); 
+
+typo.style.textShadow = `
+    ${xWalk}px ${yWalk}px 0 rgba(${pink}, ${typoAlpha}),
+    ${xWalk * -1}px ${yWalk * 2}px 0 rgba(${blue}, ${typoAlpha}),
+    ${xWalk * -2}px ${yWalk * -1}px 0 rgba(${yellow}, ${typoAlpha})
+    `;
+}
+
+function onMouseMove(e) {
+createShadow(e, e.currentTarget);
+}
+function onTouchMove(e) {
+createShadow(e.changedTouches[0], e.currentTarget);
+}
+
+const heading = document.querySelector(".mouse__text");
+heading.addEventListener("mousemove", onMouseMove);
+heading.addEventListener("touchmove", onTouchMove);
 </code></pre>
                                 </div>
                                 
@@ -158,6 +230,11 @@
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
+
+        highlight();
+        modal();
+        tabMenu();
+
         function getTwoDecimal(num) {
         // The +0.5 smoothens the transition change
         return parseFloat(num.toFixed(2) + 0.5);
@@ -203,9 +280,9 @@
         const xWalk = coordWalk(e.clientX, currTarget.offsetWidth);
         const yWalk = coordWalk(e.clientY, currTarget.offsetHeight);
 
-        const pink = [255, 0, 139];
-        const blue = [0, 86, 255];
-        const yellow = [255, 240, 0];
+        const pink = [20, 40, 90];
+        const blue = [40, 180, 120];
+        const yellow = [100, 30, 190];
         const typoAlpha = 0.6;
 
         const typo = currTarget.querySelector(".typo");

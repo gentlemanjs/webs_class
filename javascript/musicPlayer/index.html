@@ -61,9 +61,13 @@
             border-radius: 10px;
             transition: all 0.2s;
         }
+        .volume i {
+            cursor: pointer;
+        }
         .volumeControl.show {
             opacity: 1;
             pointer-events: auto;
+            cursor: pointer;
         }
         .volumeBox {
             width: 100%;
@@ -148,6 +152,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            cursor: pointer;
         }
         .music__control i:nth-child(2),
         .music__control i:nth-child(4) {
@@ -162,6 +167,7 @@
             background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
             box-shadow: 0 0 0 2px var(--pink);
             z-index: 1;
+            cursor: pointer;
         }
         .music__control .play-pause::before {
             content: '';
@@ -210,6 +216,7 @@
             max-height: 260px;
             margin: 10px 0;
             overflow: auto;
+            cursor: pointer;
         }
         .music__list .list > ul::-webkit-scrollbar {
             width: 0;
