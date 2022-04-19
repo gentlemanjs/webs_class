@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="https://webfontworld.github.io/neodgm/NeoDunggeunmo.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bg.css">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NeoDunggeunmo';
+            /* font-family: 'Kita'; */
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #header {
+            height: 35px;
+            width: 100%;
+            background-image: linear-gradient(rgb(159, 80, 190), rgb(217, 163, 219));
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            justify-content: space-between;
+        }
+        .logo {
+            margin-right: 20px;
+        }
+        .music {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .music:hover {
+            color: rgb(88, 216, 14);
+        }
+        .music img {
+            margin-right: 5px;
+        }
+        #musicIcon.rotate {
+            animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(270deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .icon img {
+            width: 50%;
+            margin: 0 auto;
+            filter: drop-shadow(rgba(0, 0, 0, 0.23) 6px 6px 0px);
+            margin-bottom: 10px;
+        }
+
+        .icon .text {
+            padding-top: 0.12em;
+            font-size: 21px;
+            padding-left: 5px;
+            padding-right: 3px;
+            color: rgb(255, 255, 255);
+            border-radius: 0;
+            background-color: rgb(132 68 185);
+            box-shadow: rgb(0 0 0 / 23%) 6px 6px 0px 0px;
+            transition: all 0.3s;
+        }
+        .icon:hover .text {
+            background-color: rgb(132 68 185);
+            color: rgb(88, 216, 14);
+        }
+        .musicBox {
+            position: absolute;
+            top: -700px; right: 0;
+            width: 400px;
+            height: 700px;
+            background: #000;
+            transition: all 0.5s ease-out;
+        }
+        .musicBox.jjan {
+            top: 50px;
+        }
+        .musicBox iframe {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 90%;
+            height: 90%;
+        }
+        .musicBox.jjan iframe {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 90%;
+            height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">GAME SITE</div>
+        <div class="music">
+            <img id="musicIcon" src="img/cd.ico" alt="">
+            <span>Play</span>
+        </div>
+    </header>
+    <div id="wrap">
+        <div class="icon">
+            <img src="img/arcade.ico" alt="">
+            <div class="text">
+                Card Game
+            </div>
+        </div>
+        <div class="icon">
+            <img src="img/gbc.ico" alt="">
+            <div class="text">
+                Dice Game
+            </div>
+        </div>
+        <div class="icon">
+            <img src="img/ds_lite.ico" alt="">
+            <div class="text">
+                Tetris Game
+            </div>
+        </div>
+        <div class="icon">
+            <img src="img/psp.ico" alt="">
+            <div class="text">
+                Bomb Game
+            </div>
+        </div>
+        <div class="icon">
+            <img src="img/gb.ico" alt="">
+            <div class="text">
+                Typing Game
+            </div>
+        </div>
+        <div class="musicBox">
+            <iframe src="https://gentlemanjs.github.io/webs_class/javascript/musicPlayer/index.html"></iframe>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(".icon").draggable();
+        $(".musicBox").draggable();
+
+        $(".music").mouseenter(function(){
+            $("#musicIcon").attr("src", "img/cd_blu.ico");
+        })
+        $(".music").mouseleave(function(){
+            if(!$("#musicIcon").hasClass("rotate")){
+                $("#musicIcon").attr("src", "img/cd.ico");
+            }
+        })
+        $(".music").click(function(){
+            $("#musicIcon").toggleClass("rotate");
+            $(".musicBox").toggleClass("jjan");
+        })
+    </script>
+</body>
+
+</html>
