@@ -454,6 +454,9 @@
                         score = time - clicked
                         cardWrap.classList.remove("active");
                         resultBox.classList.add("active");
+                        if(score < 0) {
+                            score = 0
+                        }
                         gameScore.innerText = score;
                     }, 1000)
                 }

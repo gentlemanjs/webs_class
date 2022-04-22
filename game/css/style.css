@@ -7,6 +7,11 @@
             /* font-family: 'Kita'; */
         }
 
+        a {
+            text-decoration: none;
+            cursor: none;
+        }
+
         body {
             width: 100%;
             height: 100vh;
