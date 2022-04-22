@@ -91,9 +91,11 @@
             transition: all 0.3s;
         }
         .icon:hover .text {
-            background-color: rgb(132 68 185);
             color: rgb(88, 216, 14);
         }
+        .react:hover .text {
+            color: aqua;
+        } 
         .musicBox {
             position: absolute;
             top: 50px; right: -500px;
@@ -169,12 +171,12 @@
                 height: 0;
             }
             50% {
-                width: 1200px;
+                width: 1000px;
                 height: 5px;
                 opacity: 1;
             }
             100% {
-                width: 1200px;
+                width: 1000px;
                 height: 800px;
                 opacity: 1;
                 user-select: auto;
@@ -183,12 +185,12 @@
         }
         @keyframes back {
             0% {
-                width: 1200px;
+                width: 1000px;
                 height: 800px;
                 opacity: 1;
             }
             50% {
-                width: 1200px;
+                width: 1000px;
                 height: 5px;
             }
             100% {
@@ -229,4 +231,12 @@
             overflow: hidden;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
                         0 6px 10px 0 rgba(0, 0, 0, 0.17);
+        }
+        .iconBoX {
+            position: absolute;
+            left: 20px; top: 50px;
+        }
+        .iconBox2 {
+            position: absolute;
+            left: 15px; top: 180px;
         }
