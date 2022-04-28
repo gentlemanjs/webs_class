@@ -43,7 +43,7 @@
                     Dice Game
                 </div>
             </div>
-            <div class="icon">
+            <div class="tetris icon">
                 <img src="img/ds_lite.ico" alt="">
                 <div class="text">
                     Tetris Game
@@ -73,9 +73,10 @@
             <span class="typingClose close">X</span>
             <iframe src="https://gentlemanjs.github.io/webs_class/javascript/typingGame/index.html"></iframe>
         </div>
-        <!-- <div class="memoryBox">
-            <iframe width="100%" height="100%" src="../javascript/memoryGame/index2.html"></iframe>
-        </div> -->
+        <div class="tetrisGame">
+            <span class="tetrisClose close">X</span>
+            <iframe src="https://gentlemanjs.github.io/webs_class/javascript/tetrisGame/index.html"></iframe>
+        </div>
         <!-- contentsBox -->
     </div>
 
@@ -108,6 +109,10 @@
             $(".typingGame").addClass("jjan");
             $(".typingGame").removeClass("close");
         })
+        $(".tetris").click(function(){
+            $(".tetrisGame").addClass("jjan");
+            $(".tetrisGame").removeClass("close");
+        })
 
         // 닫기
         $(".cardClose").click(function(){
@@ -117,6 +122,10 @@
         $(".typingClose").click(function(){
             $(".typingGame").removeClass("jjan");
             $(".typingGame").addClass("close");
+        })
+        $(".tetrisClose").click(function(){
+            $(".tetrisGame").removeClass("jjan");
+            $(".tetrisGame").addClass("close");
         })
 
         // 커서
