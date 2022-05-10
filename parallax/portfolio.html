@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 20000px;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 20px; top: 20px;
+            background: rgba(0,0,0,0.1);
+            color: #fff;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            z-index: 10000;
+        }
+        /* common */
+        .fixed {
+            position: fixed;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+        .section1__bg {
+            background-color: #F4955C;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+        .section1__front {
+            font-family: Anton;
+            font-size: 15vw;
+            font-weight: 700;
+            color: #313131;
+            background-color: #F4955C;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            left: 0; top: 0;
+            overflow: hidden;
+        }
+        .section1__back {
+            font-family: Anton;
+            font-size: 15vw;
+            font-weight: 700;
+            color: #F4955C;
+            background-color: #313131;
+            position: fixed;
+            width: 0vw;
+            height: 100vh;
+            left: 0; top: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .frontend {
+            position: fixed;
+            left: 1vw; top: 1vw;
+        }
+        .develeoper {
+            position: fixed;
+            left: 12vw; top: 15vw;
+        }
+        .text {
+            width: 55vw;
+            font-size: 1vw;
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            padding-left: 1vw;
+            line-height: 1.6;
+            word-break: keep-all;
+            position: fixed;
+            left: 12vw; top: 35vw;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="scrollTop">0</div>
+
+    <div id="contents">
+        <section id="section1">
+            <div class="section1__bg">
+                <div class="section1__front"
+                    data-1000 = "width: 100vw; "
+                    data-1300 = "width: 0vw; "
+                    data-3000 = "width: 100vw;"
+                >
+                    <div class="frontend"
+                        data-1300 = " transform: translateX(0%) "
+                        data-3100 = " transform: translateX(-105%)"
+                    >
+                      FRONTEND
+                    </div>
+                    <div class="develeoper"
+                        data-1300 = " transform: translateX(0%) "
+                        data-2500 = " transform: translateX(48%) "
+                        data-3100 = " transform: translateX(105%)"
+                    >
+                      DEVELOPER
+                      
+                      
+                    </div>
+                    <div class="text"
+                      data-1300 = "opacity: 1; transform: translateY(0%)"
+                      data-3000 = "opacity: 0; transform: translateY(200%)"            
+                    >
+                        무엇인가 새로 시작하기는 늦었다고 느껴질 수 있는 나이에 '개발자'라는 꿈을 꾸게 되었습니다.
+                        그 꿈을 이루기 위한 노력의 결과물들을 정리해 보았습니다. 잘 부탁드리겠습니다!
+                      </div>
+                </div>
+                <div class="section1__back"
+                    data-0 = "width: 0vw;"
+                    data-1000 = "width: 100vw; transform: translateX(0%)"
+                    data-1300 = "width: 100vw; transform: translateX(0%)"
+                    data-3000 = "transform: translateX(100%)"            
+                >
+                    <div class="frontend"
+                    data-1300 = " transform: translateX(0%) "
+                    data-3100 = " transform: translateX(-236%)"
+                    >
+                      FRONTEND
+                    </div>
+                    <div class="develeoper"
+                        data-1300 = " transform: translateX(0%) "
+                        data-2500 = " transform: translateX(-36.5%)"
+                        data-3100 = " transform: translateX(-22%)"
+                    >
+                      DEVELOPER
+                      
+                      
+                    </div>
+                    <div class="text"
+                        data-1300 = "opacity: 1; transform: translateY(0%) translateX(0%)"
+                        data-3000 = "opacity: 0; transform: translateY(200%) translateX(-179%)"            
+                    >
+                        무엇인가 새로 시작하기는 늦었다고 느껴질 수 있는 나이에 '개발자'라는 꿈을 꾸게 되었습니다.
+                        그 꿈을 이루기 위한 노력의 결과물들을 정리해 보았습니다. 잘 부탁드리겠습니다!
+                      </div>
+            </div>
+            </div>
+        </section>
+        <!-- // section1 -->
+        <section id="section2">
+            <div class="section2__img img01">
+                <img src="" alt="">
+            </div>
+        </section>
+        <!-- // section1 -->
+</body>
+<script src="js/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init({
+    smoothScrolling: true
+});
+
+
+        function scroll(){
+            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+
+            requestAnimationFrame(scroll)
+        }
+        scroll();
+    </script>
+</html>

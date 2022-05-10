@@ -199,29 +199,31 @@
     <script src="js/gsap.min.js"></script>
     <script>
         const parallaxCont = document.getElementById("parallax__cont");
-        const section = document.getElementById("section1");
+        const contenItem = document.querySelector(".content__item");
 
-        const x = section.offsetWidth;
-        const y = section.offsetHeight;
-        // 패럴랙스 박스 전체 가로 값
-        const parallaxWidth = parallaxCont.offsetWidth;
-        const s = x - y
-
-
-
-        // body에 height --> 패럴랙스 박스 전체 가로값
-        document.body.style.height = (parallaxWidth - s) + "px"
         // 스크롤 했을 때 left: scrollTop
         function scroll(){
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
             
+            // 패럴랙스 박스 전체 가로 값
+            const parallaxWidth = parallaxCont.offsetWidth;
+            // body에 height --> 패럴랙스 박스 전체 가로값
+            document.body.style.height = parallaxWidth + "px"
+
+            // 섹션 박스
+            let viewWidth = parallaxWidth - window.innerWidth;
+            let viewHeight = parallaxWidth - window.innerHeight;
+            let goLeft = scrollTop * (viewWidth / viewHeight);
             
             document.querySelector(".scrollTop span").innerText = scrollTop;
-            gsap.to(parallaxCont, {left: -scrollTop})
+            gsap.to(parallaxCont, {left: -goLeft})
             
             requestAnimationFrame(scroll);
         }
         scroll();
+
+
+        window.addEventListener("resize", scroll)
     </script>
   </body>
 </html>
