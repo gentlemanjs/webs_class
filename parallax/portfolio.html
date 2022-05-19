@@ -151,8 +151,10 @@
       .section3__text .text2 {
         transform: translateX(80%);
       }
+
+      /* section4 */
       .section4 {
-        width: 300%;
+        width: 400vw;
         height: 100vh;
         background-color: #f4955c;
         display: flex;
@@ -163,7 +165,7 @@
         z-index: 4;
       }
       .box {
-        width: 100%;
+        width: 100vw;
         height: 100%;
       }
       .section4__line {
@@ -173,12 +175,88 @@
         flex-direction: column-reverse;
       }
       .section4__line .table1 {
-        width: 99%;
-        border-bottom: 3px solid #000;
+        width: 0%;
+        border-bottom: 3px solid #313131;
+        animation: base 0.3s forwards;
+      }
+      .table1 {
+        font-size: 1vw;
+        font-family: "GmarketSans";
       }
       .section4__info {
         width: 100%;
         height: 70%;
+      }
+      @keyframes base {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+      @keyframes line {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes op {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes jjan {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .mystroy {
+        width: 40vw;
+      }
+      .myskill {
+        width: 40vw;
+      }
+      .section4__info h3 {
+        font-size: 5vw;
+        font-family: "Anton";
+        margin: 2vw 0;
+      }
+      .mystroy ul li {
+        font-family: "GmarketSans";
+        font-size: 1vw;
+        width: 20vw;
+        word-break: keep-all;
+      }
+      .myskill ul li {
+        font-family: "Anton";
+        font-size: 1.2vw;
+        margin: 1vw 0;
+      }
+      .myability {
+        width: 40vw;
+      }
+      .myability ul li {
+        font-family: "GmarketSans";
+        font-size: 1vw;
+        margin: 1vw 0;
+      }
+      .mydream {
+        width: 40vw;
+      }
+      .mydream ul li {
+        font-family: "GmarketSans";
+        font-size: 1vw;
+        width: 20vw;
+        word-break: keep-all;
       }
     </style>
   </head>
@@ -323,64 +401,178 @@
     <!-- // section3 -->
     <section
       class="section4"
-      data-9400="opacity:0; left:0%"
+      data-9400="opacity:0; left:0%;"
       data-9401="opacity:1; left:0%"
-      data-12000="left:-300%"
+      data-13000="left:-270%"
     >
-      <div class="box">
+      <div class="blank box">
         <div class="section4__line">
-          <table class="table1">
+          <table
+            class="table1"
+            data-9400="animation: base 0.3s forwards"
+            data-9450="animation: line 0.7s forwards"
+          >
             <tr>
-              <td>dd</td>
+              <td></td>
             </tr>
           </table>
         </div>
         <div class="section4__info">
           <ul>
-            <li>section4__info</li>
+            <li></li>
           </ul>
         </div>
       </div>
-      <div class="box">
+      <div class="mystroy box">
         <div class="section4__line">
-          <table class="table1">
+          <table
+            class="table1"
+            data-9400="animation: base 0.3s forwards"
+            data-9450="animation: line 1s forwards"
+          >
             <tr>
-              <td>dd</td>
-            </tr>
-          </table>
-          <table class="table1">
-            <tr>
-              <td>dd</td>
+              <td>01</td>
             </tr>
           </table>
         </div>
         <div class="section4__info">
+          <h3
+            data-9400="animation: op 0.1s forwards"
+            data-9451="animation: jjan 1s forwards"
+          >
+            MY STORY
+          </h3>
           <ul>
-            <li>section4__info</li>
+            <li
+              data-9400="animation: op 0.1s forwards;"
+              data-9451="animation: jjan 1s forwards;"
+            >
+              항공기계학과 전공으로 졸업 후에 자영업을 시작하였습니다. 하지만
+              코로나로 인해 상황이 어려워져 다른 길을 알아 보던 중, 개발자라는
+              꿈을 꾸게 되었습니다. 새로운 도전을 두려워하지 않고 더 나은 미래를
+              그려나가고 있습니다.
+            </li>
           </ul>
         </div>
       </div>
-      <div class="box">
+      <div class="myskill box">
         <div class="section4__line">
-          <table class="table1">
+          <table
+            class="table1"
+            data-9900="animation: base 0.3s forwards"
+            data-9950="animation: line 1.2s forwards"
+          >
             <tr>
-              <td>section4__line</td>
+              <td></td>
+              <td></td>
             </tr>
           </table>
-          <table class="table1">
+          <table
+            class="table1"
+            data-9900="animation: base 0.3s forwards"
+            data-9950="animation: line 1.5s forwards"
+          >
             <tr>
-              <td>section4__line</td>
-            </tr>
-          </table>
-          <table class="table1">
-            <tr>
-              <td>section4__line</td>
+              <td>02</td>
             </tr>
           </table>
         </div>
         <div class="section4__info">
+          <h3>MY SKILL</h3>
           <ul>
-            <li>section4__info</li>
+            <li>HTML5 & CSS3</li>
+            <li>JAVASCRIPT & JQUERY</li>
+            <li>PHP</li>
+            <li>REACT & VUE</li>
+          </ul>
+        </div>
+      </div>
+      <div class="myability box">
+        <div class="section4__line">
+          <table
+            class="table1"
+            data-10400="animation: base 0.3s forwards"
+            data-10450="animation: line 1.2s forwards"
+          >
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table
+            class="table1"
+            data-10400="animation: base 0.3s forwards"
+            data-10450="animation: line 1.5s forwards"
+          >
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table
+            class="table1"
+            data-10400="animation: base 0.3s forwards"
+            data-10450="animation: line 1.8s forwards"
+          >
+            <tr>
+              <td>03</td>
+            </tr>
+          </table>
+        </div>
+        <div class="section4__info">
+          <h3>MY ABILITY</h3>
+          <ul>
+            <li>웹 디자인 기능사</li>
+            <li>워드프로세서 1급</li>
+            <li>정보처리기사(필기)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mydream box">
+        <div class="section4__line">
+          <table
+            class="table1"
+            data-11000="animation: base 0.3s forwards"
+            data-11080="animation: line 1.2s forwards"
+          >
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table
+            class="table1"
+            data-11000="animation: base 0.3s forwards"
+            data-11080="animation: line 1.5s forwards"
+          >
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table
+            class="table1"
+            data-11000="animation: base 0.3s forwards"
+            data-11080="animation: line 1.8s forwards"
+          >
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table
+            class="table1"
+            data-11000="animation: base 0.3s forwards"
+            data-11080="animation: line 1.9s forwards"
+          >
+            <tr>
+              <td>04</td>
+            </tr>
+          </table>
+        </div>
+        <div class="section4__info">
+          <h3>MY DREAM</h3>
+          <ul>
+            <li>
+              반복되는 일상에 지쳐있었지만 새로운걸익히고 끊임없이 배운다는 점이
+              저를 뒤쳐지지 않게 만들었습니다. 지금의 열정과 앞으로의 노력들로
+              부끄럽지않은 개발자가 되고 싶습니다.
+            </li>
           </ul>
         </div>
       </div>
@@ -408,5 +600,12 @@
       requestAnimationFrame(scroll);
     }
     scroll();
+
+    function data() {
+      let a = window.scrollY;
+      requestAnimationFrame(data);
+      console.log(a);
+    }
+    data();
   </script>
 </html>
