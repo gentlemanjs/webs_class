@@ -1,0 +1,495 @@
+body {
+  height: 30000px;
+}
+.scrollTop {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  z-index: 10000;
+}
+.section1__front {
+  font-family: "Anton";
+  text-transform: uppercase;
+  background-color: #f4955c;
+  color: #313131;
+  font-size: 15vw;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  line-height: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 15;
+}
+.section1__back {
+  font-family: "Anton";
+  text-transform: uppercase;
+  background-color: #313131;
+  color: #f4955c;
+  font-size: 15vw;
+  width: 0%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  line-height: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 16;
+  overflow: hidden;
+}
+.frontend {
+  margin-right: 30vw;
+}
+.develeoper {
+  margin-left: 11.5vw;
+}
+.section1__desc {
+  font-family: "GmarketSans";
+  width: 60vw;
+  font-size: 1vw;
+  margin-left: 0.5vw;
+  line-height: 1.4;
+}
+.section1__desc span {
+  display: block;
+}
+/* section2 */
+#section2 {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #313131;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 14;
+}
+.section2__imgbox {
+  display: flex;
+  padding: 0 90px 0 60px;
+}
+.section2__img {
+  width: 400px;
+  height: 520px;
+  margin-right: 40px;
+}
+.section2__img img {
+  width: 100%;
+  height: 100%;
+  margin-right: 70px;
+  filter: grayscale(100%);
+  transition: all 0.8s;
+}
+.section2__img:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+.section2__text {
+  position: fixed;
+  font-family: "Anton";
+  font-size: 210px;
+  color: #f4955c;
+  right: 0%;
+  bottom: -33%;
+  white-space: nowrap;
+}
+
+/* section3 */
+.section3 {
+  z-index: 15;
+  width: 0%;
+  height: 100vh;
+  background-color: #f4955c;
+  color: #313131;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.section3__text {
+  font-size: 9vw;
+  font-family: "Anton";
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.section3__text .text1 {
+  transform: translateX(-100%);
+}
+.section3__text .text2 {
+  transform: translateX(80%);
+}
+
+/* section4 */
+.section4 {
+  width: 400vw;
+  height: 100vh;
+  background-color: #f4955c;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.box {
+  width: 100vw;
+  height: 100%;
+}
+.section4__line {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.section4__line .table1 {
+  width: 0%;
+  border-bottom: 3px solid #313131;
+  animation: base 0.3s forwards;
+}
+.table1 {
+  font-size: 1vw;
+  font-family: "GmarketSans";
+}
+.section4__info {
+  width: 100%;
+  height: 70%;
+}
+@keyframes base {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes base2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes op {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes jjan {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mystroy {
+  width: 40vw;
+}
+.myskill {
+  width: 40vw;
+}
+.section4__info h3 {
+  font-size: 5vw;
+  font-family: "Anton";
+  margin: 2vw 0;
+  opacity: 0;
+}
+.section4__info ul {
+  opacity: 0;
+}
+.mystroy ul li {
+  font-family: "GmarketSans";
+  font-size: 1vw;
+  width: 20vw;
+  word-break: keep-all;
+}
+.myskill ul li {
+  font-family: "Anton";
+  font-size: 1.2vw;
+  margin: 1vw 0;
+}
+.myability {
+  width: 40vw;
+}
+.myability ul li {
+  font-family: "GmarketSans";
+  font-size: 1vw;
+  margin: 1vw 0;
+}
+.mydream {
+  width: 40vw;
+}
+.mydream ul li {
+  font-family: "GmarketSans";
+  font-size: 1vw;
+  width: 20vw;
+  word-break: keep-all;
+}
+
+/* section5 */
+.section5 {
+  display: flex;
+  position: fixed;
+  background-color: #313131;
+  width: 100%;
+  height: 200vh;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.section5__side {
+  width: 30%;
+  height: 100%;
+  font-family: "Anton";
+  font-size: 12vw;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transform: rotateZ(-90deg);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.section5__side span {
+  -webkit-text-stroke: 2px #f4955c;
+  color: #313131;
+  display: inline-block;
+  /* transform: translateX(-50%); */
+}
+.section5__cont {
+  width: 70%;
+  position: fixed;
+  left: 30%;
+  top: 0;
+}
+.section5__text h3 {
+  font-family: "Anton";
+  font-size: 4vw;
+  color: #f4955c;
+}
+.section5__text p {
+  font-family: "GmarketSans";
+  font-size: 1vw;
+  color: #f4955c;
+}
+.section5__box {
+  margin-top: 10vw;
+  position: relative;
+}
+.section5__text {
+  width: 30%;
+  margin-bottom: 15vw;
+}
+.section5__img {
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  right: -15%;
+  top: 15%;
+  z-index: 4;
+  display: inline-block;
+  opacity: 0;
+}
+.site2 {
+}
+.site1 {
+}
+
+/* section6 */
+.section6 {
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #f4955c;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.mywork {
+  font-family: "anton";
+  font-size: 15vw;
+  -webkit-text-stroke: 0.3px #313131;
+  color: #f4955c;
+  white-space: nowrap;
+  transform: translateX(140%);
+}
+.section6__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+}
+.section6__text span {
+  display: block;
+}
+.section6__left {
+  font-size: 4vw;
+  font-family: "Anton";
+  width: 30vw;
+  margin-right: 10vw;
+}
+.section6__right {
+  font-size: 1.5vw;
+  font-family: "GmarketSans";
+  width: 30vw;
+}
+.takeAlook {
+  font-family: "anton";
+  font-size: 15vw;
+  -webkit-text-stroke: 0.3px #313131;
+  color: #f4955c;
+  white-space: nowrap;
+  transform: translateX(-120%);
+}
+
+/* section7 */
+.section7 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #313131;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+}
+.section7__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f4955c;
+}
+.section7__text span {
+  display: block;
+}
+.section7__left {
+  font-size: 4vw;
+  font-family: "Anton";
+  width: 30vw;
+  margin-right: 10vw;
+}
+.section7__right {
+  font-size: 1.5vw;
+  font-family: "GmarketSans";
+  width: 30vw;
+}
+.section7 .mywork,
+.section7 .takeAlook {
+  color: #313131;
+  -webkit-text-stroke: 0.3px #f4955c;
+}
+
+/* section8 */
+.section8 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #313131;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+}
+.section8__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f4955c;
+  opacity: 0;
+}
+.section8__text span {
+  display: block;
+}
+.section8__left {
+  font-size: 4vw;
+  font-family: "Anton";
+  width: 30vw;
+  margin-right: 10vw;
+}
+.section8__right {
+  font-size: 1.5vw;
+  font-family: "GmarketSans";
+  width: 30vw;
+}
+.section8 .mywork {
+  color: #f4955c;
+  -webkit-text-stroke: 1px #f4955c;
+}
+.section8 .takeAlook {
+  color: #313131;
+  -webkit-text-stroke: 0.3px #f4955c;
+}
+/* section9 */
+.section9 {
+  z-index: 9;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section9 .script {
+  font-family: "Anton";
+  font-size: 5vw;
+  color: #f4955c;
+}
