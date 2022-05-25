@@ -331,10 +331,6 @@ body {
   display: inline-block;
   opacity: 0;
 }
-.site2 {
-}
-.site1 {
-}
 
 /* section6 */
 .section6 {
@@ -354,7 +350,7 @@ body {
 .mywork {
   font-family: "anton";
   font-size: 15vw;
-  -webkit-text-stroke: 0.3px #313131;
+  -webkit-text-stroke: 0.5px #313131;
   color: #f4955c;
   white-space: nowrap;
   transform: translateX(140%);
@@ -382,7 +378,7 @@ body {
 .takeAlook {
   font-family: "anton";
   font-size: 15vw;
-  -webkit-text-stroke: 0.3px #313131;
+  -webkit-text-stroke: 0.5px #313131;
   color: #f4955c;
   white-space: nowrap;
   transform: translateX(-120%);
@@ -427,7 +423,7 @@ body {
 .section7 .mywork,
 .section7 .takeAlook {
   color: #313131;
-  -webkit-text-stroke: 0.3px #f4955c;
+  -webkit-text-stroke: 0.5px #f4955c;
 }
 
 /* section8 */
@@ -473,23 +469,186 @@ body {
 }
 .section8 .takeAlook {
   color: #313131;
-  -webkit-text-stroke: 0.3px #f4955c;
+  -webkit-text-stroke: 0.5px #f4955c;
 }
 /* section9 */
 .section9 {
   z-index: 9;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 100%;
   width: 100%;
   height: 100vh;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+.section9 .container {
+  width: 90vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
-.section9 .script {
-  font-family: "Anton";
-  font-size: 5vw;
+.section9 .script,
+.section9 .game {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vw;
+}
+.section9__text {
+  width: 25vw;
+}
+.section9__text h3 {
+  font-size: 2vw;
   color: #f4955c;
+  font-family: "Anton";
+}
+.section9__text p {
+  font-size: 1vw;
+  color: #f4955c;
+  font-family: "GmarketSans";
+}
+/* gsap */
+.section {
+  width: 50vw;
+  height: 50vh;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+.slide-image {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: calc(100% + 400px);
+  height: calc(100% + 400px);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slide-title {
+  font-size: 4rem;
+  line-height: 1;
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  color: #f4955c;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  font-family: "Anton";
+  text-transform: uppercase;
+  font-weight: normal;
+}
+@media (min-width: 45em) {
+  .slide-title {
+    font-size: 4vw;
+    max-width: none;
+  }
+}
+.slide-title span {
+  white-space: pre;
+  display: inline-block;
+  opacity: 0;
+}
+
+.slideshow {
+  position: relative;
+}
+.slideshow-pagination {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s opacity;
+  z-index: 10;
+}
+.slideshow-pagination-item {
+  display: flex;
+  align-items: center;
+}
+.slideshow-pagination-item .pagination-number {
+  opacity: 0.5;
+}
+.slideshow-pagination-item:hover,
+.slideshow-pagination-item:focus {
+  cursor: pointer;
+}
+.slideshow-pagination-item:last-of-type .pagination-separator {
+  width: 0;
+}
+.slideshow-pagination-item.active .pagination-number {
+  opacity: 1;
+}
+.slideshow-pagination-item.active .pagination-separator {
+  width: 10vw;
+}
+.slideshow-navigation-button {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.slideshow-navigation-button:hover,
+.slideshow-navigation-button:focus {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slideshow-navigation-button.prev {
+  left: 0;
+}
+.slideshow-navigation-button.next {
+  right: 0;
+}
+
+.pagination-number {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  padding: 0 0.5rem;
+}
+
+.pagination-separator {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+@media (min-width: 45em) {
+  .pagination-separator {
+    display: block;
+  }
+}
+.pagination-separator-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transform-origin: 0 0;
 }

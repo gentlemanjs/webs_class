@@ -19,6 +19,71 @@
     <style></style>
   </head>
   <body>
+    <!-- partial:index.partial.html -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:500"
+      rel="stylesheet"
+    />
+    <script>
+      !(function (e) {
+        "undefined" == typeof module
+          ? (this.charming = e)
+          : (module.exports = e);
+      })(function (e, n) {
+        "use strict";
+        n = n || {};
+        var t = n.tagName || "span",
+          o = null != n.classPrefix ? n.classPrefix : "char",
+          r = 1,
+          a = function (e) {
+            for (
+              var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1;
+              ++l < c;
+
+            ) {
+              var d = document.createElement(t);
+              o && ((d.className = o + r), r++),
+                d.appendChild(document.createTextNode(a[l])),
+                n.insertBefore(d, e);
+            }
+            n.removeChild(e);
+          };
+        return (
+          (function c(e) {
+            for (
+              var n = [].slice.call(e.childNodes), t = n.length, o = -1;
+              ++o < t;
+
+            )
+              c(n[o]);
+            e.nodeType === Node.TEXT_NODE && a(e);
+          })(e),
+          e
+        );
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <div class="scrollTop">0</div>
     <section class="section1">
       <div
@@ -512,8 +577,10 @@
         class="mywork"
         data-16600="transform: translateX(140%)"
         data-17700="transform: translateX(0%)"
-        data-20000="color:#f4955c"
-        data-20100="color:#313131"
+        data-20000="color:#f4955c;"
+        data-20100="color:#313131; opacity: 1"
+        data-20500="color:#313131; opacity: 1"
+        data-20700="color:#313131; opacity: 0.5"
       >
         MY WORKS
       </div>
@@ -541,12 +608,132 @@
       </div>
     </section>
     <!-- // section8 -->
-    <section class="section9">
-      <!-- <div class="script">Script Effect</div>
-      <div class="script">Javascript Game</div> -->
+    <section
+      class="section9"
+      data-20700="pointer-events:none; user-select:none; opacity:0; top:100%;"
+      data-20750="pointer-events:auto; user-select:auto; opacity:1; top:100%;"
+      data-23000="top:-150%;"
+    >
+      <div class="container">
+        <div class="script">
+          <section class="section">
+            <div class="swiper-container slideshow">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 32.jpg)"
+                  ></div>
+                  <span class="slide-title">IMAGE SLIDER</span>
+                </div>
+
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 33.jpg)"
+                  ></div>
+                  <span class="slide-title">MOUSE EFFECT</span>
+                </div>
+
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 34.jpg)"
+                  ></div>
+                  <span class="slide-title">PARALLAX</span>
+                </div>
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 44.jpg)"
+                  ></div>
+                  <span class="slide-title">SEARCH</span>
+                </div>
+              </div>
+
+              <div class="slideshow-pagination"></div>
+
+              <div class="slideshow-navigation">
+                <div class="slideshow-navigation-button prev">
+                  <span class="fas fa-chevron-left"></span>
+                </div>
+                <div class="slideshow-navigation-button next">
+                  <span class="fas fa-chevron-right"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="section9__text">
+            <h3>Script Effect</h3>
+            <p>
+              마우스 이펙트, 패럴럭스, 이미지슬라이더 등 자바스크립트를 이용한
+              간단한 예제들을 다뤄보고 실제 사이트들에 적용해 보았습니다.
+            </p>
+          </div>
+        </div>
+        <div class="game">
+          <div class="section9__text">
+            <h3>Javascript Game</h3>
+            <p>
+              카드게임, 테트리스게임 등 자바스크립트를 이용하여 다양한 게임들을
+              만들어 보았습니다.
+            </p>
+          </div>
+          <section class="section">
+            <div class="swiper-container slideshow">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 35.jpg)"
+                  ></div>
+                  <span class="slide-title">CARD GAME</span>
+                </div>
+
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 36.jpg)"
+                  ></div>
+                  <span class="slide-title">TETRIS GAME</span>
+                </div>
+
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 37.jpg)"
+                  ></div>
+                  <span class="slide-title">TYPING GAME</span>
+                </div>
+                <div class="swiper-slide slide">
+                  <div
+                    class="slide-image"
+                    style="background-image: url(assets/img/image\ 39.jpg)"
+                  ></div>
+                  <span class="slide-title">MUSIC PLAYER</span>
+                </div>
+              </div>
+
+              <div class="slideshow-pagination"></div>
+
+              <div class="slideshow-navigation">
+                <div class="slideshow-navigation-button prev">
+                  <span class="fas fa-chevron-left"></span>
+                </div>
+                <div class="slideshow-navigation-button next">
+                  <span class="fas fa-chevron-right"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </section>
   </body>
+
   <script src="js/skrollr.min.js"></script>
+  <script src="js/script.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script>
     var s = skrollr.init({ smoothScrolling: true });
