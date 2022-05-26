@@ -182,3 +182,5 @@ class Slideshow {
 }
 
 const slideshow = new Slideshow(document.querySelector(".slideshow"));
+const slideshow1 = new Slideshow(document.querySelector(".slideshow1"));
+const slideshow2 = new Slideshow(document.querySelector(".slideshow2"));

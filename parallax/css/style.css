@@ -1,5 +1,5 @@
 body {
-  height: 30000px;
+  height: 20000px;
 }
 .scrollTop {
   position: fixed;
@@ -491,7 +491,8 @@ body {
   flex-direction: column;
 }
 .section9 .script,
-.section9 .game {
+.section9 .game,
+.section9 .react {
   width: 80vw;
   display: flex;
   justify-content: space-between;
@@ -510,6 +511,47 @@ body {
   color: #f4955c;
   font-family: "GmarketSans";
 }
+/* section10 */
+.section10 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0%;
+  top: 100%;
+  z-index: 8;
+}
+.contact {
+  color: #f4955c;
+  font-size: 10vw;
+  font-family: "Anton";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* section11 */
+.section11 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4955c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 8;
+  opacity: 0;
+}
+.section11 .contact {
+  color: #313131;
+}
+
 /* gsap */
 .section {
   width: 50vw;
@@ -551,6 +593,13 @@ body {
   font-family: "Anton";
   text-transform: uppercase;
   font-weight: normal;
+}
+.slide-title a {
+  color: #313131;
+  -webkit-text-stroke: 1px #f4955c;
+}
+.slide-title a:hover {
+  color: #f4955c;
 }
 @media (min-width: 45em) {
   .slide-title {
