@@ -429,7 +429,7 @@
       <div class="section5__side">
         <div
           class="sideText"
-          data-13600="transform:translateX(70%)"
+          data-13600="transform:translateX(80%)"
           data-17000="transform:translateX(-120%)"
         >
           <span>MY PROJECT SITE</span>
@@ -588,10 +588,10 @@
         data-16600="transform: translateX(-70.8%)"
         data-17700="transform: translateX(0%)"
       >
-        <div class="section7__left"><span>REACT WORKS</span></div>
+        <div class="section7__left"><span>REACT/VUE WORKS</span></div>
         <div class="section7__right">
           <span
-            >또한, 리액트를 이용하여 다양한 사이트와 작업물들을 만들어
+            >또한, 리액트와 뷰를 이용하여 다양한 사이트와 작업물들을 만들어
             보았습니다.</span
           >
         </div>
@@ -728,6 +728,7 @@
               마우스 이펙트, 패럴럭스, 이미지슬라이더 등 자바스크립트를 이용한
               간단한 예제들을 다뤄보고 실제 사이트들에 적용해 보았습니다.
             </p>
+            <p>#javascript #parallax #HTML #CSS</p>
           </div>
         </div>
         <div class="game">
@@ -737,6 +738,7 @@
               카드게임, 테트리스게임 등 자바스크립트를 이용하여 다양한 게임들을
               만들어 보았습니다.
             </p>
+            <p>#javascript #prepend #creatElement #sort</p>
           </div>
           <section class="section">
             <div class="swiper-container slideshow1">
@@ -817,9 +819,13 @@
                 <div class="swiper-slide slide">
                   <div
                     class="slide-image"
-                    style="background-image: url()"
+                    style="background-image: url(assets/img/image\ 46.jpg)"
                   ></div>
-                  <span class="slide-title">PROJECT</span>
+                  <span class="slide-title"
+                    ><a href="https://gentlemanjs3.netlify.app/" target="_blank"
+                      >VUE ROJECT</a
+                    ></span
+                  >
                 </div>
 
                 <div class="swiper-slide slide">
@@ -852,11 +858,13 @@
             </div>
           </section>
           <div class="section9__text">
-            <h3>React Project</h3>
+            <h3>React/Vue Project</h3>
             <p>
-              리액트를 이용하여 다양한 프로젝트를 진행중에 있습니다. 완료된
-              프로젝트는 곧바로 업로드 됩니다.
+              Vue를 이용한 지역정보수집 프로젝트입니다. 지역목록을 API로 받아
+              계단식 드롭다운형태로 구성했습니다. REACT로는 다양한 프로젝트를
+              진행중에 있습니다. 완료되는 대로 업데이트 됩니다.
             </p>
+            <p>#vue #axios #async #await</p>
           </div>
         </div>
       </div>
@@ -884,10 +892,7 @@
     var s = skrollr.init({ smoothScrolling: true });
 
     function scroll() {
-      let scrollTop =
-        window.screenY ||
-        window.pageYOffset ||
-        document.documentElement.scrollTop;
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
 
       requestAnimationFrame(scroll);
